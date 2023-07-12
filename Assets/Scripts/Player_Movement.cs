@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
+
+using Cinemachine;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -23,17 +22,20 @@ public class Player_Movement : MonoBehaviour
     //Protected Variables and Refereneses
     protected RaycastHit hitinfo;
     protected Ray rayinfo;
+    protected Vector2 turn;
+    protected int isZoom = -1;
 
     // Start is called before the first frame update
     void Start()
     {
+        //Set the Navigation Mesh Agent to Player Speed;
         agent.speed = playerSpeed;
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
         //Player Interactable and Movement by left-click
         if (Input.GetMouseButtonDown(0))
         {
@@ -62,7 +64,26 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+    }
+    void OnGUI()
+    {
+        //Rotation the Camera Function with change is speed
+        Event cur = Event.current;
+        if (cur.button == 1 && isZoom == -1)
+        {
+            cam.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = cam_xAsix_mouse_Speed;
+            cam.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = cam_yAsix_mouse_Speed;
+        }
+        else
+        {
+            cam.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 0;
+            cam.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 0;
+        }
+        if (cur.button == 1 && isZoom == 1)
+        {
+            turn.x += Input.GetAxis("Mouse X");
+            turn.y += Input.GetAxis("Mouse Y");
 
-        
+        }
     }
 }
