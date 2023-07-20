@@ -1,5 +1,1 @@
-sceneSetups:
-- path: Assets/Scripts/Script_Test/New Scene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
+sceneSetups: []

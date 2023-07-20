@@ -347,8 +347,13 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
-"Assets/Scripts/Interactable.cs"
-"Assets/Scripts/Player_Movement.cs"
+"Assets/Scripts/Hello_World.cs"
+"Assets/Scripts/Player_Movement/Interactable.cs"
+"Assets/Scripts/Player_Movement/Player_Movement.cs"
+"Assets/Scripts/Sound/Audio_Data.cs"
+"Assets/Scripts/Sound/SoundPlayer.cs"
+"Assets/Scripts/Sound/Sound_Dict.cs"
+"Assets/Scripts/Sound/Sound_Track.cs"
 -langversion:9.0
 
 /deterministic
