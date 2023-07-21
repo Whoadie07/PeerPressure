@@ -18,6 +18,17 @@ public class Sound_Track : ScriptableObject
     public float Fade_In_Translating = 1;
     public float Fade_Out_Translating = 1;
 
+    //Stop, Pause, and Resume Proerites
+    public bool StopSource = false;
+    public bool PauseSource = false;
+    public bool ResumeSource = false;
+    public float Stop_time = 1;
+    public float Pause_time = 1;
+    public float Resume_time = 1;
+    public float Stop_time_vol = 0;
+    public float Pause_time_vol = 0;
+    public float Resume_time_vol = 1;
+
     //Loop Properites:
     public bool looped = false;
 
@@ -48,6 +59,9 @@ public class Sound_Track : ScriptableObject
             priority = 256;
         }
         if(Fade_In_Translating < 1) { Fade_In_Translating = 1; }
-        if(Fade_Out_Translating < 1) { Fade_Out_Translating = 1; }    
+        if(Fade_Out_Translating < 1) { Fade_Out_Translating = 1; }
+        if (Stop_time < 1) { Stop_time = 1; }
+        if (Pause_time < 1) { Pause_time = 1; }
+        if (Resume_time < 1) { Resume_time = 1; }
     }
 }
