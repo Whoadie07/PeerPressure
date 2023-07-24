@@ -9,6 +9,9 @@ public class Sound_Dict : ScriptableObject
 
     //The array will store the track in Dictinoary
     public Sound_Track[] tracks = new Sound_Track[s_Dict_Size];
+
+    //Comment 
+    [TextArea (4, 10000)] public string comment = string.Empty;
     
     public int getDictSize()
     {
