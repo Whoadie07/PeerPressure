@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\Sound\Sound_Dict.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Player_Movement\Player_Movement.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\Server.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

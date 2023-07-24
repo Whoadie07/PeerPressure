@@ -45,9 +45,13 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey("r"))
+        {
+            isZoom *= -1;
+            ZoomFunction();
+        }
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && isZoom == -1)
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -95,5 +99,9 @@ public class Player_Movement : MonoBehaviour
             turn.y += Input.GetAxis("Mouse Y");
 
         }
+    }
+    void ZoomFunction()
+    {
+        
     }
 }
