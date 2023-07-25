@@ -67,6 +67,7 @@ public class Player_Movement : MonoBehaviour
                     if (tempInteractable.GetComponent<Interactable>() != null)
                     {
                         interactable = tempInteractable;
+                        //do something like dialogue and animation (SceneCut to dialogue)
                     }
                 }
                 else
@@ -102,6 +103,20 @@ public class Player_Movement : MonoBehaviour
     }
     void ZoomFunction()
     {
-        
+        if(isZoom == 1)
+        {
+            playerdataServer.GetComponent<Server>().CameraDataServer[0].SetActive(false);
+            playerdataServer.GetComponent<Server>().CameraDataServer[1].SetActive(false);
+            playerdataServer.GetComponent<Server>().CameraDataServer[2].SetActive(true);
+        }
+        else
+        {
+            playerdataServer.GetComponent<Server>().CameraDataServer[2].GetComponent<Transform>().localRotation = Quaternion.Euler(0, 0, 0);
+            turn.x = 0;
+            turn.y = 0;
+            playerdataServer.GetComponent<Server>().CameraDataServer[0].SetActive(true);
+            playerdataServer.GetComponent<Server>().CameraDataServer[1].SetActive(true);
+            playerdataServer.GetComponent<Server>().CameraDataServer[2].SetActive(false);
+        }
     }
 }
