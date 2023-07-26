@@ -10,19 +10,11 @@ public class Player_Movement : MonoBehaviour
     public GameObject playerdataServer;
     public GameObject interactable;
     public GameObject tempInteractable;
-
-    //Main Camera
     public Camera cam;
 
-     
-
     //Private variables.
-
-    //Player Movement variables:
     private float playerSpeed = 5.0f;
     private float interactRange = 100.0f;
-
-    //Camera Movement Variables:
     private float interactRadius = 10.0f;
     private float m_camSpeed_XAxis = 4.0f;
     private float m_camSpeed_YAxis = 450.0f;
@@ -31,9 +23,7 @@ public class Player_Movement : MonoBehaviour
     protected RaycastHit hitinfo;
     protected Ray rayinfo;
     protected Vector2 turn;
-    // Check for the zoom camera is active or not 
     protected int isZoom = -1;
-
 
     // Start is called before the first frame update
     void Start()
@@ -45,13 +35,9 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("r"))
-        {
-            isZoom *= -1;
-            ZoomFunction();
-        }
+        
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0) && isZoom == -1)
+        if (Input.GetMouseButtonDown(0))
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -67,7 +53,6 @@ public class Player_Movement : MonoBehaviour
                     if (tempInteractable.GetComponent<Interactable>() != null)
                     {
                         interactable = tempInteractable;
-                        //do something like dialogue and animation (SceneCut to dialogue)
                     }
                 }
                 else
@@ -99,24 +84,6 @@ public class Player_Movement : MonoBehaviour
             turn.x += Input.GetAxis("Mouse X");
             turn.y += Input.GetAxis("Mouse Y");
 
-        }
-    }
-    void ZoomFunction()
-    {
-        if(isZoom == 1)
-        {
-            playerdataServer.GetComponent<Server>().CameraDataServer[0].SetActive(false);
-            playerdataServer.GetComponent<Server>().CameraDataServer[1].SetActive(false);
-            playerdataServer.GetComponent<Server>().CameraDataServer[2].SetActive(true);
-        }
-        else
-        {
-            playerdataServer.GetComponent<Server>().CameraDataServer[2].GetComponent<Transform>().localRotation = Quaternion.Euler(0, 0, 0);
-            turn.x = 0;
-            turn.y = 0;
-            playerdataServer.GetComponent<Server>().CameraDataServer[0].SetActive(true);
-            playerdataServer.GetComponent<Server>().CameraDataServer[1].SetActive(true);
-            playerdataServer.GetComponent<Server>().CameraDataServer[2].SetActive(false);
         }
     }
 }
