@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\Sound\Sound_Dict.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Player_Movement\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\DialogueNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
