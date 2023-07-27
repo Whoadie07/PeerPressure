@@ -358,6 +358,7 @@
 "Assets/Scripts/Data_Script/Menu.cs"
 "Assets/Scripts/Data_Script/Server.cs"
 "Assets/Scripts/Dialogues_Script/DialogueNode.cs"
+"Assets/Scripts/Dialogues_Script/Dialogue_Player.cs"
 "Assets/Scripts/Hello_World.cs"
 "Assets/Scripts/Player_Movement/Interactable.cs"
 "Assets/Scripts/Player_Movement/Player_Movement.cs"

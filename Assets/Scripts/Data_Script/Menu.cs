@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+
+[CreateAssetMenu(menuName = "Menu", fileName ="Menu", order = 2)]
 public class Menu : ScriptableObject
 {
     //Public Variables

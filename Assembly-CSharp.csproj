@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\Dialogues_Script\DialogueNode.cs" />
     <Compile Include="Assets\Scripts\Player_Movement\Interactable.cs" />
     <Compile Include="Assets\Scripts\Data_Script\Menu.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\Dialogue_Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
