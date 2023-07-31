@@ -14,7 +14,7 @@ public class DialogueNode : ScriptableObject
     public static int LineSize = 1;
     [TextArea(3,10000)][SerializeField] public string[] LineOfDialogue = new string[LineSize];
     public bool IsPlaying = false;
-    public float[] LineDisplay = new float[LineSize-1];
+    public float[] LineDisplay = new float[LineSize];
     public bool IsAQueation = false;
 
     public static int ResponseSize = 4;

@@ -62,11 +62,11 @@
     <Compile Include="Assets\Scripts\Player_Movement\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Sound\Audio_Data.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound_Dict.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\Dialogue_Player.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\Menu.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundPlayer.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\DialogueNode.cs" />
     <Compile Include="Assets\Scripts\Player_Movement\Interactable.cs" />
-    <Compile Include="Assets\Scripts\Data_Script\Menu.cs" />
-    <Compile Include="Assets\Scripts\Dialogues_Script\Dialogue_Player.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
