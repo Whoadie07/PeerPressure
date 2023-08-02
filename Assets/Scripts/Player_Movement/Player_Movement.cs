@@ -12,6 +12,8 @@ public class Player_Movement : MonoBehaviour
     public GameObject tempInteractable;
     public Camera cam;
 
+    public Animator player_animotr;
+
     //Private variables.
     private float playerSpeed = 5.0f;
     private float interactRange = 100.0f;

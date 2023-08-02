@@ -4,6 +4,12 @@ using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 
+/*
+ * An asset object that user can pre-written dialogue line and connect
+ * with other narrative line. These object can be player on the 
+ * Dialogue_Player
+*/
+
 [CreateAssetMenu(menuName ="Dialogue Node", fileName ="Node", order = 3)]
 public class DialogueNode : ScriptableObject
 {
@@ -12,16 +18,15 @@ public class DialogueNode : ScriptableObject
     //Start variables
     //Dialogue and Question will be last index
     public static int LineSize = 1;
-    [TextArea(3,10000)][SerializeField] public string[] LineOfDialogue = new string[LineSize];
+    [TextArea(3,10000)][SerializeField] public string[] LineOfDialogue = new string[LineSize]; //List of Dialogues Line for node
     public bool IsPlaying = false;
-    public float[] LineDisplay = new float[LineSize];
+    public float[] LineDisplay = new float[LineSize]; //List of dialogues second translating.
     public bool IsAQueation = false;
 
-    public static int ResponseSize = 4;
-    public DialogueNode[] AnswerResponse = new DialogueNode[ResponseSize];
-    
 
     //Answers
+    public static int ResponseSize = 4;
+    public DialogueNode[] AnswerResponse = new DialogueNode[ResponseSize];
     [TextArea(3, 10000)][SerializeField] public string answer;
     public bool IsItCorrect = false;
 
@@ -76,17 +81,20 @@ public class DialogueNode : ScriptableObject
         }
         return AnswerResponse[index];
     }
+
     //Check if the answer of this node is correct
     public bool IsCorrect()
     {
         return IsItCorrect;
     }
+
     //Return the answer
     public string GetAnswer()
     {
         return answer;
     }
-    //Return the length of the Arrays
+
+    //Return the length of the Arrays of the ListofDialogue, LineDisplay, and AnswerResponse
     public int DialogueLineSize()
     {
         return LineOfDialogue.Length;

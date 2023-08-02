@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEditor.SearchService;
 using UnityEngine;
 
+/*
+ * An program that store and connect Data, Gameobjects, and etc to other of it, type
+ */
 public class Server : MonoBehaviour
 {
     /*
@@ -14,28 +17,40 @@ public class Server : MonoBehaviour
      4) Environment
      5) Sound Dictionary
      */
-    [TextArea(3,1000)][SerializeField] protected string note = "The Server for quick and access to Gameobject, Camera, and etc;\r\n     Type Objects:\r\n     1) GameObject with Scripts that are important, but cannot fit anywhere else.\r\n     2) Camera: [0] is main camera and [1] is zoom function camera\r\n     3) Character\r\n     4) Environment\r\n     5) Sound Dictionary";
-    //GameObject Data
+    [TextArea(3,1000)][SerializeField] protected string note = "The Server for quick and access to Gameobject, Camera, and etc;\r\n     " +
+                                                                "Type Objects:\r\n     " +
+                                                                "1) GameObject with Scripts that are important, but cannot fit anywhere else.\r\n     " +
+                                                                "2) Camera: [0] is main camera and [1] is zoom function camera\r\n     " +
+                                                                "3) Character\r\n     " +
+                                                                "4) Environment\r\n     " +
+                                                                "5) Sound Dictionary";
+    //GameObject Datas
     public static int GameobjectSize;
     public GameObject[] GameobjectDataServer = new GameObject[GameobjectSize];
 
-    //Camera Data
+    //Camera Datas
     public static int CameraSize;
     public GameObject[] CameraDataServer = new GameObject[CameraSize];
 
-    //Character Data
+    //Character Datas (Required: Interactable Script)
     public static int CharacterSize;
     public GameObject[] CharacterDataServer = new GameObject[CharacterSize];
 
-    //Environment Data
+    //Environment Datas
     public static int EnvironmentSize;
     public GameObject[] EnvironmentDataServer = new GameObject[EnvironmentSize];
 
-    //Sound Dictionary Date
+    //Sound Dictionary Dates
     public static int SoundDictionarySize;
     public Sound_Dict[] SoundDictsServer = new Sound_Dict[SoundDictionarySize];
 
-    //Connect a object from the server to the object by passing it the obj 
+    private void Awake()
+    {
+
+    }
+
+    //Connect a object from the server to the object by passing it the objbect types and index the 
+    //object is located.
     public Object Connect(int typeObject, int index)
     {
         Object obj = null;
@@ -67,6 +82,7 @@ public class Server : MonoBehaviour
         }
         return obj;
     }
+
     //Connection object to other object in the server but simple.
     public GameObject ConnectGameObject(int index)
     {

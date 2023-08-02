@@ -7,6 +7,10 @@ using Unity.PlasticSCM.Editor.WebApi;
 using UnityEditorInternal;
 using UnityEngine;
 
+/*
+ * The Sound Player can play sound from the sound dictionary by pass index, which 
+ * the track is located. 
+ */
 public class SoundPlayer : MonoBehaviour
 {
     //PUblic Variables:
@@ -200,7 +204,9 @@ public class SoundPlayer : MonoBehaviour
         }
     }
 
-    //Fade Functions
+    //Fade Functions:
+
+    //A function for volume to fade-in or fade-out
     IEnumerator VolumeFade(GameObject sourceObject, float fade_time, float volume_num)
     {
         if (volume_num < 0)
@@ -227,6 +233,7 @@ public class SoundPlayer : MonoBehaviour
             volume_num = 1;
         }
     }
+    //A function fade-in or fade-out the pitch of the Audio Source
     IEnumerator PitchFade(GameObject sourceObject, float fade_time, float pitch_num)
     {
         if (pitch_num < -3)
@@ -254,6 +261,7 @@ public class SoundPlayer : MonoBehaviour
             pitch_num = 3;
         }
     }
+    //A function fade-in or fade-out the priority of the Audio Source
     IEnumerator priority(GameObject sourceObject, float fade_time, float priority_num)
     {
         if (priority_num < 0)
@@ -281,6 +289,7 @@ public class SoundPlayer : MonoBehaviour
             priority_num = 256;
         }
     }
+    //A function fade-out an Audio Source until complete stop
     IEnumerator StopFade(GameObject sourceObject, float fade_time, float volume_num)
     {
         if (volume_num < 0)
@@ -309,6 +318,7 @@ public class SoundPlayer : MonoBehaviour
             volume_num = 1;
         }
     }
+    //A function fade-out an Audio Source until complete Pause
     IEnumerator PauseFade(GameObject sourceObject, float fade_time, float volume_num)
     {
         if (volume_num < 0)
@@ -337,6 +347,7 @@ public class SoundPlayer : MonoBehaviour
             volume_num = 1;
         }
     }
+    //A function will resume and fade-in to volume of Audio Source 
     IEnumerator ResumeFade(GameObject sourceObject, float fade_time, float volume_num)
     {
         if (volume_num < 0)
@@ -365,6 +376,7 @@ public class SoundPlayer : MonoBehaviour
             volume_num = 1;
         }
     }
+
     //Delete Audio Source
     public void DeleteSource(string source_name)
     {
@@ -430,47 +442,56 @@ public class SoundPlayer : MonoBehaviour
     //volume: (0 - 100)
     //Pitch: (-3 - 100)
     //Priority (0 - 256)
-    //Change the Proporites of Audio Source
+    /*Change the Proporites of Audio Source*/
+
+    //Set the Volume of the Audio Source (0 - 100) will be convert to (0 - 1)
     public void SetSourceVolume(string source_num, float volume)
     {
         if(volume > 0) { volume  = 0; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().volume = (volume / 100); }
     }
+    //Set the Pitch of the Audio Source (-3 to 3)
     public void SetSourcePriority(string source_num, int priority)
     {
         if (priority < 0) { priority = 0; } else if (priority > 256) { priority = 256; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().priority = priority; }
     }
+    //Set the Priority Level of the Audio Source (0 - 256)
     public void SetSourcePitch(string source_num, float pitch)
     {
         if (pitch < 0) { pitch = 0; } else if (pitch > 3) { pitch = 3; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().pitch = pitch; }
     }
+    //Set the Audio Source to loop
     public void SetSourceLoop(string source_num, bool Changed)
     {
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().loop = Changed; }
     }
+    //Set the Audio Source to Mute
     public void SetSourceMute(string source_num, bool Changed)
     {
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().mute = Changed; }
     }
+    //Set the Audio Source Stereo Pan (-1 - 1)
     public void SetSourceStereoPan(string source_num, float st_pan)
     {
         if (st_pan < -1) { st_pan = -1; } else if (st_pan > 1) { st_pan = 1; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().panStereo = st_pan; }
     }
+    //Set the Audio Source Spatial Blend (-1 - 1)
     public void SetSourceSpatialBlend(string source_num, float sp_blend)
     {
         if (sp_blend < -1) { sp_blend = -1; } else if (sp_blend > 1) { sp_blend = 1; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().panStereo = sp_blend; }
     }
+    //Set the Audio Source Zone Mix (-1.1 - 1.1)
     public void SetSourceZoneMix(string source_num, float Zone_Mix)
     {
         if (Zone_Mix < 0) { Zone_Mix = 0.001f; } else if (Zone_Mix > 1.1) { Zone_Mix = 1.1f; }
@@ -478,7 +499,9 @@ public class SoundPlayer : MonoBehaviour
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().reverbZoneMix = Zone_Mix; }
     }
 
-    //Change the Proporties of the Track 
+    /*Change the Proporties of the Track */
+
+    //Set the Volume of the Sound Track (0 - 100) will be convert to (0 - 1)
     public void SetVolume(int index_num, float volume)
     {
         if(volume < 0)
@@ -486,7 +509,8 @@ public class SoundPlayer : MonoBehaviour
             volume = 0;
         }
         sp_dict.tracks[index_num].volume = (volume/100);
-    }
+    } 
+    //Set the Pitch of the Sound Track (-3 to 3)
     public void SetPitch(int index_num, float pitch)
     {
         if (pitch < -3)
@@ -499,77 +523,93 @@ public class SoundPlayer : MonoBehaviour
         }
         sp_dict.tracks[index_num].pitch = pitch;
     }
+    //Set the Priority Level of the Sound Track (0 - 256)
     public void SetPriority(int index_num, int priority)
     {
         if (priority < 0) { priority = 0; } else if (priority > 256) { priority = 256; }
         sp_dict.tracks[index_num].priority = priority;
     }
     
-    //Fading Properites Change:
+    /*Fading Properites Change:*/
+
+    //Set variable if the Sound Track will Fade-In
     public void SetFadeIn(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].Fade_In = changed;
     }
+    //Set variable if the Sound Track will Fade-Out
     public void SetFadeOut(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].Fade_Out = changed;
     }
+    //Set time it take for the Sound Track to fade in
     public void SetFadeInTranslate(int index_num, float num)
     {
         if(num < 0) { num = 0.001f;}
         sp_dict.tracks[index_num].Fade_In_Translating = num;
     }
+    //Set time it take for the Sound Track to fade out
     public void SetFadeOutTranslate(int index_num, float num)
     {
         if (num < 0) {num = 0.001f;}
         sp_dict.tracks[index_num].Fade_Out_Translating = num;
     }
 
-    //Stop, Pause, and Resume Proerites Change:
+    /*Stop, Pause, and Resume Proerites Change:*/
+
+    //Set the variable if Sound Track will stop over time
     public void SetStopSource(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].StopSource = changed;
     }
+    //Set the variable if Sound Track will pause over time
     public void SetPauseSource(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].PauseSource = changed;
     }
+    //Set the variable if Sound Track will resume over time
     public void SetResumeSource(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].ResumeSource = changed;
     }
+    //Set the time to stop the Sound Track
     public void SetStopTime(int index_num, float num)
     {
         if (num < 0){ num = 0.001f; }
         sp_dict.tracks[index_num].Stop_time = num;
     }
+    //Set the time to pause the Sound Track
     public void SetPauseTime(int index_num, float num)
     {
         if (num < 0) { num = 0.001f; }
         sp_dict.tracks[index_num].Pause_time = num;
     }
+    //Set the time to resume the Sound Track
     public void SetResumeTime(int index_num, float num)
     {
         if (num < 0) { num = 0.001f; }
         sp_dict.tracks[index_num].Resume_time = num;
     }
+    //Set the volume when Sound Track stop
     public void SetStopTimeVolume(int index_num, float num)
     {
         if (num < 0) { num = 0; }
         sp_dict.tracks[index_num].Stop_time_vol = num;
     }
+    //Set the volume when Sound Track pause
     public void SetPauseTimeVolume(int index_num, float num)
     {
         if (num < 0) { num = 0; }
         sp_dict.tracks[index_num].Pause_time_vol = num;
     }
+    //Set the volume when Sound Track resume
     public void SetResumeTimeVolume(int index_num, float num)
     {
         if (num < 0) { num = 0; }
         sp_dict.tracks[index_num].Resume_time_vol = num;
     }
 
-    //Chnage the loop proporites
+    //Change the loop proporites
     public void SetLoop(int index_num, bool changed)
     {
         sp_dict.tracks[index_num].looped = changed;

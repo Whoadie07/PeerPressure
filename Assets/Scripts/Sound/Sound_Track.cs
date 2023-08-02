@@ -1,6 +1,10 @@
 using UnityEngine;
 using UnityEngine.Audio;
 
+/*
+ * An asset object that store audio track
+ * and set the track proerties.
+ */
 [CreateAssetMenu(menuName = "Sound Track", fileName ="Sound Track need a Name", order = 1)]
 public class Sound_Track : ScriptableObject
 {
@@ -8,26 +12,26 @@ public class Sound_Track : ScriptableObject
     public AudioClip track;
 
     //Sound Properties:
-    public float volume = 0;
-    public float pitch = 0;
-    public int priority = 128;
+    public float volume = 0; //Volume 0 -> 1
+    public float pitch = 0; // Pitch -3 -> 3
+    public int priority = 128; // Priority 0 -> 256
 
     //Fading Properites:
-    public bool Fade_In = false;
-    public bool Fade_Out = false;
-    public float Fade_In_Translating = 1;
-    public float Fade_Out_Translating = 1;
+    public bool Fade_In = false; //A boolean variable for if the track is should fade in when play
+    public bool Fade_Out = false; //A boolean variable for if the track is should fade out while play
+    public float Fade_In_Translating = 1; //Time it take to fade in
+    public float Fade_Out_Translating = 1; //Time it take to fade out
 
     //Stop, Pause, and Resume Proerites
-    public bool StopSource = false;
-    public bool PauseSource = false;
-    public bool ResumeSource = false;
-    public float Stop_time = 1;
-    public float Pause_time = 1;
-    public float Resume_time = 1;
-    public float Stop_time_vol = 0;
-    public float Pause_time_vol = 0;
-    public float Resume_time_vol = 1;
+    public bool StopSource = false; //A boolean variable for if the track is should fade out and then stop
+    public bool PauseSource = false; //A boolean variable for if the track is should fade out and then Pause
+    public bool ResumeSource = false; //A boolean variable for if the track is should resume and fade-in
+    public float Stop_time = 1; //The time fade-out until the sound_track's audio source will stop
+    public float Pause_time = 1; //The time fade-out until the sound_track's audio source will pause
+    public float Resume_time = 1; //The time fade-in out when the sound_track's audio source will resume
+    public float Stop_time_vol = 0; //The volume when the sound_track's Audio Source is fade-out until complete stop
+    public float Pause_time_vol = 0; //The volume when the sound_track's Audio Source is fade-out until complete pause
+    public float Resume_time_vol = 1; //The volume when sound_track's Audio Source resume and fade-in.
 
     //Loop Properites:
     public bool looped = false;
@@ -38,6 +42,7 @@ public class Sound_Track : ScriptableObject
      */
     public AudioMixerGroup mixer = null;
 
+    //Update Check when variable changes.
     private void OnValidate()
     {
         if (volume < 0)

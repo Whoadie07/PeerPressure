@@ -4,21 +4,31 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ A Dialogue player the when a player interact with object with 
+ Dialogue Node and Interactable script. A Dialogue Player will 
+ take the Dialogue Node and player out the narrative dialogue 
+ pre-written in dialogue line
+ */
 public class Dialogue_Player : MonoBehaviour
 {
     //Public Variables
+
+    //Dialogue Node Variables
     public DialogueNode rootNode = null;
     public DialogueNode currentNode = null;
     public DialogueNode tmpNode = null;
 
 
     //UI
-    public GameObject DialogueDisplay;
-    public GameObject DialogueText;
-    public GameObject[] ListofButton = new GameObject[4];
-    public Text[] ListofAnswer = new Text[4];
+    public GameObject DialogueDisplay; //Display the Border the text will display.
+    public GameObject DialogueText; //The Text Object.
+    public GameObject[] ListofButton = new GameObject[4]; //The List of Button for answer
+    public Text[] ListofAnswer = new Text[4]; //The list of answers text for the option button option
 
-    //Protected Variables
+    /*Protected Variables*/
+
+    //A variable to keep track of second translate of each dialogues.
     protected int DialogueIndex = 0;
     protected float DisplaySecond = 0;
     protected float StartSecond = 0;
@@ -27,6 +37,7 @@ public class Dialogue_Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Set the Dialogue UI to inactive before the player interact with the object.
         for(int i = 0; i < ListofButton.Length; i++)
         {
             ListofButton[i].SetActive(false);         
@@ -36,11 +47,7 @@ public class Dialogue_Player : MonoBehaviour
         isRunning = false;
     }
 
-    /*/ Update is called once per frame
-    void Update()
-    {
-        
-    }*/
+    //The main function to play the dialogue for each interaction
     public void DialoguePlay()
     {
         DialogueIndex = 0;
@@ -63,6 +70,7 @@ public class Dialogue_Player : MonoBehaviour
             DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
         }
     }
+    //This function will play the dialogue along with the animation
     IEnumerator DialoguePlaying()
     {
         while(true)
@@ -79,6 +87,7 @@ public class Dialogue_Player : MonoBehaviour
             StartSecond++;
         }
     }
+    //This function play the dialogue, but only by clicking
     IEnumerator DialogueClicking()
     {
         
@@ -86,13 +95,29 @@ public class Dialogue_Player : MonoBehaviour
         NextLine();
 
     }
+    private void OnGUI()
+    {
+        Event e = Event.current;
+        if (e.button == 1)
+        {
+            if (isRunning)
+            {
+                NextLine();
+            }
+            else
+            {
+                StartCoroutine(DialogueClicking());
+            }
+        }
+    }
+    //The function play the next line of dialogue in ListofDialogue
     public void NextLine()
     {
         if(DialogueIndex + 1 < currentNode.DialogueLineSize()) 
         {
             DialogueIndex++;
         }
-        if (DialogueIndex < currentNode.DialogueLineSize() - 1)
+        if (DialogueIndex < currentNode.DialogueLineSize())
         {
             DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
             DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
@@ -113,27 +138,16 @@ public class Dialogue_Player : MonoBehaviour
         } 
 
     }
-    private void OnGUI()
-    {
-        Event e = Event.current;
-        if(e.button == 1)
-        {
-            if (isRunning)
-            {
-                NextLine();
-            }
-            else
-            {
-                StartCoroutine(DialogueClicking());
-            }
-        }
-    }
 
     //Player choices an answer
     public void SelectAnswer(int index)
     {
         if(index <= ListofAnswer.Length) { return; }
         DialogueNode cur_select = currentNode.GetAnswerLine(index);
+        for (int i = 0; i < ListofButton.Length; i++)
+        {
+            ListofButton[i].SetActive(false);
+        }
         if (cur_select.IsCorrect())
         {
             currentNode = currentNode.GetAnswerLine(index);
@@ -147,6 +161,7 @@ public class Dialogue_Player : MonoBehaviour
             StartCoroutine(WrongAnimation());
         }
     }
+    //If the player get the animation wrong. This function will play out the dialouge for the scene
     IEnumerator WrongAnimation()
     {
         float cur_node_frame = 0f;
