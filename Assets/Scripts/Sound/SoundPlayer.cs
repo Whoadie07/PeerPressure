@@ -3,8 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using Unity.PlasticSCM.Editor.WebApi;
-using UnityEditorInternal;
 using UnityEngine;
 
 /*
@@ -77,12 +75,12 @@ public class SoundPlayer : MonoBehaviour
             return;
         }
         Sound_Track cur_track = cur_m_audio_source.GetComponent<Audio_Data>().ad_track;
-        if(cur_track != null)
+        if (cur_track != null)
         {
             cur_m_audio_source.GetComponent<AudioSource>().clip = cur_track.track;
             cur_m_audio_source.GetComponent<AudioSource>().pitch = cur_track.pitch;
             cur_m_audio_source.GetComponent<AudioSource>().priority = cur_track.priority;
-            if(cur_track.looped) { cur_m_audio_source.GetComponent<AudioSource>().loop = cur_track.looped; }
+            if (cur_track.looped) { cur_m_audio_source.GetComponent<AudioSource>().loop = cur_track.looped; }
             cur_m_audio_source.GetComponent<AudioSource>().Play();
             if (cur_track.Fade_In)
             {
@@ -91,7 +89,7 @@ public class SoundPlayer : MonoBehaviour
             else
             {
                 cur_m_audio_source.GetComponent<AudioSource>().volume = cur_track.volume;
-            } 
+            }
         }
     }
 
@@ -212,7 +210,8 @@ public class SoundPlayer : MonoBehaviour
         if (volume_num < 0)
         {
             volume_num = 0;
-        }else if (volume_num > 1)
+        }
+        else if (volume_num > 1)
         {
             volume_num = 1;
         }
@@ -242,7 +241,7 @@ public class SoundPlayer : MonoBehaviour
         }
         else if (pitch_num > 3)
         {
-           pitch_num = 3;
+            pitch_num = 3;
         }
         float change_time = 0;
         float change_in_pitch = (pitch_num - sourceObject.GetComponent<AudioSource>().pitch) / fade_time;
@@ -387,17 +386,18 @@ public class SoundPlayer : MonoBehaviour
             if (cur_track == null)
             {
                 Debug.Log("The current track is null");
-                
-            }else if(cur_m_audio_source.GetComponent<Audio_Data>().ad_track.Fade_Out)
+
+            }
+            else if (cur_m_audio_source.GetComponent<Audio_Data>().ad_track.Fade_Out)
             {
                 StartCoroutine(PitchFade(cur_m_audio_source, cur_track.Fade_Out_Translating, 0));
-                StartCoroutine(VolumeFade(cur_m_audio_source, cur_track.Fade_Out_Translating,0));
+                StartCoroutine(VolumeFade(cur_m_audio_source, cur_track.Fade_Out_Translating, 0));
 
             }
             else
             {
                 cur_m_audio_source.GetComponent<AudioSource>().pitch = 0;
-                cur_m_audio_source.GetComponent <AudioSource>().volume = 0;
+                cur_m_audio_source.GetComponent<AudioSource>().volume = 0;
             }
             m_audio_source_list.Remove(source_name);
             m_sound_name_list.Remove(source_name);
@@ -414,7 +414,7 @@ public class SoundPlayer : MonoBehaviour
     {
         for (int i = 0; i < m_sound_name_list.ToArray().Length; i++)
         {
-            DeleteSource((string) m_sound_name_list.ToArray().GetValue(i));
+            DeleteSource((string)m_sound_name_list.ToArray().GetValue(i));
         }
         m_audio_source_list.Clear();
     }
@@ -447,7 +447,7 @@ public class SoundPlayer : MonoBehaviour
     //Set the Volume of the Audio Source (0 - 100) will be convert to (0 - 1)
     public void SetSourceVolume(string source_num, float volume)
     {
-        if(volume > 0) { volume  = 0; }
+        if (volume > 0) { volume = 0; }
         GameObject cur_m_audio_source = m_audio_source_list[source_num] as GameObject;
         if (cur_m_audio_source != null) { cur_m_audio_source.GetComponent<AudioSource>().volume = (volume / 100); }
     }
@@ -504,12 +504,12 @@ public class SoundPlayer : MonoBehaviour
     //Set the Volume of the Sound Track (0 - 100) will be convert to (0 - 1)
     public void SetVolume(int index_num, float volume)
     {
-        if(volume < 0)
+        if (volume < 0)
         {
             volume = 0;
         }
-        sp_dict.tracks[index_num].volume = (volume/100);
-    } 
+        sp_dict.tracks[index_num].volume = (volume / 100);
+    }
     //Set the Pitch of the Sound Track (-3 to 3)
     public void SetPitch(int index_num, float pitch)
     {
@@ -519,7 +519,7 @@ public class SoundPlayer : MonoBehaviour
         }
         else if (pitch > 3)
         {
-            pitch = 3;  
+            pitch = 3;
         }
         sp_dict.tracks[index_num].pitch = pitch;
     }
@@ -529,7 +529,7 @@ public class SoundPlayer : MonoBehaviour
         if (priority < 0) { priority = 0; } else if (priority > 256) { priority = 256; }
         sp_dict.tracks[index_num].priority = priority;
     }
-    
+
     /*Fading Properites Change:*/
 
     //Set variable if the Sound Track will Fade-In
@@ -545,13 +545,13 @@ public class SoundPlayer : MonoBehaviour
     //Set time it take for the Sound Track to fade in
     public void SetFadeInTranslate(int index_num, float num)
     {
-        if(num < 0) { num = 0.001f;}
+        if (num < 0) { num = 0.001f; }
         sp_dict.tracks[index_num].Fade_In_Translating = num;
     }
     //Set time it take for the Sound Track to fade out
     public void SetFadeOutTranslate(int index_num, float num)
     {
-        if (num < 0) {num = 0.001f;}
+        if (num < 0) { num = 0.001f; }
         sp_dict.tracks[index_num].Fade_Out_Translating = num;
     }
 
@@ -575,7 +575,7 @@ public class SoundPlayer : MonoBehaviour
     //Set the time to stop the Sound Track
     public void SetStopTime(int index_num, float num)
     {
-        if (num < 0){ num = 0.001f; }
+        if (num < 0) { num = 0.001f; }
         sp_dict.tracks[index_num].Stop_time = num;
     }
     //Set the time to pause the Sound Track

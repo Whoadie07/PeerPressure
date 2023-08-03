@@ -10,14 +10,14 @@ public class Menu : ScriptableObject
     //Public Variables
     public static int NumberScene = 5;
     public string[] SceneNames = new string[NumberScene]; //The list of Scene Names.
-    protected int currently_play = 3;
+    public int currently_play = 3;
 
     //When the game start up
     private void Awake()
     {
         SceneNames[0] = "Home";
         SceneNames[1] = "Tutorial";
-        SceneNames[2] = "Control";
+        SceneNames[2] = "Setting";
     }
 
     //Load the scene of the level players is going to play or current level player coming back to play
@@ -37,7 +37,7 @@ public class Menu : ScriptableObject
         SceneManager.LoadScene(SceneNames[1]);
     }
     //Load the control scene
-    public void Control()
+    public void Setting()
     {
         SceneManager.LoadScene(SceneNames[2]);
     }
@@ -56,5 +56,9 @@ public class Menu : ScriptableObject
     {
         SceneManager.LoadScene(SceneNames[currently_play]);
         currently_play++;
+    }
+    public void anyscene(int index)
+    {
+        SceneManager.LoadScene(SceneNames[index]);
     }
 }

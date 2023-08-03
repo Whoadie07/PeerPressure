@@ -5,7 +5,7 @@ using UnityEngine.Audio;
  * An asset object that store audio track
  * and set the track proerties.
  */
-[CreateAssetMenu(menuName = "Sound Track", fileName ="Sound Track need a Name", order = 1)]
+[CreateAssetMenu(menuName = "Sound Track", fileName = "Sound Track need a Name", order = 1)]
 public class Sound_Track : ScriptableObject
 {
     //Sound Track
@@ -48,23 +48,29 @@ public class Sound_Track : ScriptableObject
         if (volume < 0)
         {
             volume = 0;
-        }else if (volume > 1)
+        }
+        else if (volume > 1)
         {
             volume = 1;
         }
-        if(pitch < -3)
+        if (pitch < -3)
         {
             pitch = -3;
-        }else if(pitch > 3) { 
+        }
+        else if (pitch > 3)
+        {
             pitch = 3;
         }
-        if (priority < 0) { 
+        if (priority < 0)
+        {
             priority = 0;
-        }else if(priority > 256) { 
+        }
+        else if (priority > 256)
+        {
             priority = 256;
         }
-        if(Fade_In_Translating < 1) { Fade_In_Translating = 1; }
-        if(Fade_Out_Translating < 1) { Fade_Out_Translating = 1; }
+        if (Fade_In_Translating < 1) { Fade_In_Translating = 1; }
+        if (Fade_Out_Translating < 1) { Fade_Out_Translating = 1; }
         if (Stop_time < 1) { Stop_time = 1; }
         if (Pause_time < 1) { Pause_time = 1; }
         if (Resume_time < 1) { Resume_time = 1; }

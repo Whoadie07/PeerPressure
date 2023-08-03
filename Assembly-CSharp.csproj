@@ -57,16 +57,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Data_Script\Server.cs" />
+    <Compile Include="Assets\Scripts\Player_Movement\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\Hello_World.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound_Track.cs" />
-    <Compile Include="Assets\Scripts\Player_Movement\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Sound\Audio_Data.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound_Dict.cs" />
-    <Compile Include="Assets\Scripts\Dialogues_Script\Dialogue_Player.cs" />
     <Compile Include="Assets\Scripts\Data_Script\Menu.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\MenuClick.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\NarrativeNode.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\NarrativeReader.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundPlayer.cs" />
-    <Compile Include="Assets\Scripts\Dialogues_Script\DialogueNode.cs" />
-    <Compile Include="Assets\Scripts\Player_Movement\Interactable.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\Setting.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\CreditScroll.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
