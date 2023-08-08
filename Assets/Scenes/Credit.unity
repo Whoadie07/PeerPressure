@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.047169805, g: 0.023317901, b: 0.023317901, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -467,22 +467,30 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Credit:\n\nProject Manager    SHOUQI HUANG\nTeam Manager       DANIELLE
-    SMITH\nArtist / Modeler       BREANNA VROMAN\nGame Developer    HUY SON\n\nAsset
-    Credit \nClassroom:\r\nSchool assets - https://assetstore.unity.com/packages/3d/environments/school-assets-146253
+  m_Text: "                                                                                                 
+    Credit:\n\n                                                                     
+    Project Manager    SHOUQI HUANG\n                                                                     
+    Team Manager       DANIELLE SMITH\n                                                                     
+    Artist / Modeler       BREANNA VROMAN\n                                                                     
+    Game Developer   HUY SON\n\n                                                                                               
+    Asset Credit:\n                                                                                               
+    Classroom:\r\nSchool assets - https://assetstore.unity.com/packages/3d/environments/school-assets-146253
     \r\nLowpoly Classroom Pack - https://alberto-luviano.itch.io/lowpoly-classroom-pack
-    \r\nClassrooms Asset Pack- https://styloo.itch.io/classroom-asset-pack \r\nPlayground\r\nPlayground
-    Lw Poly - \r\nhttps://assetstore.unity.com/packages/3d/environments/playground-low-poly-191533
-    \r\nCafeteria\r\nFolding Table and Chair PBR - https://assetstore.unity.com/packages/3d/props/furniture/folding-table-and-chair-pbr-111726
-    \r\nProp: \r\n\tStreet Bench - https://assetstore.unity.com/packages/3d/props/exterior/street-bench-656
+    \r\nClassrooms Asset Pack- https://styloo.itch.io/classroom-asset-pack\n \r\n                                                                                               
+    Playground:\r\nPlayground Lw Poly - https://assetstore.unity.com/packages/3d/environments/playground-low-poly-191533
+    \r\n\n                                                                                               
+    Cafeteria\r:\nFolding Table and Chair PBR - https://assetstore.unity.com/packages/3d/props/furniture/folding-table-and-chair-pbr-111726
+    \r\n\n                                                                                               
+    Prop: \r\n\tStreet Bench - https://assetstore.unity.com/packages/3d/props/exterior/street-bench-656
     \r\nWood Furniture - https://loafbrr.itch.io/wood-furnitures/download/eyJpZCI6MTY2OTg2OSwiZXhwaXJlcyI6MTY4NjE1NjMzN30%3d.QhSrTdMdOcrwhezMeX4pEvLkRNQ%3d
-    \r\n\r\nTexture:\r\n\tFree Stylized Textures - https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-textures-204742
+    \r\n\n                                                                                               
+    Texture:\r\n\tFree Stylized Textures - https://assetstore.unity.com/packages/2d/textures-materials/free-stylized-textures-204742
     \r\nStylized Wood Texture -  https://assetstore.unity.com/packages/2d/textures-materials/wood/stylized-wood-texture-153499
     \r\n25+ Free Realistic Textures - Nature, City, Home, Construction & More - https://assetstore.unity.com/packages/2d/textures-materials/25-free-realistic-textures-nature-city-home-construction-more-240323
     \r\n"
@@ -507,8 +515,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditbox: {fileID: 534020083}
-  credit_speed: 0.09
+  credit_speed: 0.2
   creditHomeButton: {fileID: 362640872}
+  FadeCredit: {fileID: 1596552338}
+  FadeSpeed: 0.001
 --- !u!1 &809133586
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,6 +792,7 @@ RectTransform:
   - {fileID: 10850322}
   - {fileID: 985982058}
   - {fileID: 362640873}
+  - {fileID: 1596552337}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -906,4 +917,80 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1073624740}
+  m_CullTransparentMesh: 1
+--- !u!1 &1596552336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1596552337}
+  - component: {fileID: 1596552339}
+  - component: {fileID: 1596552338}
+  m_Layer: 5
+  m_Name: Fade-In
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1596552337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596552336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 892874961}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 800, y: 400}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1596552338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596552336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1596552339
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1596552336}
   m_CullTransparentMesh: 1

@@ -19,7 +19,6 @@ public class Menu : ScriptableObject
         SceneNames[1] = "Tutorial";
         SceneNames[2] = "Setting";
     }
-
     //Load the scene of the level players is going to play or current level player coming back to play
     public void Play()
     {
@@ -29,7 +28,7 @@ public class Menu : ScriptableObject
     //Quit out of the Application
     public void Quit()
     {
-        Application.Quit(); 
+        Application.Quit();
     }
     //Load the tutorial scene
     public void Tutorial()
