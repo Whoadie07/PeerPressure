@@ -23,6 +23,7 @@ public class Menu : ScriptableObject
     public void Play()
     {
         //From the Home Scene to first scene in the game.
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[currently_play]);
     }
     //Quit out of the Application
@@ -33,11 +34,13 @@ public class Menu : ScriptableObject
     //Load the tutorial scene
     public void Tutorial()
     {
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[1]);
     }
     //Load the control scene
     public void Setting()
     {
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[2]);
     }
     //Reset the level data.
@@ -48,16 +51,19 @@ public class Menu : ScriptableObject
     //Load the Home Scene
     public void Home()
     {
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[0]);
     }
     //Load the next level
     public void NextLevel()
     {
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[currently_play]);
         currently_play++;
     }
     public void anyscene(int index)
     {
+        new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[index]);
     }
 }

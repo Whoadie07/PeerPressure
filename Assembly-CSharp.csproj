@@ -66,9 +66,33 @@
     <Compile Include="Assets\Scripts\Sound\Sound_Dict.cs" />
     <Compile Include="Assets\Scripts\Data_Script\Menu.cs" />
     <Compile Include="Assets\Scripts\Data_Script\MenuClick.cs" />
-    <Compile Include="Assets\Scripts\Dialogues_Script\NarrativeNode.cs" />
-    <Compile Include="Assets\Scripts\Dialogues_Script\NarrativeReader.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\Extra\NarrativeNode.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\Extra\NarrativeReader.cs" />
     <Compile Include="Assets\Scripts\Sound\SoundPlayer.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\QuestChartDemo.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\MiniJSON_VIDE.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\VIDEDemoPlayer.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\VeryBasic\minUIExample.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Narration\DEMO_UIManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\VIDEUIManager1.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\witchExample.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\CylinderGuy.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Editor_Skin.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Template\Template_UIManager.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Localization.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\MultiInstances\VIDEUIManager3.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_EditorDB.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Localization\VIDEUIManager2.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Data.cs" />
+    <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\VIDE_Assign.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\README.txt" />
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\About.txt" />
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\Export\Readme.txt" />
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\MultiInstances\README.txt" />
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Localization\README.txt" />
+    <None Include="Assets\Scripts\Dialogues_Script\VIDE\ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
