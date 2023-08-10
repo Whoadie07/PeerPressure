@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.047169805, g: 0.023317901, b: 0.023317901, a: 1}
+  m_Color: {r: 0.03773582, g: 0.031114252, b: 0.031114252, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -477,8 +477,9 @@ MonoBehaviour:
     Credit:\n\n                                                                     
     Project Manager    SHOUQI HUANG\n                                                                     
     Team Manager       DANIELLE SMITH\n                                                                     
-    Artist / Modeler       BREANNA VROMAN\n                                                                     
-    Game Developer   HUY SON\n\n                                                                                               
+    Artist / Modeler       BREANNA VROMAN\n                                                             
+    Narrative / Script Writer TONG WU\n                                                                     
+    Game Developer     HUY SON\n\n                                                                                               
     Asset Credit:\n                                                                                               
     Classroom:\r\nSchool assets - https://assetstore.unity.com/packages/3d/environments/school-assets-146253
     \r\nLowpoly Classroom Pack - https://alberto-luviano.itch.io/lowpoly-classroom-pack
@@ -515,7 +516,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creditbox: {fileID: 534020083}
-  credit_speed: 0.2
+  credit_speed: 0.1
   creditHomeButton: {fileID: 362640872}
   FadeCredit: {fileID: 1596552338}
   FadeSpeed: 0.001
@@ -535,7 +536,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!108 &809133587
 Light:
   m_ObjectHideFlags: 0
@@ -969,7 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

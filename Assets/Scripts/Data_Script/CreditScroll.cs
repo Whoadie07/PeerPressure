@@ -29,7 +29,7 @@ public class CreditScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (FadeCredit.color.a == 0)
+        if (FadeCredit.color.a <= 0)
         {
             FadeCredit.enabled = false;
             if (creditbox.GetComponent<RectTransform>().position.y > 900)
@@ -42,7 +42,7 @@ public class CreditScroll : MonoBehaviour
         }
         else
         {
-            FadeCredit.color = new Color(FadeCredit.color.r, FadeCredit.color.g, FadeCredit.color.b, FadeCredit.color.a - credit_speed);
+            FadeCredit.color = new Color(FadeCredit.color.r, FadeCredit.color.g, FadeCredit.color.b, FadeCredit.color.a - credit_speed * Time.deltaTime);
         }
     }
 }
