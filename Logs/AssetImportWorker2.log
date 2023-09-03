@@ -15,7 +15,7 @@ D:/GitHub/PeerPressure
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-62366
+51715
 Successfully changed project path to: D:/GitHub/PeerPressure
 D:/GitHub/PeerPressure
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ D:/GitHub/PeerPressure
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [20176] Host "[IP] 192.168.1.145 [Port] 0 [Flags] 2 [Guid] 1397034345 [EditorId] 1397034345 [Version] 1048832 [Id] WindowsEditor(7,BreannasComputer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [34352] Host "[IP] 192.168.202.44 [Port] 0 [Flags] 2 [Guid] 701061135 [EditorId] 701061135 [Version] 1048832 [Id] WindowsEditor(7,BreannasComputer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [20176] Host "[IP] 192.168.1.145 [Port] 0 [Flags] 2 [Guid] 1397034345 [EditorId] 1397034345 [Version] 1048832 [Id] WindowsEditor(7,BreannasComputer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [34352] Host "[IP] 192.168.202.44 [Port] 0 [Flags] 2 [Guid] 701061135 [EditorId] 701061135 [Version] 1048832 [Id] WindowsEditor(7,BreannasComputer) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 67.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 67.02 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,89 +67,89 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56532
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.003532 seconds.
+Registered in 0.003451 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 67.79 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 80.91 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.522 seconds
+- Completed reload, in  0.549 seconds
 Domain Reload Profiling:
-	ReloadAssembly (523ms)
-		BeginReloadAssembly (63ms)
+	ReloadAssembly (550ms)
+		BeginReloadAssembly (69ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (379ms)
-			LoadAssemblies (62ms)
+		EndReloadAssembly (400ms)
+			LoadAssemblies (68ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (85ms)
+			SetupTypeCache (87ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (230ms)
+			RebuildScriptCaches (23ms)
+			SetupLoadedEditorAssemblies (248ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
+				InitializePlatformSupportModulesInManaged (7ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (68ms)
+				RefreshPlugins (81ms)
 				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (117ms)
-				ProcessInitializeOnLoadMethodAttributes (38ms)
+				ProcessInitializeOnLoadAttributes (121ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003138 seconds.
+Registered in 0.003134 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\GitHub\PeerPressure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\GitHub\PeerPressure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.974 seconds
+- Completed reload, in  1.025 seconds
 Domain Reload Profiling:
-	ReloadAssembly (975ms)
-		BeginReloadAssembly (92ms)
+	ReloadAssembly (1026ms)
+		BeginReloadAssembly (101ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (5ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (15ms)
-		EndReloadAssembly (798ms)
-			LoadAssemblies (66ms)
+			CreateAndSetChildDomain (18ms)
+		EndReloadAssembly (834ms)
+			LoadAssemblies (75ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (221ms)
+			SetupTypeCache (224ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (47ms)
-			SetupLoadedEditorAssemblies (438ms)
+			RebuildScriptCaches (48ms)
+			SetupLoadedEditorAssemblies (465ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (4ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (64ms)
-				ProcessInitializeOnLoadAttributes (348ms)
-				ProcessInitializeOnLoadMethodAttributes (16ms)
-				AfterProcessingInitializeOnLoad (5ms)
+				BeforeProcessingInitializeOnLoad (72ms)
+				ProcessInitializeOnLoadAttributes (363ms)
+				ProcessInitializeOnLoadMethodAttributes (18ms)
+				AfterProcessingInitializeOnLoad (6ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (4ms)
+			AwakeInstancesAfterBackupRestoration (5ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 3210 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 37 unused Assets / (184.4 KB). Loaded Objects now: 3671.
-Memory consumption went from 114.4 MB to 114.2 MB.
-Total: 4.493900 ms (FindLiveObjects: 0.351200 ms CreateObjectMapping: 0.301000 ms MarkObjects: 3.726200 ms  DeleteObjects: 0.114400 ms)
+Unloading 37 unused Assets / (184.3 KB). Loaded Objects now: 3672.
+Memory consumption went from 114.5 MB to 114.3 MB.
+Total: 2.881500 ms (FindLiveObjects: 0.257200 ms CreateObjectMapping: 0.202600 ms MarkObjects: 2.310300 ms  DeleteObjects: 0.110600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -163,61 +163,157 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 532374.164649 seconds.
-  path: Assets/Bre Assets/Audio Clips/Glass Cup
-  artifactKey: Guid(babbc3cc4fedd7c42aefee707398720b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Glass Cup using Guid(babbc3cc4fedd7c42aefee707398720b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '83c9612d43030ca4daeafef96fc5ad4c') in 0.012007 seconds 
+  Time since last request: 338005.905908 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0002_Layer-41.png
+  artifactKey: Guid(642b4efa9c332484a8cf8c6332820e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0002_Layer-41.png using Guid(642b4efa9c332484a8cf8c6332820e34) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7276504627cd26ca21d5ba5dcdb2180') in 0.061213 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.927047 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects
-  artifactKey: Guid(cc304dd819ad6e34da0eee6a7f06c69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects using Guid(cc304dd819ad6e34da0eee6a7f06c69f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'adec8ae714479fcc2f2b4715f1da19c2') in 0.008828 seconds 
+  Time since last request: 0.000023 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer Pressure Paper Menu Full Background.png
+  artifactKey: Guid(90b30fd60e93dc3458b767a54e449b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer Pressure Paper Menu Full Background.png using Guid(90b30fd60e93dc3458b767a54e449b18) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a1f91a1d16f9470e08793c8d6e9c7a7') in 0.014264 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.062269 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/3 Glass Clink.wav
-  artifactKey: Guid(3f49550dcfec4db418389379de8dfaec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/3 Glass Clink.wav using Guid(3f49550dcfec4db418389379de8dfaec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10e5f7a3dcf66716456dd26f6278e907') in 0.090649 seconds 
+  Time since last request: 0.000025 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0006s_0002_Layer-15.png
+  artifactKey: Guid(6e8b969c30141094db9accb5567b345c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0006s_0002_Layer-15.png using Guid(6e8b969c30141094db9accb5567b345c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b40ff06382ad52a1c009cea6336cf47b') in 0.012468 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Pen Click 2.wav
-  artifactKey: Guid(eafeb766e28807b4b8361f5c54b20a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Pen Click 2.wav using Guid(eafeb766e28807b4b8361f5c54b20a04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6573be18f8b9ad8e405f937a61204a3') in 0.012061 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Place Coins.wav
-  artifactKey: Guid(a880879d1d4adb54b85a097cbc64ce04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Place Coins.wav using Guid(a880879d1d4adb54b85a097cbc64ce04) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d9074def2ffb0c7bdc19b8821291b1c') in 0.012077 seconds 
+  Time since last request: 0.000021 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000s_0000_Layer-16.png
+  artifactKey: Guid(f49fed6b5e5ce3d4c9ef561f077aed22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000s_0000_Layer-16.png using Guid(f49fed6b5e5ce3d4c9ef561f077aed22) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b56626a1184d8ddce1935f70daaf92fb') in 0.014688 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000018 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Loud Long Flip Page.wav
-  artifactKey: Guid(a384894ce1645544dba1da61a3e07b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Loud Long Flip Page.wav using Guid(a384894ce1645544dba1da61a3e07b94) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5bb2b25a741cfc8c006677b7815f55a') in 0.011660 seconds 
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0009_Layer-32.png
+  artifactKey: Guid(4286da258fcfb2d48a106246ff6d6475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0009_Layer-32.png using Guid(4286da258fcfb2d48a106246ff6d6475) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e107cc97503a2f48826c3e6ea908636b') in 0.013882 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0002_Layer-28.png
+  artifactKey: Guid(6c0e470578496fa48991aae96136de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0002_Layer-28.png using Guid(6c0e470578496fa48991aae96136de14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a92bc8bc5bdeee7733a53e3db3167786') in 0.011671 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0005_Layer-26.png
+  artifactKey: Guid(eee945eb5c2e7864cba9a96c4ed8b2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0005_Layer-26.png using Guid(eee945eb5c2e7864cba9a96c4ed8b2d9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fba72c91a30e70e5f59387a21fd788c9') in 0.013023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000s_0001_Layer-16.png
+  artifactKey: Guid(58a59a668a8702944a5393cf8275b016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000s_0001_Layer-16.png using Guid(58a59a668a8702944a5393cf8275b016) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dee51f020dc5ae6ade1b1996e3d7767') in 0.012821 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0000_Layer-30.png
+  artifactKey: Guid(b3419a9bf0802e84f812ea48a1012ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0000_Layer-30.png using Guid(b3419a9bf0802e84f812ea48a1012ed3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e143d7093721d6c094d99cfcf34717c6') in 0.014841 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000019 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Crinkle Paper 1.wav
-  artifactKey: Guid(bdb9353e38ab3504c88cd81b13ac7911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Crinkle Paper 1.wav using Guid(bdb9353e38ab3504c88cd81b13ac7911) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e21e59f3dca65594cd7cb9b251aad501') in 0.011955 seconds 
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0008s_0002_Layer-1.png
+  artifactKey: Guid(6e64679153ca0e34dbd8c3e38790689c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0008s_0002_Layer-1.png using Guid(6e64679153ca0e34dbd8c3e38790689c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c86d9504c9787fa56f1e31d323eba7ce') in 0.015883 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Place Coin.wav
-  artifactKey: Guid(556b53554d80b6243a4d686effc4a71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Place Coin.wav using Guid(556b53554d80b6243a4d686effc4a71d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '10f26b6b023f5fdc3b1d2c2216515500') in 0.011092 seconds 
+  Time since last request: 0.000032 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0002s_0003_Layer-57.png
+  artifactKey: Guid(8eaf69a9336b1494c916c695f433541a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0002s_0003_Layer-57.png using Guid(8eaf69a9336b1494c916c695f433541a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f589330ffc581c7c6ee21e3e39fe8c47') in 0.017156 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Place Crinkle 3.wav
-  artifactKey: Guid(80ca95376d7f8974ab699e879da3f668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Place Crinkle 3.wav using Guid(80ca95376d7f8974ab699e879da3f668) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ebfd8bf17f3221632b1d366d990e9608') in 0.012089 seconds 
+  Time since last request: 0.000025 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000_Layer-59.png
+  artifactKey: Guid(e016934e70875064f8a30da034fc3c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0003s_0000_Layer-59.png using Guid(e016934e70875064f8a30da034fc3c0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '610c619f9769507f6ea389cf287b35e3') in 0.011826 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0006s_0001_Layer-22.png
+  artifactKey: Guid(a815c9413d4b7af4ebc8783ba1b19744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0006s_0001_Layer-22.png using Guid(a815c9413d4b7af4ebc8783ba1b19744) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e3b80ab07a4eb0c1dbf195db31f52e7') in 0.012295 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0006_Layer-34.png
+  artifactKey: Guid(f0b593abfd600e149bc92b59542a386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0006_Layer-34.png using Guid(f0b593abfd600e149bc92b59542a386f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '225a21361396146195dbcd9c0598ac3c') in 0.011770 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0001s_0000s_0001_Layer-16.png
+  artifactKey: Guid(353d166fdf6a50d4380861c82f394f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0001s_0000s_0001_Layer-16.png using Guid(353d166fdf6a50d4380861c82f394f4a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f069c96ee924a6976d58ffb1853e3edf') in 0.010886 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0002s_0001_Layer-58.png
+  artifactKey: Guid(a7dd6e5a804ff3e439667250273bcc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0002s_0001_Layer-58.png using Guid(a7dd6e5a804ff3e439667250273bcc85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd24021996a0b1bd667d38a74c676d636') in 0.012212 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0001_Layer-20.png
+  artifactKey: Guid(bb2814c85d1a5eb4d8f142461010c54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0001_Layer-20.png using Guid(bb2814c85d1a5eb4d8f142461010c54b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bef7f9bf9747eb92716ddec75bd7bbb') in 0.012792 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0004_Layer-27.png
+  artifactKey: Guid(10f1a6fb4795fa14793f03a3134f580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0005s_0004_Layer-27.png using Guid(10f1a6fb4795fa14793f03a3134f580c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daef4b4ee54e3066f13049b6f7331cec') in 0.012354 seconds 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000017 seconds.
-  path: Assets/Bre Assets/Audio Clips/Random Objects/Glass Place.wav
-  artifactKey: Guid(4f6893163fc967e4581826172896ef93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Bre Assets/Audio Clips/Random Objects/Glass Place.wav using Guid(4f6893163fc967e4581826172896ef93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '872a9a2f9cc1b7561044d5b540be41ea') in 0.011075 seconds 
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0000_Layer-21.png
+  artifactKey: Guid(d71c22580d37e9242bce29480bed865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0000_Layer-21.png using Guid(d71c22580d37e9242bce29480bed865c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3224b6697cbdeeb9ef3b9d50fda8e83b') in 0.011249 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0009s_0002_Layer-1.png
+  artifactKey: Guid(208482c33b73cfb46b677ac4c066a6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0009s_0002_Layer-1.png using Guid(208482c33b73cfb46b677ac4c066a6eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2e0df2b12cf9cbb1d69796ef5a8a357') in 0.013796 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0007_Layer-34.png
+  artifactKey: Guid(e956be95f93fdab478464297da04b04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0007_Layer-34.png using Guid(e956be95f93fdab478464297da04b04a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1ccdef6bbcb1ae4d74c060ea7b60817') in 0.010727 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0002_Layer-19.png
+  artifactKey: Guid(150956b05dbffca42bd0d57cd574c80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0007s_0002_Layer-19.png using Guid(150956b05dbffca42bd0d57cd574c80f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2617b7209bf37ad8c0b1d00add0fd3fb') in 0.012370 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0002s_0001_Layer-37.png
+  artifactKey: Guid(505317614c059e247b58e3e7f9190118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0002s_0001_Layer-37.png using Guid(505317614c059e247b58e3e7f9190118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d1ecd832e69b34ea3f17c721647638b') in 0.010944 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0008_Layer-33.png
+  artifactKey: Guid(59ee056bbcc0c07468784307a39f6a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Peer Pressure Menu Sprites/Peer-Pressure-Menu_0004s_0008_Layer-33.png using Guid(59ee056bbcc0c07468784307a39f6a30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1855470c8a0198de97a60ed20b33597') in 0.010929 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 100.039609 seconds.
+  path: Assets/Bre Assets/Menu Sprites
+  artifactKey: Guid(4d0168c09f9597a40918786a948a0034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Menu Sprites using Guid(4d0168c09f9597a40918786a948a0034) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f99df29c20ba61c5cc9914d063f338') in 0.010333 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.674123 seconds.
+  path: Assets/Bre Assets/Menu Layout Doc.psd
+  artifactKey: Guid(ee03b37969caef447ba949fde1463832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Bre Assets/Menu Layout Doc.psd using Guid(ee03b37969caef447ba949fde1463832) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f8c52f082a5b780a708c4015b0629f7') in 0.049400 seconds 
