@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -10,6 +8,7 @@ public class NPC_Movement : MonoBehaviour
     public Animator npc_animator;
 
     //Variables for controll npc interact
+    public bool IsInteracting= false;
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
@@ -36,20 +35,27 @@ public class NPC_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        Vector3 npc_target = cur_path;
-        npc_target.Set(npc_target.x, npc_agent.destination.y, npc_target.z);
-        npc_agent.SetDestination(npc_target);
-        cur_path.y = npc_agent.destination.y;
-        if (game_npc_agent.GetComponent<Transform>().position.Equals(cur_path))
+        if (!IsInteracting)
         {
-            NpcPath++;
-            if (KeepMovement && NpcPath + 1 > PathNumber)
+            Vector3 npc_target = cur_path;
+            npc_target.Set(npc_target.x, npc_agent.destination.y, npc_target.z);
+            npc_agent.SetDestination(npc_target);
+            cur_path.y = npc_agent.destination.y;
+            if (game_npc_agent.GetComponent<Transform>().position.Equals(cur_path))
             {
-                NpcPath = 0;
+                NpcPath++;
+                if (KeepMovement && NpcPath + 1 > PathNumber)
+                {
+                    NpcPath = 0;
+                }
+                cur_path = NpcTargetPath[NpcPath].GetComponent<Transform>().position;
             }
-            cur_path = NpcTargetPath[NpcPath].GetComponent<Transform>().position;
         }
+        else
+        {
+            cur_path = transform.position;
+        }
+        
     }
     public void UpdateNPC()
     {

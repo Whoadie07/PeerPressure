@@ -1,4 +1,5 @@
 using Cinemachine;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -64,13 +65,15 @@ public class Player_Movement : MonoBehaviour
                 float m_tempRadius = Mathf.Sqrt(Mathf.Pow(p_x, 2) + Mathf.Pow(p_y, 2) + Mathf.Pow(p_z, 2));
 
                 //NPC interact
-                if (m_tempRadius <= interactRadius)
+                if (m_tempRadius <= interactRadius && tempInteractable.GetComponents<NPC_Movement>() != null)
                 {
-                    
+                    tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
+                    tempInteractable.GetComponent<Transform>().rotation = new Quaternion(-1, -1, -1, 1)*gameObject.transform.rotation;
+                    tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
                 }
                 else if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<Object_Data>() != null)
                 {   //Player interact with object
-
+                    loadObjecttoHand(tempInteractable);
                 }
                 else
                 {
