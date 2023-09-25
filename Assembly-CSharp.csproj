@@ -64,7 +64,7 @@
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Editor_Skin.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\VeryBasic\minUIExample.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Template\Template_UIManager.cs" />
-    <Compile Include="Assets\Scripts\Player_Movement\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\Player_Movement\Player_Movement.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\VIDE_Assign.cs" />
     <Compile Include="Assets\Scripts\Hello_World.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound_Track.cs" />

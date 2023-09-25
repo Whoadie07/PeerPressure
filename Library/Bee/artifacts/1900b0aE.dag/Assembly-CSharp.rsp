@@ -383,7 +383,7 @@
 "Assets/Scripts/Hello_World.cs"
 "Assets/Scripts/NPC/NPC_Movement.cs"
 "Assets/Scripts/Player_Movement/Inventory.cs"
-"Assets/Scripts/Player_Movement/PlayerMovement.cs"
+"Assets/Scripts/Player_Movement/Player_Movement.cs"
 "Assets/Scripts/Sound/Audio_Data.cs"
 "Assets/Scripts/Sound/SoundPlayer.cs"
 "Assets/Scripts/Sound/Sound_Dict.cs"

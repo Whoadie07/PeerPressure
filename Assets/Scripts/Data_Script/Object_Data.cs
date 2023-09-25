@@ -30,9 +30,7 @@ public class Object_Data : MonoBehaviour
         if (!isHold && !isContain)
         {
             this.GetComponent<Transform>().localScale.Set(o_original_size.x, o_original_size.y, o_original_size.z);
-            this.GetComponent<BoxCollider>().enabled = true;
             this.GetComponent<MeshRenderer>().enabled = true;
-            this.GetComponentInChildren<BoxCollider>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
         if (isContain && isHold)
@@ -40,9 +38,7 @@ public class Object_Data : MonoBehaviour
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);
             this.transform.position = play_hand.GetComponent<Transform>().position;
             this.transform.rotation = play_hand.GetComponent<Transform>().rotation;
-            this.GetComponent<BoxCollider>().enabled = true;
             this.GetComponent<MeshRenderer>().enabled = true;
-            this.GetComponentInChildren<BoxCollider>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
         if (isContain && !isHold)
@@ -50,9 +46,7 @@ public class Object_Data : MonoBehaviour
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);
             this.transform.position = play_hand.GetComponent<Transform>().position;
             this.transform.rotation = play_hand.GetComponent<Transform>().rotation;
-            this.GetComponent<BoxCollider>().enabled = false;
             this.GetComponent<MeshRenderer>().enabled = false;
-            this.GetComponentInChildren<BoxCollider>().enabled = false;
             this.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
 
