@@ -2,54 +2,91 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    private static int InventorySize = 9;
+    private static int InventorySize = 20;
+    private static int HotBarSize = 4;
+    public bool OpenMainInventory = false;
     public GameObject[] m_Inventory = new GameObject[InventorySize];
-    public GameObject[] m_Inventory_UI = new GameObject[InventorySize];
+    public GameObject mainInventory = null;
+    public GameObject Hotbar = null;
+    public GameObject[] HotbarInventory = new GameObject[HotBarSize];
     public GameObject CurruntlyHolding = null;
+    public GameObject tmpHolder = null;
     public int NumberItemCurrentlyHolding = 0;
-
+    public bool isSelect;
+    private void Start()
+    {
+        OpenMainInventory = false;
+        mainInventory.SetActive(OpenMainInventory);
+    }
+    private void Update()
+    {
+        if (OpenMainInventory)
+        {
+            mainInventory.SetActive(true);
+        }
+        else
+        {
+            mainInventory.SetActive(false);
+        }
+    }
     public void setItem(GameObject item)
     {
         int avaSlot = avaiableSlot();
         if (avaSlot != -1)
         {
-            m_Inventory[avaSlot] = item;
-            m_Inventory[avaSlot].GetComponent<Object_Data>().isContain = true;
-            m_Inventory_UI[avaSlot].GetComponent<RawImage>().enabled = true;
-            
+            if (avaSlot < HotBarSize)
+            {
+                HotbarInventory[avaSlot] = item;
+                HotbarInventory[avaSlot].GetComponent<Object_Data>().isContain = true;
+            }
+            else
+            {
+                avaSlot -= HotBarSize;
+                m_Inventory[avaSlot] = item;
+                m_Inventory[avaSlot].GetComponent<Object_Data>().isContain = true;
+            }
+           
         }
         else
         {
             Console.WriteLine("Not enough space");
             //Something.
         }
-        if (CurruntlyHolding == null)
+        if (CurruntlyHolding == null && avaSlot < HotBarSize)
         {
             NumberItemCurrentlyHolding = avaSlot;
             setItemHold();
-            m_Inventory[avaSlot].GetComponent<Object_Data>().isHold = true;
+            HotbarInventory[avaSlot].GetComponent<Object_Data>().isHold = true;
 
         }
     }
     public int avaiableSlot()
     {
+        for(int i = 0; i < HotBarSize; i++)
+        {
+            if (HotbarInventory[i] == null)
+            {
+                return i;
+            }
+        }
         for (int i = 0; i < InventorySize; i++)
         {
             if (m_Inventory[i] == null)
             {
-                return i;
+                return HotBarSize+i;
             }
         }
         return -1;
     }
     public GameObject GetGameObject(int item_num)
     {
-        if (item_num < 0 || item_num >= InventorySize) { return null; }
-        return m_Inventory[item_num];
+        if (item_num < 0 || item_num >= HotBarSize) { return null; }
+        return HotbarInventory[item_num];
     }
     public void setItemHold()
     {
@@ -76,9 +113,9 @@ public class Inventory : MonoBehaviour
         NumberItemCurrentlyHolding += num;
         if (NumberItemCurrentlyHolding < 0)
         {
-            NumberItemCurrentlyHolding = InventorySize - 1;
+            NumberItemCurrentlyHolding = HotBarSize - 1;
         }
-        if (NumberItemCurrentlyHolding >= InventorySize)
+        if (NumberItemCurrentlyHolding >= HotBarSize)
         {
             NumberItemCurrentlyHolding = 0;
         }

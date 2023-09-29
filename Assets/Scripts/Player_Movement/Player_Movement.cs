@@ -109,7 +109,6 @@ public class Player_Movement : MonoBehaviour
             int hand = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
             PlayerHand.GetComponent<Inventory>().m_Inventory[hand].GetComponent<Object_Data>().isContain = false;
             PlayerHand.GetComponent<Inventory>().m_Inventory[hand].GetComponent<Object_Data>().isHold = false;
-            PlayerHand.GetComponent<Inventory>().m_Inventory_UI[hand].GetComponent<RawImage>().enabled = false;
             PlayerHand.GetComponent<Inventory>().m_Inventory[hand] = null;
             PlayerHand.GetComponent<Inventory>().CurruntlyHolding = null;
 
@@ -161,7 +160,6 @@ public class Player_Movement : MonoBehaviour
         int numberSlot = 0;
         PlayerHand.GetComponent<Inventory>().setItem(instance_Object);
         numberSlot = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
-        PlayerHand.GetComponent<Inventory>().m_Inventory_UI[numberSlot].GetComponent<Image>().sprite = instance_Object.GetComponent<Object_Data>().ObjectImage;
         instance_Object.transform.position = PlayerHand.GetComponent<Transform>().position;
         instance_Object.transform.rotation = PlayerHand.GetComponent<Transform>().rotation;
     }

@@ -362,6 +362,7 @@
 "Assets/Scripts/Data_Script/Object_Data.cs"
 "Assets/Scripts/Data_Script/Server.cs"
 "Assets/Scripts/Data_Script/Setting.cs"
+"Assets/Scripts/Data_Script/Slot.cs"
 "Assets/Scripts/Dialogues_Script/Extra/NarrativeNode.cs"
 "Assets/Scripts/Dialogues_Script/Extra/NarrativeReader.cs"
 "Assets/Scripts/Dialogues_Script/VIDE/Data/MiniJSON_VIDE.cs"
