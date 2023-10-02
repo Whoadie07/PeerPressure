@@ -11,6 +11,7 @@ public class Menu : ScriptableObject
     public static int NumberScene = 5;
     public string[] SceneNames = new string[NumberScene]; //The list of Scene Names.
     public int currently_play = 3;
+    public bool firstPlay = true;
 
     //When the game start up
     private void Awake()
@@ -23,8 +24,19 @@ public class Menu : ScriptableObject
     public void Play()
     {
         //From the Home Scene to first scene in the game.
-        new WaitForSeconds(10);
-        SceneManager.LoadScene(SceneNames[currently_play]);
+        
+        if (firstPlay)
+        {
+            firstPlay = false;
+            Tutorial();
+            
+        }
+        else
+        {
+            new WaitForSeconds(10);
+            SceneManager.LoadScene(SceneNames[currently_play]);
+        }
+       
     }
     //Quit out of the Application
     public void Quit()
@@ -42,6 +54,12 @@ public class Menu : ScriptableObject
     {
         new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[2]);
+    }
+    //Load the answer Scene
+    public void AS()
+    {
+        new WaitForSeconds(10);
+        SceneManager.LoadScene("Classroom(TEST)");
     }
     //Reset the level data.
     public void Reset()

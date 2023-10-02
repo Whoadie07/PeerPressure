@@ -19,4 +19,8 @@ MonoBehaviour:
   - Classroom
   - Playground
   - Cafeteria
+  - Classroom(Test)
   - Credit
+  - TestAnswers
+  currently_play: 3
+  firstPlay: 0
