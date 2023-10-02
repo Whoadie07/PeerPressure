@@ -662,7 +662,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1746587055}
+  SlotNumber: 13
 --- !u!114 &74328259
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -880,7 +881,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1183842449}
+  SlotNumber: 17
 --- !u!114 &103486153
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6581,7 +6583,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1666507823}
+  SlotNumber: 18
 --- !u!114 &107877742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10475,6 +10478,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1479599053}
+  SlotNumber: 1
 --- !u!114 &130167842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11107,7 +11111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 5, z: -5}
+  m_FollowOffset: {x: 0, y: 3, z: -5}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -11551,7 +11555,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 365180160}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.044993106, y: 5.85, z: -4.9997973}
+  m_LocalPosition: {x: -0.044993106, y: 3.85, z: -4.9997973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -11654,9 +11658,9 @@ MonoBehaviour:
   m_BindingMode: 5
   m_SplineCurvature: 0.2
   m_Orbits:
-  - m_Height: 10
-    m_Radius: 3
   - m_Height: 5
+    m_Radius: 3
+  - m_Height: 3
     m_Radius: 5
   - m_Height: 0
     m_Radius: 7
@@ -11967,7 +11971,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 223972168}
+  SlotNumber: 6
 --- !u!114 &411032138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12209,7 +12214,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 449562679}
-  m_LocalRotation: {x: 0.38267955, y: 0.0041568787, z: -0.0017218355, w: 0.9238702}
+  m_LocalRotation: {x: 0.26693088, y: 0.004336097, z: -0.0012010292, w: 0.9637052}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -12360,6 +12365,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 2046553896}
+  SlotNumber: 20
 --- !u!114 &466600481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12705,7 +12711,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508973255}
-  m_LocalRotation: {x: 0.3488675, y: 0.0042166375, z: -0.0015696845, w: 0.93716127}
+  m_LocalRotation: {x: 0.23174821, y: 0.0043768557, z: -0.0010427264, w: 0.97276545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -13060,7 +13066,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 2014388159}
+  SlotNumber: 9
 --- !u!114 &619486982
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13438,7 +13445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1920700839}
+  SlotNumber: 15
 --- !u!114 &739774481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13748,6 +13756,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1109064612}
+  SlotNumber: 16
 --- !u!114 &883518410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14016,7 +14025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 5, z: -5}
+  m_FollowOffset: {x: 0, y: 3, z: -5}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -14316,7 +14325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 134621983}
+  SlotNumber: 10
 --- !u!114 &967542040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14913,8 +14923,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043280942}
-  m_LocalRotation: {x: 0.3658116, y: 0.004187463, z: -0.0016459207, w: 0.93067807}
-  m_LocalPosition: {x: -0.044993106, y: 5.85, z: -4.9997973}
+  m_LocalRotation: {x: 0.24935743, y: 0.0043571885, z: -0.0011219498, w: 0.9684011}
+  m_LocalPosition: {x: -0.044993106, y: 3.85, z: -4.9997973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15127,7 +15137,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1812084114}
+  SlotNumber: 12
 --- !u!114 &1052900270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15738,6 +15749,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1910913796}
+  SlotNumber: 19
 --- !u!114 &1173397869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15900,7 +15912,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 969554374}
+  SlotNumber: 14
 --- !u!114 &1187158636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16475,7 +16488,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 141668240}
+  SlotNumber: 7
 --- !u!114 &1218788615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17781,6 +17795,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 2119716992}
+  SlotNumber: 3
 --- !u!114 &1482750390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18116,7 +18131,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 1025109962}
+  SlotNumber: 4
 --- !u!114 &1540536273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18691,7 +18707,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649935526}
-  m_LocalRotation: {x: 0.36581156, y: 0.004187478, z: -0.0016459266, w: 0.93067807}
+  m_LocalRotation: {x: 0.24935742, y: 0.0043572066, z: -0.0011219543, w: 0.9684011}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18877,7 +18893,7 @@ GameObject:
   - component: {fileID: 1666507824}
   - component: {fileID: 1666507823}
   m_Layer: 5
-  m_Name: Select
+  m_Name: Select18
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -19081,6 +19097,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 712325850}
+  SlotNumber: 2
 --- !u!114 &1683461282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19244,8 +19261,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  mainInventory: {fileID: 0}
-  Hotbar: {fileID: 0}
+  mainInventory: {fileID: 1556734634}
+  Hotbar: {fileID: 496318194}
   HotbarInventory:
   - {fileID: 0}
   - {fileID: 0}
@@ -19255,6 +19272,7 @@ MonoBehaviour:
   tmpHolder: {fileID: 0}
   NumberItemCurrentlyHolding: 0
   isSelect: 0
+  currectSelect: 0
 --- !u!4 &1720214296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 1b1187f7ad9517041a435571c7ea9f0f, type: 3}
@@ -20353,7 +20371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 5
-  m_FollowOffset: {x: 0, y: 5, z: -5}
+  m_FollowOffset: {x: 0, y: 3, z: -5}
   m_XDamping: 1
   m_YDamping: 1
   m_ZDamping: 1
@@ -20544,7 +20562,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 8928893}
+  SlotNumber: 11
 --- !u!114 &1976905349
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20789,7 +20808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 487265858}
+  SlotNumber: 8
 --- !u!114 &2028846044
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21239,7 +21259,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
-  selectIcon: {fileID: 0}
+  selectIcon: {fileID: 502733595}
+  SlotNumber: 5
 --- !u!114 &2086357185
 MonoBehaviour:
   m_ObjectHideFlags: 0
