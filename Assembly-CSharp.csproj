@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\VIDE_Assign.cs" />
     <Compile Include="Assets\Scripts\Hello_World.cs" />
     <Compile Include="Assets\Scripts\Sound\Sound_Track.cs" />
+    <Compile Include="Assets\Scripts\Data_Script\Slot.cs" />
     <Compile Include="Assets\Scripts\Data_Script\CreditScroll.cs" />
     <Compile Include="Assets\Scripts\Data_Script\Setting.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Data.cs" />
@@ -89,7 +90,6 @@
     <Compile Include="Assets\Scripts\Data_Script\ButtonSelect.cs" />
     <Compile Include="Assets\Scripts\Player_Movement\Inventory.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\Localization\VIDEUIManager2.cs" />
-    <Compile Include="Assets\Scripts\Data_Script\Slot.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\README.txt" />

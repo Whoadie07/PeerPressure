@@ -52,7 +52,7 @@ public class Player_Movement : MonoBehaviour
     {
 
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory)
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -75,7 +75,7 @@ public class Player_Movement : MonoBehaviour
                 }
                 else if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<Object_Data>() != null)
                 {   //Player interact with object
-                    Debug.Log("I have a Object_data Script");
+                    //Debug.Log("I have a Object_data Script");
                     loadObjecttoHand(tempInteractable);
                 }
                 else
@@ -112,6 +112,18 @@ public class Player_Movement : MonoBehaviour
             PlayerHand.GetComponent<Inventory>().m_Inventory[hand] = null;
             PlayerHand.GetComponent<Inventory>().CurruntlyHolding = null;
 
+        }
+        if (Input.GetKeyDown("e"))
+        {
+            if (!PlayerHand.GetComponent<Inventory>().OpenMainInventory)
+            {
+                PlayerHand.GetComponent<Inventory>().OpenMainInventory = true;
+            }
+            else
+            {
+                PlayerHand.GetComponent<Inventory>().OpenMainInventory = false;
+            }
+            
         }
 
     }

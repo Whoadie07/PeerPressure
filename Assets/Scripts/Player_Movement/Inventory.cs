@@ -7,17 +7,25 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    //Main Inventory
     private static int InventorySize = 20;
-    private static int HotBarSize = 4;
     public bool OpenMainInventory = false;
     public GameObject[] m_Inventory = new GameObject[InventorySize];
     public GameObject mainInventory = null;
+
+    //HotBar  Inventory
+    private static int HotBarSize = 4;
     public GameObject Hotbar = null;
     public GameObject[] HotbarInventory = new GameObject[HotBarSize];
+
+    //What the character is hold
     public GameObject CurruntlyHolding = null;
     public GameObject tmpHolder = null;
     public int NumberItemCurrentlyHolding = 0;
     public bool isSelect;
+    public int currectSelect;
+
+
     private void Start()
     {
         OpenMainInventory = false;
