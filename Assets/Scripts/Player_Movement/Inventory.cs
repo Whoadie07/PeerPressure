@@ -62,8 +62,10 @@ public class Inventory : MonoBehaviour
                 avaSlot -= HotBarSize;
                 m_Inventory[avaSlot] = item;
                 m_Inventory[avaSlot].GetComponent<Object_Data>().isContain = true;
+                m_Inventory_UI[avaSlot].GetComponent<RawImage>().texture = item.GetComponent<Object_Data>().ObjectImage;
+
             }
-           
+
         }
         else
         {

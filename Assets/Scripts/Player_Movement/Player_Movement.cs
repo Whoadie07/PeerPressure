@@ -88,7 +88,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
-        int inf = PlayerHand.GetComponent<Inventory>().m_Inventory.Length;
+        int inf = PlayerHand.GetComponent<Inventory>().HotbarInventory.Length;
         for (int i = 1; i <= inf; i++)
         {
             if ((Input.GetKeyDown(i.ToString())))
