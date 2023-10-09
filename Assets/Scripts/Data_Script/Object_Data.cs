@@ -13,7 +13,8 @@ public class Object_Data : MonoBehaviour
     public bool isContain = false; //Boolean variable for item to check if the it is in the player inventory.
     public bool isHold = false; //Boolean variable to check if the item is currently being hold in player hand.
     public GameObject play_hand = null; //The hand that holding the item.
-    public Sprite ObjectImage = null;
+    public GameObject Object = null;
+    public Texture ObjectImage = null;
 
 
     // Start is called before the first frame update
@@ -29,8 +30,8 @@ public class Object_Data : MonoBehaviour
     {
         if (!isHold && !isContain)
         {
-            this.GetComponent<Transform>().localScale.Set(o_original_size.x, o_original_size.y, o_original_size.z);
-            this.GetComponent<MeshRenderer>().enabled = true;
+            //this.GetComponent<Transform>().localScale.Set(o_original_size.x, o_original_size.y, o_original_size.z);
+            Object.GetComponent<MeshRenderer>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
         if (isContain && isHold)
@@ -38,7 +39,7 @@ public class Object_Data : MonoBehaviour
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);
             this.transform.position = play_hand.GetComponent<Transform>().position;
             this.transform.rotation = play_hand.GetComponent<Transform>().rotation;
-            this.GetComponent<MeshRenderer>().enabled = true;
+            Object.GetComponent<MeshRenderer>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
         if (isContain && !isHold)
@@ -46,7 +47,7 @@ public class Object_Data : MonoBehaviour
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);
             this.transform.position = play_hand.GetComponent<Transform>().position;
             this.transform.rotation = play_hand.GetComponent<Transform>().rotation;
-            this.GetComponent<MeshRenderer>().enabled = false;
+            Object.GetComponent<MeshRenderer>().enabled = false;
             this.GetComponentInChildren<MeshRenderer>().enabled = false;
         }
 

@@ -11,12 +11,14 @@ public class Inventory : MonoBehaviour
     private static int InventorySize = 20;
     public bool OpenMainInventory = false;
     public GameObject[] m_Inventory = new GameObject[InventorySize];
+    public GameObject[] m_Inventory_UI = new GameObject[InventorySize];
     public GameObject mainInventory = null;
 
     //HotBar  Inventory
     private static int HotBarSize = 4;
     public GameObject Hotbar = null;
     public GameObject[] HotbarInventory = new GameObject[HotBarSize];
+    public GameObject[] HotbarInventory_UI = new GameObject[HotBarSize];
 
     //What the character is hold
     public GameObject CurruntlyHolding = null;
@@ -51,8 +53,11 @@ public class Inventory : MonoBehaviour
             {
                 HotbarInventory[avaSlot] = item;
                 HotbarInventory[avaSlot].GetComponent<Object_Data>().isContain = true;
+                HotbarInventory_UI[avaSlot].GetComponent<Slot>().ObjectInSlot = item;
+                HotbarInventory_UI[avaSlot].GetComponent<RawImage>().texture = item.GetComponent<Object_Data>().ObjectImage;
+
             }
-            else
+            else if((avaSlot - HotBarSize) < InventorySize)
             {
                 avaSlot -= HotBarSize;
                 m_Inventory[avaSlot] = item;
@@ -62,14 +67,15 @@ public class Inventory : MonoBehaviour
         }
         else
         {
-            Console.WriteLine("Not enough space");
+            Debug.Log("Not enough space");
             //Something.
         }
-        if (CurruntlyHolding == null && avaSlot < HotBarSize)
+        if (CurruntlyHolding == null)
         {
             NumberItemCurrentlyHolding = avaSlot;
             setItemHold();
             HotbarInventory[avaSlot].GetComponent<Object_Data>().isHold = true;
+            
 
         }
     }
@@ -104,15 +110,15 @@ public class Inventory : MonoBehaviour
     {
         if (CurruntlyHolding != null)
         {
-            CurruntlyHolding.GetComponent<BoxCollider>().enabled = false;
-            CurruntlyHolding.GetComponent<MeshRenderer>().enabled = false;
-            CurruntlyHolding.GetComponent<Object_Data>().isHold = false;
+           // CurruntlyHolding.GetComponent<BoxCollider>().enabled = false;
+            //CurruntlyHolding.GetComponent<MeshRenderer>().enabled = false;
+            //CurruntlyHolding.GetComponent<Object_Data>().isHold = false;
         }
         CurruntlyHolding = m_Inventory[(int)num];
         NumberItemCurrentlyHolding = num;
-        CurruntlyHolding.GetComponent<BoxCollider>().enabled = true;
-        CurruntlyHolding.GetComponent<MeshRenderer>().enabled = true;
-        CurruntlyHolding.GetComponent<Object_Data>().isHold = true;
+        //CurruntlyHolding.GetComponent<BoxCollider>().enabled = true;
+        //CurruntlyHolding.GetComponent<MeshRenderer>().enabled = true;
+        //CurruntlyHolding.GetComponent<Object_Data>().isHold = true;
 
 
     }

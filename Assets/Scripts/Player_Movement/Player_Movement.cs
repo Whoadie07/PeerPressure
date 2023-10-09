@@ -107,9 +107,10 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown("q"))
         {
             int hand = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
-            PlayerHand.GetComponent<Inventory>().m_Inventory[hand].GetComponent<Object_Data>().isContain = false;
-            PlayerHand.GetComponent<Inventory>().m_Inventory[hand].GetComponent<Object_Data>().isHold = false;
-            PlayerHand.GetComponent<Inventory>().m_Inventory[hand] = null;
+            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
+            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
+            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
+            PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
             PlayerHand.GetComponent<Inventory>().CurruntlyHolding = null;
 
         }
