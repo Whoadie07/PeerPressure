@@ -13190,7 +13190,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1767747964}
-  SlotNumber: 1
+  SlotNumber: 22
 --- !u!114 &526148320
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13291,7 +13291,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1206952904}
-  SlotNumber: 1
+  SlotNumber: 24
 --- !u!114 &578458040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13832,7 +13832,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 2003294742}
-  SlotNumber: 1
+  SlotNumber: 23
 --- !u!114 &737270100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20174,7 +20174,7 @@ MonoBehaviour:
   - {fileID: 526148317}
   - {fileID: 737270097}
   - {fileID: 578458037}
-  CurruntlyHolding: {fileID: 0}
+  CurrentlyHolding: {fileID: 0}
   tmpHolder: {fileID: 0}
   NumberItemCurrentlyHolding: 0
   isSelect: 0
@@ -21463,7 +21463,7 @@ MonoBehaviour:
   s_inventory: {fileID: 1707729285}
   ObjectInSlot: {fileID: 0}
   selectIcon: {fileID: 1453501530}
-  SlotNumber: 1
+  SlotNumber: 21
 --- !u!114 &1941752975
 MonoBehaviour:
   m_ObjectHideFlags: 0

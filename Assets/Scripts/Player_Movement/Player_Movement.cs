@@ -94,7 +94,7 @@ public class Player_Movement : MonoBehaviour
             if ((Input.GetKeyDown(i.ToString())))
             {
                 Debug.Log("Press: " + i.ToString());
-                if (PlayerHand.GetComponent<Inventory>().m_Inventory[i - 1] == null)
+                if (PlayerHand.GetComponent<Inventory>().HotbarInventory[i - 1] == null)
                 {
                     Debug.Log("Not item found");
                 }
@@ -111,7 +111,7 @@ public class Player_Movement : MonoBehaviour
             PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
             PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
             PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
-            PlayerHand.GetComponent<Inventory>().CurruntlyHolding = null;
+            PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
 
         }
         if (Input.GetKeyDown("e"))

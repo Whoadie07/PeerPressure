@@ -24,37 +24,46 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // Update is called once per frame
     void Update()
     {
+        if(s_inventory.currectSelect == 0)
+        {
+            s_inventory.isSelect = false;
+        }
         if(MoveOver)
         {
             if(Input.GetMouseButtonDown(0))
             {
-                if (ObjectInSlot != null && s_inventory.isSelect)
+                if (ObjectInSlot != null && !s_inventory.isSelect)
                 {
-                    GameObject tmpObject = ObjectInSlot;
-                    ObjectInSlot = s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot;
-                    s_inventory.tmpHolder.GetComponent<Slot>().selectIcon.enabled = false;
-                    s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot = tmpObject;
-                    s_inventory.tmpHolder = null;
-                    s_inventory.currectSelect = 0;
-                    s_inventory.isSelect = false;
-                    selectIcon.enabled = true;
-                }
-                else if (ObjectInSlot != null && !s_inventory.isSelect)
-                {
-                    s_inventory.isSelect = true;
                     s_inventory.currectSelect = SlotNumber;
+                    s_inventory.isSelect = true;
                     s_inventory.tmpHolder = this.gameObject;
-                    selectIcon.enabled = true;
+                }
+                else if (ObjectInSlot != null && s_inventory.isSelect)
+                {
+                    if (s_inventory.tmpHolder != null)
+                    {
+                        if (s_inventory.tmpHolder.GetComponent<Slot>() != null)
+                        {
+                            GameObject tmpObject = this.ObjectInSlot;
+                            this.ObjectInSlot = s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot;
+                            s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot = tmpObject;
+                        }
+                        s_inventory.swapItem(this.SlotNumber, s_inventory.currectSelect);
+                    }
+                    s_inventory.currectSelect = 0;
+                    s_inventory.tmpHolder = this.gameObject;
                 } 
                 else if (ObjectInSlot == null && s_inventory.isSelect)
                 {
                     
-                    if(s_inventory.tmpHolder.GetComponent<Slot>() != null)
+                    if(s_inventory.tmpHolder != null)
                     {
-                        Debug.Log("it work");
-                        ObjectInSlot = s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot;
-                        s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot = null;
-                        s_inventory.tmpHolder.GetComponent<Slot>().selectIcon.enabled = false;
+                        if (s_inventory.tmpHolder.GetComponent<Slot>() != null)
+                        {
+                            this.ObjectInSlot = s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot;
+                            s_inventory.tmpHolder.GetComponent<Slot>().ObjectInSlot = null;
+                        }
+                        s_inventory.swapItem(this.SlotNumber, s_inventory.currectSelect);
                     }
                     s_inventory.currectSelect = 0;
                     s_inventory.isSelect = false;
@@ -63,10 +72,9 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 }
                 else if(!s_inventory.isSelect)
                 {
-                    s_inventory.isSelect = true;
                     s_inventory.currectSelect = SlotNumber;
+                    s_inventory.isSelect = true;
                     s_inventory.tmpHolder = this.gameObject;
-                    selectIcon.enabled = true;
                 }
             }
             selectIcon.enabled = true;

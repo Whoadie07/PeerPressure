@@ -1,8 +1,4 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
@@ -21,7 +17,7 @@ public class Inventory : MonoBehaviour
     public GameObject[] HotbarInventory_UI = new GameObject[HotBarSize];
 
     //What the character is hold
-    public GameObject CurruntlyHolding = null;
+    public GameObject CurrentlyHolding = null;
     public GameObject tmpHolder = null;
     public int NumberItemCurrentlyHolding = 0;
     public bool isSelect;
@@ -43,6 +39,7 @@ public class Inventory : MonoBehaviour
         {
             mainInventory.SetActive(false);
         }
+        CurrentlyHolding = HotbarInventory[NumberItemCurrentlyHolding];
     }
     public void setItem(GameObject item)
     {
@@ -63,6 +60,7 @@ public class Inventory : MonoBehaviour
                 m_Inventory[avaSlot] = item;
                 m_Inventory[avaSlot].GetComponent<Object_Data>().isContain = true;
                 m_Inventory_UI[avaSlot].GetComponent<RawImage>().texture = item.GetComponent<Object_Data>().ObjectImage;
+                m_Inventory_UI[avaSlot].GetComponent<Slot>().ObjectInSlot = item;
 
             }
 
@@ -72,11 +70,11 @@ public class Inventory : MonoBehaviour
             Debug.Log("Not enough space");
             //Something.
         }
-        if (CurruntlyHolding == null)
+        if (CurrentlyHolding == null)
         {
             NumberItemCurrentlyHolding = avaSlot;
-            setItemHold();
             HotbarInventory[avaSlot].GetComponent<Object_Data>().isHold = true;
+            CurrentlyHolding = HotbarInventory[avaSlot];
             
 
         }
@@ -110,17 +108,21 @@ public class Inventory : MonoBehaviour
     }
     public void setSlot(int num)
     {
-        if (CurruntlyHolding != null)
+        if (CurrentlyHolding != null)
         {
-           // CurruntlyHolding.GetComponent<BoxCollider>().enabled = false;
-            //CurruntlyHolding.GetComponent<MeshRenderer>().enabled = false;
-            //CurruntlyHolding.GetComponent<Object_Data>().isHold = false;
+            CurrentlyHolding.GetComponent<Object_Data>().isHold = false;
         }
-        CurruntlyHolding = m_Inventory[(int)num];
-        NumberItemCurrentlyHolding = num;
-        //CurruntlyHolding.GetComponent<BoxCollider>().enabled = true;
-        //CurruntlyHolding.GetComponent<MeshRenderer>().enabled = true;
-        //CurruntlyHolding.GetComponent<Object_Data>().isHold = true;
+        if(HotbarInventory[(int)num] != null)
+        {
+            CurrentlyHolding = HotbarInventory[(int)num];
+            NumberItemCurrentlyHolding = num;
+            CurrentlyHolding.GetComponent<Object_Data>().isHold = true;
+        }
+        else
+        {
+            CurrentlyHolding = HotbarInventory[(int)num];
+            NumberItemCurrentlyHolding = num;
+        }
 
 
     }
@@ -138,6 +140,109 @@ public class Inventory : MonoBehaviour
     }
     public GameObject getCurHold()
     {
-        return CurruntlyHolding;
+        return CurrentlyHolding;
     }
+    public void AddTexture(int a)
+    {
+        if(a > 20)
+        {
+            a -= 21;
+            if (HotbarInventory[a] != null)
+            {
+                HotbarInventory_UI[a].GetComponent<RawImage>().texture = HotbarInventory[a].GetComponent<Object_Data>().ObjectImage;
+            }
+            else
+            {
+                HotbarInventory_UI[a].GetComponent<RawImage>().texture = null;
+            }
+        }
+        else
+        {
+            a -= 1;
+            if (m_Inventory[a] != null)
+            {
+                m_Inventory_UI[a].GetComponent<RawImage>().texture = m_Inventory[a].GetComponent<Object_Data>().ObjectImage;
+            }
+            else
+            {
+                m_Inventory_UI[a].GetComponent<RawImage>().texture = null;
+            }
+        }
+    }
+    public void checkhand(int a, int b)
+    {
+        if(a > 20 || b > 20)
+        {
+            if ((a - 21) == NumberItemCurrentlyHolding)
+            { 
+                if (CurrentlyHolding != null)
+                {
+                    CurrentlyHolding.GetComponent<Object_Data>().isHold = false;
+                }
+            }
+            if ((b -21)  == NumberItemCurrentlyHolding)
+            {
+                if (CurrentlyHolding != null)
+                {
+                    CurrentlyHolding.GetComponent<Object_Data>().isHold = false;
+                }
+            }
+           
+        }
+    }
+    public void swapItem(int a, int b)
+    {
+        GameObject tmpObject;
+        int tmpb, tmpa;
+        checkhand(a, b);
+        if (b > 20)
+        {
+            tmpb =  b - (21);
+            if(a > 20)
+            {
+                tmpa = a - (21);
+                tmpObject = HotbarInventory[tmpa];
+                HotbarInventory[tmpa] = HotbarInventory[tmpb];
+                HotbarInventory[tmpb] = tmpObject;
+                
+            }
+            else
+            {
+                tmpa = a - (1);
+                tmpObject = m_Inventory[tmpa];
+                m_Inventory[tmpa] = HotbarInventory[tmpb];
+                HotbarInventory[tmpb] = tmpObject;
+
+            }
+        }
+        else
+        {
+            tmpb = b - (1);
+            if (a > 20)
+            {
+                tmpa = a - (21);
+                tmpObject = HotbarInventory[tmpa];
+                HotbarInventory[tmpa] = m_Inventory[tmpb];
+                m_Inventory[tmpb] = tmpObject;
+            }
+            else
+            {
+                tmpa = a - (1);
+                tmpObject = m_Inventory[tmpa];
+                m_Inventory[tmpa] = m_Inventory[tmpb];
+                m_Inventory[tmpb] = tmpObject;
+            }
+        }
+        tmpb = b;
+        tmpa = a;
+        AddTexture(tmpa);
+        AddTexture(tmpb);
+        CurrentlyHolding = HotbarInventory[NumberItemCurrentlyHolding];
+        if(CurrentlyHolding != null)
+        {
+            CurrentlyHolding.GetComponent<Object_Data>().isHold = true;
+        }
+        
+    }
+   
 }
