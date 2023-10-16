@@ -47,7 +47,7 @@ public class NarrativeNode : ScriptableObject
     //Return the dialogue Lines
     public string GetDialogueLine(int index)
     {
-        if (index < LineOfDialogue.Length)
+        if (index >= LineOfDialogue.Length)
         {
             return "None Text Exist";
         }
@@ -75,7 +75,7 @@ public class NarrativeNode : ScriptableObject
     //Return the node with the answer
     public NarrativeNode GetAnswerLine(int index)
     {
-        if (index < AnswerResponse.Length)
+        if (index >= AnswerResponse.Length)
         {
             return null;
         }

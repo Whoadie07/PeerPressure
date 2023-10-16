@@ -24,8 +24,11 @@ public class Player_Movement : MonoBehaviour
     public Camera cam; //Main character camera
     public GameObject cam1; // The Cinamachine camera
 
-    //Character Animator
+    //Player Animator
     public Animator player_animotr;
+
+    //Player Menu
+    public GameObject playerMenu;
 
     //Private variables.
     private float playerSpeed = 5.0f;
@@ -52,7 +55,7 @@ public class Player_Movement : MonoBehaviour
     {
 
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory)
+        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf)
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -68,7 +71,7 @@ public class Player_Movement : MonoBehaviour
 
                 if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<NPC_Movement>() != null)
                 {
-                    Debug.Log("I have a NPC_Movement Script");
+                    //Debug.Log("I have a NPC_Movement Script");
                     tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
                     tempInteractable.GetComponent<Transform>().rotation = new Quaternion(-1, -1, -1, 1)*gameObject.transform.rotation;
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
@@ -107,11 +110,19 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown("q"))
         {
             int hand = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
-            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
-            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
-            PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
-            PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
-            PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
+            if (PlayerHand.GetComponent<Inventory>() != null)
+            {
+                if (PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>() != null)
+                {
+                    PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
+                    PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
+                }
+                
+                PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
+                PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
+                PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
+            }
+            
 
         }
         if (Input.GetKeyDown("e"))
@@ -125,6 +136,10 @@ public class Player_Movement : MonoBehaviour
                 PlayerHand.GetComponent<Inventory>().OpenMainInventory = false;
             }
             
+        }
+        if (Input.GetKeyDown("w"))
+        {
+            playerMenu.SetActive(!playerMenu.activeSelf);
         }
 
     }
