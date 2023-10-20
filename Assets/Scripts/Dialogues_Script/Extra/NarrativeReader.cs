@@ -29,10 +29,11 @@ public class NarrativeReader : MonoBehaviour
     /*Protected Variables*/
 
     //A variable to keep track of second translate of each dialogues.
-    protected int DialogueIndex = 0;
+    public int DialogueIndex = 0;
     protected float DisplaySecond = 0;
     protected float StartSecond = 0;
     protected bool isRunning = false;
+    protected bool isFinished = true;
 
     // Start is called before the first frame update
     void Start()
@@ -46,7 +47,16 @@ public class NarrativeReader : MonoBehaviour
         DialogueText.SetActive(false);
         isRunning = false;
     }
-
+    //Still need to fix the dialgoue next line
+    private void Update()
+    {
+        if (Input.GetMouseButton(1) && isFinished)
+        {
+            isFinished = false;
+            Debug.Log("It click");
+            NextLine();
+        }
+    }
     //The main function to play the dialogue for each interaction
     public void DialoguePlay()
     {
@@ -67,7 +77,6 @@ public class NarrativeReader : MonoBehaviour
         {
             isRunning = false;
             DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
-            DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
         }
     }
     //This function will play the dialogue along with tn
@@ -87,38 +96,13 @@ public class NarrativeReader : MonoBehaviour
             StartSecond++;
         }
     }
-    //This function play the dialogue, but only by clicking
-    IEnumerator DialogueClicking()
-    {
-
-        yield return new WaitForSeconds(1f);
-        NextLine();
-
-    }
-    private void OnGUI()
-    {
-        Event e = Event.current;
-        if (e.button == 1)
-        {
-            if (isRunning)
-            {
-                NextLine();
-            }
-            else
-            {
-                StartCoroutine(DialogueClicking());
-            }
-        }
-    }
     //The function play the next line of dialogue in ListofDialogue
     public void NextLine()
     {
-        if (DialogueIndex + 1 < currentNode.DialogueLineSize())
-        {
-            DialogueIndex++;
-        }
+        DialogueIndex++;
         if (DialogueIndex < currentNode.DialogueLineSize())
         {
+            DialogueText.GetComponent<Text>().text = string.Empty;
             DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
             DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
             if (DialogueIndex == currentNode.DialogueLineSize() - 1 && currentNode.IsQuestion())
@@ -130,12 +114,14 @@ public class NarrativeReader : MonoBehaviour
                     ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
                 }
             }
-            else if (currentNode.IsQuestion())
+            else if (!currentNode.IsQuestion())
             {
                 DialogueDisplay.SetActive(false);
                 DialogueText.SetActive(false);
             }
         }
+        isFinished = true;
+        Debug.Log("Check 4");
 
     }
 

@@ -73,7 +73,6 @@ public class Player_Movement : MonoBehaviour
                 {
                     //Debug.Log("I have a NPC_Movement Script");
                     tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
-                    tempInteractable.GetComponent<Transform>().rotation = new Quaternion(-1, -1, -1, 1)*gameObject.transform.rotation;
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
                 }
                 else if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<Object_Data>() != null)
