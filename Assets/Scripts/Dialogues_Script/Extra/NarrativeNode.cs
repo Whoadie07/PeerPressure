@@ -58,7 +58,7 @@ public class NarrativeNode : ScriptableObject
     {
         if (IsPlay())
         {
-            if (index < LineDisplay.Length)
+            if (index >= LineDisplay.Length)
             {
                 return 0;
             }

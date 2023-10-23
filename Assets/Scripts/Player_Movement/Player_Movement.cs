@@ -16,6 +16,7 @@ public class Player_Movement : MonoBehaviour
     public GameObject PlayerHand;
 
     //Player interactable gameobject 
+    public bool NpcInteracting = false;
     public GameObject PlayerDataServer;
     public GameObject interactable;
     public GameObject tempInteractable;
@@ -55,7 +56,7 @@ public class Player_Movement : MonoBehaviour
     {
 
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf)
+        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting)
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -72,8 +73,11 @@ public class Player_Movement : MonoBehaviour
                 if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<NPC_Movement>() != null)
                 {
                     //Debug.Log("I have a NPC_Movement Script");
+                    NpcInteracting = true;
                     tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
+                    tempInteractable.GetComponent<NPC_Movement>().InteractTarget = this.gameObject;
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
+                    tempInteractable = null;
                 }
                 else if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<Object_Data>() != null)
                 {   //Player interact with object

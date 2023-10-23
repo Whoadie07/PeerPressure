@@ -8,7 +8,7 @@ public class NPC_Movement : MonoBehaviour
     public Animator npc_animator;
 
     //Variables for controll npc interact
-    public bool IsInteracting= false;
+    public bool IsInteracting = false;
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
@@ -55,7 +55,15 @@ public class NPC_Movement : MonoBehaviour
         {
             cur_path = transform.position;
         }
-        
+        if (InteractTarget != null && !IsInteracting)
+        {
+            if (InteractTarget.GetComponent<Player_Movement>() != null)
+            {
+                InteractTarget.GetComponent<Player_Movement>().NpcInteracting = false;
+                InteractTarget.GetComponent<Player_Movement>().interactable = null;
+                InteractTarget = null;
+            }
+        }
     }
     public void UpdateNPC()
     {
@@ -63,5 +71,6 @@ public class NPC_Movement : MonoBehaviour
         npcreader.rootNode = NPC_Dialogue;
         npcreader.currentNode = NPC_Dialogue;
         npcreader.DialoguePlay();
+        npcreader.NarrativeObject = this.gameObject;
     }
 }

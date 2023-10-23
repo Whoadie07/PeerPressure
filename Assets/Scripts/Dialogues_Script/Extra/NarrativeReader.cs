@@ -26,6 +26,9 @@ public class NarrativeReader : MonoBehaviour
     public GameObject[] ListofButton = new GameObject[4]; //The List of Button for answer
     public Text[] ListofAnswer = new Text[4]; //The list of answers text for the option button option
 
+    //Object Pass in the dialogue
+    public GameObject NarrativeObject;
+
     /*Protected Variables*/
 
     //A variable to keep track of second translate of each dialogues.
@@ -50,10 +53,8 @@ public class NarrativeReader : MonoBehaviour
     //Still need to fix the dialgoue next line
     private void Update()
     {
-        if (Input.GetMouseButton(1) && isFinished)
+        if (Input.GetMouseButtonDown(1))
         {
-            isFinished = false;
-            Debug.Log("It click");
             NextLine();
         }
     }
@@ -78,8 +79,25 @@ public class NarrativeReader : MonoBehaviour
             isRunning = false;
             DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
         }
+        if (currentNode.DialogueLineSize() < 1)
+        {
+            for (int i = 0; i < ListofButton.Length; i++)
+            {
+                ListofButton[i].SetActive(false);
+            }
+            DialogueDisplay.SetActive(false);
+            DialogueText.SetActive(false);
+            isRunning = false;
+        }
+        if (currentNode.DialogueLineSize()  <= 1)
+        {
+            for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
+            {
+                ListofButton[i].SetActive(true);
+            }
+        }
     }
-    //This function will play the dialogue along with tn
+    //This function will play the dialogue along with animation
     IEnumerator DialoguePlaying()
     {
         while (true)
@@ -88,7 +106,7 @@ public class NarrativeReader : MonoBehaviour
             {
                 break;
             }
-            if (StartSecond <= DisplaySecond)
+            if (StartSecond >= DisplaySecond)
             {
                 NextLine();
             }
@@ -107,7 +125,7 @@ public class NarrativeReader : MonoBehaviour
             DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
             if (DialogueIndex == currentNode.DialogueLineSize() - 1 && currentNode.IsQuestion())
             {
-                for (int i = 0; i < ListofButton.Length; i++)
+                for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
                 {
                     ListofButton[i].SetActive(true);
                     ListofAnswer[i].text = string.Empty;
@@ -116,19 +134,35 @@ public class NarrativeReader : MonoBehaviour
             }
             else if (!currentNode.IsQuestion())
             {
+                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
                 DialogueDisplay.SetActive(false);
                 DialogueText.SetActive(false);
+                for (int i = 0; i < ListofAnswer.Length; i++)
+                {
+                    ListofButton[i].SetActive(false);
+                }
             }
         }
-        isFinished = true;
-        Debug.Log("Check 4");
-
+        else
+        {
+            if (!currentNode.IsQuestion())
+            {
+                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
+                DialogueDisplay.SetActive(false);
+                DialogueText.SetActive(false);
+                for (int i = 0; i < ListofAnswer.Length; i++)
+                {
+                    ListofButton[i].SetActive(false);
+                }
+            }
+        }
+       
     }
 
     //Player choices an answer
     public void SelectAnswer(int index)
     {
-        if (index <= ListofAnswer.Length) { return; }
+        if (index > ListofAnswer.Length) { return; }
         NarrativeNode cur_select = currentNode.GetAnswerLine(index);
         for (int i = 0; i < ListofButton.Length; i++)
         {
@@ -144,11 +178,11 @@ public class NarrativeReader : MonoBehaviour
             tmpNode = currentNode;
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
-            StartCoroutine(WrongAnimation());
+            StartCoroutine(WrongAnswer());
         }
     }
     //If the player get the animation wrong. This function will play out the dialouge for the scene
-    IEnumerator WrongAnimation()
+    IEnumerator WrongAnswer()
     {
         float cur_node_frame = 0f;
         float cur_node_end = tmpNode.endFrame;
