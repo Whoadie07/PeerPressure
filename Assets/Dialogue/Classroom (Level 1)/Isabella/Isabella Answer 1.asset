@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Isabella Answer 1
   m_EditorClassIdentifier: 
   LineOfDialogue:
-  - 
+  - 'You: Yes'
   IsPlaying: 0
   LineDisplay:
   - 0

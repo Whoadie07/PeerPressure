@@ -50,7 +50,7 @@ public class NarrativeReader : MonoBehaviour
         DialogueText.SetActive(false);
         isRunning = false;
     }
-    //Still need to fix the dialgoue next line
+    //(Fixed) Move to the next dialgoue nextline
     private void Update()
     {
         if (Input.GetMouseButtonDown(1))
@@ -89,7 +89,7 @@ public class NarrativeReader : MonoBehaviour
             DialogueText.SetActive(false);
             isRunning = false;
         }
-        if (currentNode.DialogueLineSize()  <= 1)
+        if (currentNode.DialogueLineSize()  <= 1 && currentNode.IsAQueation)
         {
             for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
             {

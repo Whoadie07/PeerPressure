@@ -8,14 +8,14 @@ public class CreditScroll : MonoBehaviour
 {
     //Credit Box
     public GameObject creditbox;
-    public float credit_speed = 0.5f;
+    public float credit_speed = 100000.0f;
 
     //Home Button
     public GameObject creditHomeButton;
 
     //Fade-In
     public Image FadeCredit;
-    public float FadeSpeed = 0.001f;
+    public float FadeSpeed = 25f;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +42,7 @@ public class CreditScroll : MonoBehaviour
         }
         else
         {
-            FadeCredit.color = new Color(FadeCredit.color.r, FadeCredit.color.g, FadeCredit.color.b, FadeCredit.color.a - credit_speed * Time.deltaTime);
+            FadeCredit.color = new Color(FadeCredit.color.r, FadeCredit.color.g, FadeCredit.color.b, FadeCredit.color.a - FadeSpeed * Time.deltaTime);
         }
     }
 }

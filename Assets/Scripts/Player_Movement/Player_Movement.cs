@@ -68,8 +68,7 @@ public class Player_Movement : MonoBehaviour
                 float p_z = this.transform.position.z - m_tempPosition.position.z;
                 float m_tempRadius = Mathf.Sqrt(Mathf.Pow(p_x, 2) + Mathf.Pow(p_y, 2) + Mathf.Pow(p_z, 2));
 
-                //NPC interact
-
+                //Player can intereact with NPC.
                 if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<NPC_Movement>() != null)
                 {
                     //Debug.Log("I have a NPC_Movement Script");
@@ -79,6 +78,7 @@ public class Player_Movement : MonoBehaviour
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
                     tempInteractable = null;
                 }
+                //Player can intereact with Object.
                 else if (m_tempRadius <= interactRadius && tempInteractable.GetComponent<Object_Data>() != null)
                 {   //Player interact with object
                     //Debug.Log("I have a Object_data Script");
@@ -86,7 +86,7 @@ public class Player_Movement : MonoBehaviour
                 }
                 else
                 {
-                    //Character movement
+                    //Player can move around the scene.
                     if (Physics.Raycast(rayinfo, out hitinfo))
                     {
                         agent.SetDestination(hitinfo.point);
@@ -94,6 +94,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+        //Switch item in the player hot bar. 
         int inf = PlayerHand.GetComponent<Inventory>().HotbarInventory.Length;
         for (int i = 1; i <= inf; i++)
         {
@@ -110,6 +111,7 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+        //Drop item.
         if (Input.GetKeyDown("q"))
         {
             int hand = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
@@ -128,6 +130,7 @@ public class Player_Movement : MonoBehaviour
             
 
         }
+        //Open main inventory.
         if (Input.GetKeyDown("e"))
         {
             if (!PlayerHand.GetComponent<Inventory>().OpenMainInventory)
@@ -140,6 +143,7 @@ public class Player_Movement : MonoBehaviour
             }
             
         }
+        //Open Player UI
         if (Input.GetKeyDown("w"))
         {
             playerMenu.SetActive(!playerMenu.activeSelf);
@@ -160,13 +164,14 @@ public class Player_Movement : MonoBehaviour
             cam1.GetComponent<CinemachineFreeLook>().m_XAxis.m_MaxSpeed = 0;
             cam1.GetComponent<CinemachineFreeLook>().m_YAxis.m_MaxSpeed = 0;
         }
-        //Zoom in Function
+        //Zoom in Function (Not yet implement)
         if (cur.button == 1 && isZoom == 1)
         {
             turn.x += Input.GetAxis("Mouse X");
             turn.y += Input.GetAxis("Mouse Y");
 
         }
+        //Switch item with Scroll wheel
         if (cur.isScrollWheel || cur.button == 2)
         {
             if (cur.delta.y > 0.0f)

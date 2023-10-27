@@ -16,14 +16,14 @@ public class Inventory : MonoBehaviour
     public GameObject[] HotbarInventory = new GameObject[HotBarSize];
     public GameObject[] HotbarInventory_UI = new GameObject[HotBarSize];
 
-    //What the character is hold
+    //What the character inventory manager
     public GameObject CurrentlyHolding = null;
     public GameObject tmpHolder = null;
     public int NumberItemCurrentlyHolding = 0;
     public bool isSelect;
     public int currectSelect;
 
-
+    //Start of the game.
     private void Start()
     {
         OpenMainInventory = false;
@@ -31,6 +31,7 @@ public class Inventory : MonoBehaviour
     }
     private void Update()
     {
+        //Manage open of the main inventory.
         if (OpenMainInventory)
         {
             mainInventory.SetActive(true);
@@ -39,8 +40,10 @@ public class Inventory : MonoBehaviour
         {
             mainInventory.SetActive(false);
         }
+        //If the characters have item that they are holding.
         CurrentlyHolding = HotbarInventory[NumberItemCurrentlyHolding];
     }
+    //Set the item to character hotbar and then main inventory
     public void setItem(GameObject item)
     {
         int avaSlot = avaiableSlot();
@@ -79,6 +82,7 @@ public class Inventory : MonoBehaviour
 
         }
     }
+    //Check if what slot in hot bar or main inventory is occupied.
     public int avaiableSlot()
     {
         for(int i = 0; i < HotBarSize; i++)
@@ -102,10 +106,12 @@ public class Inventory : MonoBehaviour
         if (item_num < 0 || item_num >= HotBarSize) { return null; }
         return HotbarInventory[item_num];
     }
+    //Set the o
     public void setItemHold()
     {
         setSlot(NumberItemCurrentlyHolding);
     }
+    //Swap to the item that player want to hold.  
     public void setSlot(int num)
     {
         if (CurrentlyHolding != null)
@@ -126,6 +132,7 @@ public class Inventory : MonoBehaviour
 
 
     }
+    //Set the slot with the item the player want to hold. 
     public void setCurItemHold(int num)
     {
         NumberItemCurrentlyHolding += num;
@@ -138,10 +145,16 @@ public class Inventory : MonoBehaviour
             NumberItemCurrentlyHolding = 0;
         }
     }
+    //Return the item that player is currently holding. 
     public GameObject getCurHold()
     {
         return CurrentlyHolding;
     }
+    //Managing UI
+
+    /*
+     * Add texture of the item when player is currently UI slot in Hot Bar or Main Inventory
+     */
     public void AddTexture(int a)
     {
         if(a > 20)
@@ -169,6 +182,7 @@ public class Inventory : MonoBehaviour
             }
         }
     }
+    //Check if the hand is currently hold a item to turn off the UI texture at the slot. 
     public void checkhand(int a, int b)
     {
         if(a > 20 || b > 20)
@@ -190,6 +204,7 @@ public class Inventory : MonoBehaviour
            
         }
     }
+    //Swap Item in UI. 
     public void swapItem(int a, int b)
     {
         GameObject tmpObject;

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*Need farther Implement*/
 public class Setting : ScriptableObject
 {
     //Public Variable

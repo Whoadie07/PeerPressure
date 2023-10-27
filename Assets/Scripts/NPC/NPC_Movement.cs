@@ -13,7 +13,7 @@ public class NPC_Movement : MonoBehaviour
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
 
-    //NPC Movement
+    //NPC Movement by move them with a path to follow
     public int NpcPath = 0;
     public int CurrentpPath = 0;
     public static int PathNumber = 2;
@@ -35,6 +35,7 @@ public class NPC_Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Make the character move around. 
         if (!IsInteracting)
         {
             Vector3 npc_target = cur_path;
@@ -55,6 +56,7 @@ public class NPC_Movement : MonoBehaviour
         {
             cur_path = transform.position;
         }
+        //For the when the NPC stop interacting with the character. 
         if (InteractTarget != null && !IsInteracting)
         {
             if (InteractTarget.GetComponent<Player_Movement>() != null)
@@ -65,6 +67,7 @@ public class NPC_Movement : MonoBehaviour
             }
         }
     }
+    //NPC will update to communicate with the player. 
     public void UpdateNPC()
     {
         

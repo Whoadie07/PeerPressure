@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * This Script is develop for object the player can pick up in the scene. 
+ */
 public class Object_Data : MonoBehaviour
 {
     //private Variables
@@ -28,12 +31,13 @@ public class Object_Data : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Check if the character is not hold and contain item in their inventory. 
         if (!isHold && !isContain)
         {
-            //this.GetComponent<Transform>().localScale.Set(o_original_size.x, o_original_size.y, o_original_size.z);
             Object.GetComponent<MeshRenderer>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
+        //Check if the character is hold and contain item in their inventory. 
         if (isContain && isHold)
         {
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);
@@ -42,6 +46,7 @@ public class Object_Data : MonoBehaviour
             Object.GetComponent<MeshRenderer>().enabled = true;
             this.GetComponentInChildren<MeshRenderer>().enabled = true;
         }
+        //Check if the character do contain item in their inventory, but they are not currently hold it. 
         if (isContain && !isHold)
         {
             this.GetComponent<Transform>().localScale.Set(o_change_size.x, o_change_size.y, o_change_size.z);

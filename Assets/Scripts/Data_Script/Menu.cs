@@ -79,6 +79,7 @@ public class Menu : ScriptableObject
         SceneManager.LoadScene(SceneNames[currently_play]);
         currently_play++;
     }
+    //Load any scene with index.
     public void anyscene(int index)
     {
         new WaitForSeconds(10);

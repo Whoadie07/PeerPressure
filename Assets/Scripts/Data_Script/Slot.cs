@@ -4,9 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+/*
+ This script is develop for UI representation the slot.
+ */
 public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
+    //Public Varaibles
+
+    //I
     public Inventory s_inventory;
     public GameObject ObjectInSlot;
     public RawImage selectIcon;
@@ -24,14 +29,18 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     // Update is called once per frame
     void Update()
     {
+        //Check if the player have not select any slot.
         if(s_inventory.currectSelect == 0)
         {
             s_inventory.isSelect = false;
         }
-        if(MoveOver)
+        //Check if mouse is hover the slot
+        if (MoveOver)
         {
+            //If the player left click
             if(Input.GetMouseButtonDown(0))
             {
+                //Player can switch item throughout the other slots.
                 if (ObjectInSlot != null && !s_inventory.isSelect)
                 {
                     s_inventory.currectSelect = SlotNumber;

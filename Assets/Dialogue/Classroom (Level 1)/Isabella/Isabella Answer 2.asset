@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Isabella Answer 2
   m_EditorClassIdentifier: 
   LineOfDialogue:
-  - 
+  - "You: Too\r strict for me."
   IsPlaying: 0
   LineDisplay:
   - 0
