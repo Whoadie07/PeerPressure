@@ -93,6 +93,8 @@ public class NarrativeReader : MonoBehaviour
         {
             for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
             {
+                ListofAnswer[i].text = string.Empty;
+                ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
                 ListofButton[i].SetActive(true);
             }
         }
@@ -132,16 +134,16 @@ public class NarrativeReader : MonoBehaviour
                     ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
                 }
             }
-            else if (!currentNode.IsQuestion())
-            {
-                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
+            /*else if (!currentNode.IsQuestion())
+            { 
                 DialogueDisplay.SetActive(false);
                 DialogueText.SetActive(false);
                 for (int i = 0; i < ListofAnswer.Length; i++)
                 {
                     ListofButton[i].SetActive(false);
                 }
-            }
+                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
+            }*/
         }
         else
         {

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
+  m_Name: Ethan_Classroom_Root
+  m_EditorClassIdentifier: 
+  LineOfDialogue:
+  - "Ethan: Hi (playerName), Do you\r know how to write the\r second question in
+    her\r practice?\r"
+  IsPlaying: 0
+  LineDisplay:
+  - 0
+  IsAQueation: 1
+  AnswerResponse:
+  - {fileID: 11400000, guid: 21e011fda40ce5340ae8b7745aaca9c5, type: 2}
+  - {fileID: 11400000, guid: f2d3416b99215544a9e96361f4a7ade6, type: 2}
+  - {fileID: 11400000, guid: 35831ed695224484ca03392de9269c09, type: 2}
+  answer: 
+  IsItCorrect: 0
+  beginFrame: 0
+  endFrame: 1
