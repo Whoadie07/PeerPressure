@@ -15,7 +15,7 @@ C:/Users/14423/OneDrive/Desktop/Unity/PeerPressure
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-50500
+53297
 Successfully changed project path to: C:/Users/14423/OneDrive/Desktop/Unity/PeerPressure
 C:/Users/14423/OneDrive/Desktop/Unity/PeerPressure
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,11 +47,11 @@ C:/Users/14423/OneDrive/Desktop/Unity/PeerPressure
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [3580] Host "[IP] 192.168.0.219 [Port] 0 [Flags] 2 [Guid] 1460925891 [EditorId] 1460925891 [Version] 1048832 [Id] WindowsEditor(7,HuyDSon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [20864] Host "[IP] 192.168.0.219 [Port] 0 [Flags] 2 [Guid] 2965535140 [EditorId] 2965535140 [Version] 1048832 [Id] WindowsEditor(7,HuyDSon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [3580] Host "[IP] 192.168.0.219 [Port] 0 [Flags] 2 [Guid] 1460925891 [EditorId] 1460925891 [Version] 1048832 [Id] WindowsEditor(7,HuyDSon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [20864] Host "[IP] 192.168.0.219 [Port] 0 [Flags] 2 [Guid] 2965535140 [EditorId] 2965535140 [Version] 1048832 [Id] WindowsEditor(7,HuyDSon) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
-Refreshing native plugins compatible for Editor in 85.05 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 108.40 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.25f1 (68ef2c4f8861)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Resources/UnitySubsystems
@@ -67,7 +67,7 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56712
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56912
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
@@ -78,7 +78,7 @@ Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/LinuxStandaloneSupport/UnityEditor.LinuxStandalone.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.25f1/Editor/Data/PlaybackEngines/MetroSupport/UnityEditor.UWP.Extensions.dll
-Registered in 0.017518 seconds.
+Registered in 0.381435 seconds.
 Native extension for UWP target not found
 Native extension for LinuxStandalone target not found
 Native extension for WindowsStandalone target not found
@@ -89,210 +89,3 @@ Native extension for AppleTV target not found
 [usbmuxd] Listen thread started
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 737 ms
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 81.34 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.555 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1555ms)
-		BeginReloadAssembly (131ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (0ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (1303ms)
-			LoadAssemblies (132ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (148ms)
-			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (24ms)
-			SetupLoadedEditorAssemblies (1074ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (860ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (81ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (83ms)
-				ProcessInitializeOnLoadMethodAttributes (47ms)
-				AfterProcessingInitializeOnLoad (0ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (0ms)
-Platform modules already initialized, skipping
-Registering precompiled user dll's ...
-Registered in 0.003543 seconds.
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory doesn't match image C:\Users\14423\OneDrive\Desktop\Unity\PeerPressure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
-Symbol file LoadedFromMemory doesn't match image C:\Users\14423\OneDrive\Desktop\Unity\PeerPressure\Library\PackageCache\com.unity.visualscripting@1.8.0\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
-Native extension for UWP target not found
-Native extension for LinuxStandalone target not found
-Native extension for WindowsStandalone target not found
-Native extension for AppleTV target not found
-Native extension for iOS target not found
-Native extension for Android target not found
-Native extension for OSXStandalone target not found
-Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.349 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1349ms)
-		BeginReloadAssembly (127ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (7ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (23ms)
-		EndReloadAssembly (1104ms)
-			LoadAssemblies (137ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (304ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (71ms)
-			SetupLoadedEditorAssemblies (534ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (37ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (61ms)
-				ProcessInitializeOnLoadAttributes (408ms)
-				ProcessInitializeOnLoadMethodAttributes (20ms)
-				AfterProcessingInitializeOnLoad (7ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (5ms)
-Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3254 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 35 unused Assets / (357.6 KB). Loaded Objects now: 3725.
-Memory consumption went from 124.4 MB to 124.1 MB.
-Total: 6.034900 ms (FindLiveObjects: 0.694100 ms CreateObjectMapping: 0.124600 ms MarkObjects: 5.031500 ms  DeleteObjects: 0.181900 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 576904.304499 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ana
-  artifactKey: Guid(baefb20c22c73d84ba405c586c755727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ana using Guid(baefb20c22c73d84ba405c586c755727) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85bff9e62a885bba72bfb50d13439dcb') in 0.011884 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 109.901303 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Classroom_Root.asset
-  artifactKey: Guid(315482873e410664d9efe7ecc04cd751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Classroom_Root.asset using Guid(315482873e410664d9efe7ecc04cd751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc9fb21273ab99b01ece2c7178774185') in 0.029331 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 417.616822 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_1.2.asset
-  artifactKey: Guid(1511341614bed7a4f955959d5ebc8b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_1.2.asset using Guid(1511341614bed7a4f955959d5ebc8b11) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea6f5af64e78edad78bdfb13ae8682ff') in 0.004609 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_1.3.asset
-  artifactKey: Guid(1f3c79c094392064aa852e0c0dd32e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_1.3.asset using Guid(1f3c79c094392064aa852e0c0dd32e3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e656b4ad9b1a4528fd2a31112dfebfab') in 0.003845 seconds 
-========================================================================
-Received Prepare
-Refreshing native plugins compatible for Editor in 13.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 16 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 16 unused Assets / (92.6 KB). Loaded Objects now: 3726.
-Memory consumption went from 57.8 MB to 57.7 MB.
-Total: 5.080600 ms (FindLiveObjects: 0.268400 ms CreateObjectMapping: 0.104500 ms MarkObjects: 4.642300 ms  DeleteObjects: 0.064000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 879.149870 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.1.asset
-  artifactKey: Guid(333f9630efb1b3e4f8bd384db218f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.1.asset using Guid(333f9630efb1b3e4f8bd384db218f46c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '112be0e7a6ff319494755b5a9b88769f') in 0.028497 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 17.896524 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset
-  artifactKey: Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset using Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1db7843847e7cba3698d25085e2e5557') in 0.007807 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 8918.558973 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset
-  artifactKey: Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset using Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a885672266e80725d78c1075ed6c40a8') in 0.041570 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 227.688919 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Pencil_Answer 2.asset
-  artifactKey: Guid(9ca2f8644c072e7478b03e414f1502ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Pencil_Answer 2.asset using Guid(9ca2f8644c072e7478b03e414f1502ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbdbcd90262261681c7b7c814938ba9c') in 0.012306 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 2610.993706 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Answer_1.asset
-  artifactKey: Guid(21e011fda40ce5340ae8b7745aaca9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Answer_1.asset using Guid(21e011fda40ce5340ae8b7745aaca9c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '72fa3d4365ae863a72a4a483fb474b00') in 0.056316 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 567.940752 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Answer_4.asset
-  artifactKey: Guid(a4fb973f092e4fa4e9befb0b37e4dd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Answer_4.asset using Guid(a4fb973f092e4fa4e9befb0b37e4dd1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd5b8a586e5a22a75586291fdc64f0c31') in 0.017395 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 137.371831 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Classroom_1.2.asset
-  artifactKey: Guid(4f9afde5aa3ddd248a9bcc08b6035ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Classroom_1.2.asset using Guid(4f9afde5aa3ddd248a9bcc08b6035ea6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4750aafbb206acbf1bb10f5bad602b22') in 0.009645 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 222.383517 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Classroom_2.asset
-  artifactKey: Guid(f19e3b220db042e4ab60d9e66976e755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ethan/Ethan_Classroom_2.asset using Guid(f19e3b220db042e4ab60d9e66976e755) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd08b93414b86bc29b40ccc6248bfd443') in 0.014380 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 143.949061 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset
-  artifactKey: Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Answer_2.2.asset using Guid(000025b294a3bc349a230b6b7e67cb92) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63ecfed61ff118c539fe89acaeb6f464') in 0.005948 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.898761 seconds.
-  path: Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Pencil_Answer 1.asset
-  artifactKey: Guid(d5296af7fa19b904c96a4ae0a6e7d6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Dialogue/Classroom (Level 1)/Ava/Ava_Pencil_Answer 1.asset using Guid(d5296af7fa19b904c96a4ae0a6e7d6ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '592e1109d79ada0b238276597ffb19a2') in 0.009783 seconds 
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
