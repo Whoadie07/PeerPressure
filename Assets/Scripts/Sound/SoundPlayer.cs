@@ -12,6 +12,8 @@ using UnityEngine;
 public class SoundPlayer : MonoBehaviour
 {
     //PUblic Variables:
+    //Setting
+    public Setting m_setting;
     //List of Audio Source Created
     Hashtable m_audio_source_list = new Hashtable();
 
@@ -24,9 +26,10 @@ public class SoundPlayer : MonoBehaviour
     //Connect the the Sound Dictinoary
     public Sound_Dict sp_dict;
 
+
     //Create Audio Source by pass in source name and track number that you user
     //want to play by Audio Source.
-    public void CreateAudioSource(string source_name, int track_num)
+    public void CreateAudioSource(string source_name, int track_num, string tag)
     {
         GameObject cur_m_audio_source = null;
         //Check if the audio source with name existed.
@@ -56,6 +59,19 @@ public class SoundPlayer : MonoBehaviour
             return;
         }
         cur_m_audio_source.GetComponent<Audio_Data>().ad_track = sp_dict.tracks[track_num];
+        cur_m_audio_source.GetComponent<Audio_Data>().sound_tag = tag;
+        if (tag.Equals("Music"))
+        {
+            cur_m_audio_source.GetComponent<Audio_Data>().ad_track.volume = m_setting.Music;
+        }else if (tag.Equals("Volume"))
+        {
+            cur_m_audio_source.GetComponent<Audio_Data>().ad_track.volume = m_setting.Music;
+        }
+        else if (tag.Equals("Sound Effect"))
+        {
+            cur_m_audio_source.GetComponent<Audio_Data>().ad_track.volume = m_setting.SoundEffect;
+        }
+        
         m_sound_name_list.Add(source_name);
         m_audio_source_list.Add(source_name, cur_m_audio_source);
         PlayAudioSource(source_name);
@@ -81,6 +97,7 @@ public class SoundPlayer : MonoBehaviour
             cur_m_audio_source.GetComponent<AudioSource>().pitch = cur_track.pitch;
             cur_m_audio_source.GetComponent<AudioSource>().priority = cur_track.priority;
             if (cur_track.looped) { cur_m_audio_source.GetComponent<AudioSource>().loop = cur_track.looped; }
+            if (cur_track.volume > 0) { }
             cur_m_audio_source.GetComponent<AudioSource>().Play();
             if (cur_track.Fade_In)
             {

@@ -226,9 +226,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d88fffff
-      m_LastClickedID: -28712
-      m_ExpandedIDs: f28fffffdeceffff80f2ffff82f2ffff84f2ffff86f2ffffc0f4ffff16fbffff2a5a0000345a0000905c0000c65c0000d25c0000
+      m_SelectedIDs: e2edffff
+      m_LastClickedID: -4638
+      m_ExpandedIDs: d2f3ffff14fbffff9c590000085a0000485a0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -699,10 +699,10 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 79}
-    m_SelectedIDs: 425b0000
-    m_LastClickedID: 23362
-    m_ExpandedIDs: 00000000985a00009a5a00009c5a00009e5a0000a05a0000005b0000445b000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 191}
+    m_SelectedIDs: 845b0000
+    m_LastClickedID: 23428
+    m_ExpandedIDs: 00000000b05a0000b25a0000b45a0000b65a0000b85a0000185b000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -730,7 +730,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000985a00009a5a00009c5a00009e5a0000a05a000000ca9a3bffffff7f
+    m_ExpandedIDs: 00000000b05a0000b25a0000b45a0000b65a0000b85a000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -755,10 +755,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: d88fffff
-    m_LastClickedInstanceID: -28712
-    m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f0990000189a000000000000fa5c0000
+    m_SelectedInstanceIDs: e2edffff
+    m_LastClickedInstanceID: -4638
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c6230000f0990000189a000000000000fa5c00003e580000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: 1412526313
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: 23802
+  m_LastInspectedObjectInstanceID: 22198
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0

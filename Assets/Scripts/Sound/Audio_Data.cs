@@ -10,4 +10,5 @@ public class Audio_Data : MonoBehaviour
 {
     //Public Data of Audio Source
     public Sound_Track ad_track = null;
+    public string sound_tag = "";
 }
