@@ -66,17 +66,17 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _BumpScale: 1.23
+    - _BumpScale: 1.2
     - _Cutoff: 0.41
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
-    - _GlossMapScale: 0.151
+    - _GlossMapScale: 0.34
     - _Glossiness: 0.75
     - _GlossyReflections: 1
     - _Metallic: 0
     - _Mode: 0
-    - _OcclusionStrength: 0.986
-    - _Parallax: 0.0331
+    - _OcclusionStrength: 0.596
+    - _Parallax: 0.0383
     - _SmoothnessTextureChannel: 1
     - _SpecularHighlights: 1
     - _SrcBlend: 1
