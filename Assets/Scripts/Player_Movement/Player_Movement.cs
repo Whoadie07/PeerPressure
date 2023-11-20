@@ -31,6 +31,9 @@ public class Player_Movement : MonoBehaviour
     //Player Menu
     public GameObject playerMenu;
 
+    //Player Path
+    public PathObject playerPath;
+
     //Private variables.
     private float playerSpeed = 5.0f;
     private float interactRange = 100.0f;
@@ -43,6 +46,8 @@ public class Player_Movement : MonoBehaviour
     protected Ray rayinfo;
     protected Vector2 turn;
     protected int isZoom = -1;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -127,7 +132,6 @@ public class Player_Movement : MonoBehaviour
                 PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
                 PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
             }
-            
 
         }
         //Open main inventory.

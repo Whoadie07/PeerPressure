@@ -10,6 +10,7 @@ public class Object_Data : MonoBehaviour
 {
     //private Variables
     private Vector3 o_original_size = new Vector3();
+    public string object_name = "";
 
     //Public Variables
     public Vector3 o_change_size = new Vector3(); //Set the size of the object with in the player hand.

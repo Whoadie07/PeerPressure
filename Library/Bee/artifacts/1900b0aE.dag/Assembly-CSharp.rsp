@@ -384,6 +384,8 @@
 "Assets/Scripts/Dialogues_Script/VIDE/VIDE_Assign.cs"
 "Assets/Scripts/Hello_World.cs"
 "Assets/Scripts/NPC/NPC_Movement.cs"
+"Assets/Scripts/NPC/Path/CollectPath.cs"
+"Assets/Scripts/NPC/Path/PathObject.cs"
 "Assets/Scripts/Player_Movement/Inventory.cs"
 "Assets/Scripts/Player_Movement/Player_Movement.cs"
 "Assets/Scripts/Sound/Audio_Data.cs"

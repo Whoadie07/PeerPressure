@@ -72,6 +72,7 @@
     <Compile Include="Assets\Scripts\Data_Script\CreditScroll.cs" />
     <Compile Include="Assets\Scripts\Data_Script\Setting.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_Data.cs" />
+    <Compile Include="Assets\Scripts\NPC\Path\CollectPath.cs" />
     <Compile Include="Assets\Scripts\Sound\Audio_Data.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\MiniJSON_VIDE.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\VIDEDemoPlayer.cs" />
@@ -82,6 +83,7 @@
     <Compile Include="Assets\Scripts\Data_Script\MenuClick.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Data\VIDE_EditorDB.cs" />
     <Compile Include="Assets\Scripts\Data_Script\SettingScene.cs" />
+    <Compile Include="Assets\Scripts\NPC\Path\PathObject.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\Extra\NarrativeNode.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\VIDE\Demos\PlayerInteraction\demoScripts\witchExample.cs" />
     <Compile Include="Assets\Scripts\Dialogues_Script\Extra\NarrativeReader.cs" />
