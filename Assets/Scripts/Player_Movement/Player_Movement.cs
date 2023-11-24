@@ -1,4 +1,5 @@
 using Cinemachine;
+using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
@@ -32,7 +33,7 @@ public class Player_Movement : MonoBehaviour
     public GameObject playerMenu;
 
     //Player Path
-    public PathObject playerPath;
+    public PathObject[] playerPath = new PathObject[1];
 
     //Private variables.
     private float playerSpeed = 5.0f;
@@ -151,6 +152,23 @@ public class Player_Movement : MonoBehaviour
         if (Input.GetKeyDown("w"))
         {
             playerMenu.SetActive(!playerMenu.activeSelf);
+        }
+        for(int i = 0; i < playerPath.Length; i++)
+        {
+            if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
+            {
+                CollectPath a = (CollectPath)playerPath.ElementAt(i);
+                if (playerPath.ElementAt(i).pathBegin)
+                {
+                    a.pathBegin = true;
+                    a.begin(PlayerHand);
+                    a.checkPath();
+                }
+                else
+                {
+                    a.checkPath();
+                }
+            }
         }
 
     }
