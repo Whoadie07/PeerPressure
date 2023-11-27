@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -174,6 +175,25 @@ public class NarrativeReader : MonoBehaviour
         {
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
+            if (currentNode.isTherePath)
+            {
+                GameObject s_object = NarrativeObject.GetComponent<NPC_Movement>().InteractTarget;
+                if(s_object != null)
+                {
+                    int i_loop = -1;
+                    for (int i = 0; i < s_object.GetComponent<Player_Movement>().playerPath.Length; i++)
+                    {
+                        if (s_object.GetComponent<Player_Movement>().playerPath.ElementAt<PathObject>(i) != null) { continue; }
+                        i_loop = i;
+                        break;
+                    }
+                    if (i_loop != -1)
+                    {
+                        NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().playerPath[i_loop] = currentNode.PathObject;
+                    }
+                    
+                }
+            }
         }
         else
         {

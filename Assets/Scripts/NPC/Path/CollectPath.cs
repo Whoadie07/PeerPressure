@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.XR;
 using UnityEngine;
-
+[CreateAssetMenu(fileName = "Collect Path", menuName = "Collect Path")]
 public class CollectPath : PathObject
 {
     public static int numItem = 1;
@@ -18,6 +19,7 @@ public class CollectPath : PathObject
         {
             return;
         }
+        Debug.Log("There a inventory");
         pathInventory = obj.GetComponent<Inventory>();
         for(int i = 0; i  < numItem; i++)
         {
@@ -30,10 +32,34 @@ public class CollectPath : PathObject
         {
             return;
         }
-
-        for(int i = 0;i < pathInventory.m_Inventory.Length;i++)
+        for (int i = 0; i < numItem; i++)
         {
-            update();
+            itemlistCorrect[i] = 0;
+        }
+        for (int i = 0;i < pathInventory.m_Inventory.Length;i++)
+        {
+            update(pathInventory.m_Inventory[i]);
+        }
+        for (int i = 0; i < pathInventory.HotbarInventory.Length; i++)
+        {
+            update(pathInventory.HotbarInventory[i]);
+        }
+        bool sf_setpathComplete = false;
+        for(int i = 0; i < numItem; i++)
+        {
+            if (itemlistNeed[i] == itemlistCorrect[i])
+            {
+                sf_setpathComplete = true;
+            }
+            else
+            {
+                sf_setpathComplete = false;
+                break;
+            }
+        }
+        if (sf_setpathComplete)
+        {
+            end();
         }
     }
     public void update(GameObject obj)

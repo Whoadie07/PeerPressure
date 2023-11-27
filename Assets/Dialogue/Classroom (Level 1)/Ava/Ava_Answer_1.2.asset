@@ -29,3 +29,5 @@ MonoBehaviour:
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

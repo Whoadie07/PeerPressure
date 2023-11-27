@@ -155,14 +155,16 @@ public class Player_Movement : MonoBehaviour
         }
         for(int i = 0; i < playerPath.Length; i++)
         {
+            if (playerPath.ElementAt(i) == null) { continue; }
             if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
             {
-                CollectPath a = (CollectPath)playerPath.ElementAt(i);
-                if (playerPath.ElementAt(i).pathBegin)
+                CollectPath a = (CollectPath)playerPath[i];
+                if (!playerPath.ElementAt(i).pathBegin)
                 {
                     a.pathBegin = true;
                     a.begin(PlayerHand);
                     a.checkPath();
+                    playerPath[i]= a;
                 }
                 else
                 {
