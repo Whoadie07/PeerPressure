@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2409ce8b243a4f240a919afd66bdfb2f, type: 3}
   m_Name: CollectPencilFromAva
   m_EditorClassIdentifier: 
-  pathComplete: 0
-  pathBegin: 0
+  pathComplete: 1
+  pathBegin: 1
   path_name: A Pencil
   path_description: Find a pencil for Ava
-  pathInventory: {fileID: 0}
   itemlist:
   - Pencil
   itemlistNeed: 01000000
+  dialogueEndPath: {fileID: 11400000, guid: 35f4fc7bbad7e1f49bf85f83477cfb1d, type: 2}

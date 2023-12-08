@@ -12,11 +12,6 @@ public class ButtonSelect : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
     public RawImage selectButton;
     //Bool to check if the mouse pointer is hover. 
     protected bool MoveOver;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

@@ -162,13 +162,15 @@ public class Player_Movement : MonoBehaviour
                 if (!playerPath.ElementAt(i).pathBegin)
                 {
                     a.pathBegin = true;
-                    a.begin(PlayerHand);
-                    a.checkPath();
+                    a.begin(PlayerHand, PlayerHand.GetComponent<Inventory>());
+                    a.checkPath(PlayerHand.GetComponent<Inventory>());
                     playerPath[i]= a;
+                    Debug.Log("Run 1");
                 }
                 else
                 {
-                    a.checkPath();
+                    a.checkPath(PlayerHand.GetComponent<Inventory>());
+                    Debug.Log("Run 2");
                 }
             }
         }

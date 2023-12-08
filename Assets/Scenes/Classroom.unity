@@ -10793,6 +10793,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 8b3d1f1dab9393f4abe736263af8ad93, type: 2}
+  CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
   NpcTargetPath:
@@ -11184,6 +11185,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 95e84df908fc062469c3d1c6c7c8044d, type: 2}
+  CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
   NpcTargetPath:
@@ -11432,6 +11434,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -12487,6 +12490,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -13181,6 +13185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -13596,7 +13601,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508973255}
-  m_LocalRotation: {x: 0.23174818, y: 0.004376872, z: -0.0010427303, w: 0.97276545}
+  m_LocalRotation: {x: 0.23174818, y: 0.004376855, z: -0.0010427262, w: 0.97276545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14075,6 +14080,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 315482873e410664d9efe7ecc04cd751, type: 2}
+  CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
   NpcTargetPath:
@@ -14352,6 +14358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -16204,6 +16211,8 @@ MonoBehaviour:
   cam1: {fileID: 365180160}
   player_animotr: {fileID: 0}
   playerMenu: {fileID: 2146208724}
+  playerPath:
+  - {fileID: 0}
 --- !u!1 &940644114
 GameObject:
   m_ObjectHideFlags: 0
@@ -16645,6 +16654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -17077,7 +17087,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1043280942}
-  m_LocalRotation: {x: 0.24935743, y: 0.004357189, z: -0.0011219499, w: 0.9684011}
+  m_LocalRotation: {x: 0.24935743, y: 0.0043572634, z: -0.001121969, w: 0.9684011}
   m_LocalPosition: {x: -0.044993106, y: 3.85, z: -4.9997973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -18850,6 +18860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -20139,6 +20150,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -20536,6 +20548,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -21319,6 +21332,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: aa93832eea5bd974382ab1632e5a33f5, type: 2}
+  CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
   NpcTargetPath:
@@ -22261,6 +22275,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9cc6ae3d2b7c877408dd2695ac74618f, type: 3}
+--- !u!1 &1622880783 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1b1187f7ad9517041a435571c7ea9f0f, type: 3}
+  m_PrefabInstance: {fileID: 2432979259271752857}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1630304901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9cc6ae3d2b7c877408dd2695ac74618f, type: 3}
@@ -22485,7 +22504,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1649935526}
-  m_LocalRotation: {x: 0.24935742, y: 0.004357207, z: -0.0011219543, w: 0.9684011}
+  m_LocalRotation: {x: 0.24935742, y: 0.0043572444, z: -0.0011219641, w: 0.9684011}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -24696,6 +24715,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  object_name: Pencil
   o_change_size: {x: 0, y: 0, z: 0}
   isContain: 0
   isHold: 0
@@ -30062,6 +30082,7 @@ GameObject:
   - component: {fileID: 7777997875913172510}
   - component: {fileID: 7777997875913172512}
   - component: {fileID: 7777997875913172511}
+  - component: {fileID: 7777997875913172513}
   m_Layer: 7
   m_Name: Pencil
   m_TagString: Untagged
@@ -31291,6 +31312,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &7777997875913172513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643615756360101407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object_name: Pencil
+  o_change_size: {x: 0, y: 0, z: 0}
+  isContain: 0
+  isHold: 0
+  play_hand: {fileID: 1707729283}
+  Object: {fileID: 1622880783}
+  ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
 --- !u!4 &8149487651720298692
 Transform:
   m_ObjectHideFlags: 0

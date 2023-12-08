@@ -3,33 +3,36 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.XR;
 using UnityEngine;
+using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Collect Path", menuName = "Collect Path")]
 public class CollectPath : PathObject
 {
     public static int numItem = 1;
-    public Inventory pathInventory;
     public string[] itemlist= new string[numItem];
     public int[] itemlistNeed = new int[numItem];
     private int[] itemlistCorrect = new int[numItem];
+
+    //NPC Dialogue
+    public NarrativeNode dialogueEndPath;
     
-    public void begin(GameObject obj)
+    public void begin(GameObject obj, Inventory pathInventory)
     {
         pathComplete = false;
         if (obj.GetComponent<Inventory>() == null)
         {
             return;
         }
-        Debug.Log("There a inventory");
         pathInventory = obj.GetComponent<Inventory>();
         for(int i = 0; i  < numItem; i++)
         {
             itemlistCorrect[i] = 0;
         }
     }
-    public void checkPath()
+    public void checkPath(Inventory pathInventory)
     {
         if (pathInventory == null)
         {
+            Debug.Log("there not inventory");
             return;
         }
         for (int i = 0; i < numItem; i++)
@@ -59,11 +62,12 @@ public class CollectPath : PathObject
         }
         if (sf_setpathComplete)
         {
-            end();
+            end(pathInventory);
         }
     }
     public void update(GameObject obj)
     {
+        if(obj == null) { return; }
         if(obj.GetComponent<Object_Data>() != null)
         {
             int itemlocation = -1;
@@ -81,7 +85,7 @@ public class CollectPath : PathObject
             }
         }
     }
-    public void end()
+    public void end(Inventory pathInventory)
     {
         pathComplete = true;
     }

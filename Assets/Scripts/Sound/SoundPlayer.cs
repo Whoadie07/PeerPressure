@@ -23,7 +23,7 @@ public class SoundPlayer : MonoBehaviour
     //The gameobject that user want to create
     public GameObject m_audio_source;
 
-    //Connect the the Sound Dictinoary
+    //Connect to the Sound Dictinoary
     public Sound_Dict sp_dict;
 
 
@@ -35,7 +35,7 @@ public class SoundPlayer : MonoBehaviour
         //Check if the audio source with name existed.
         if (m_sound_name_list.Contains(source_name))
         {
-            cur_m_audio_source = m_audio_source_list[source_name] as GameObject;
+            cur_m_audio_source = m_audio_source_list[source_name] as GameObject; 
             if (SourceCheck(cur_m_audio_source) || BoundCheck(track_num))
             {
                 return;
@@ -337,13 +337,13 @@ public class SoundPlayer : MonoBehaviour
     //A function fade-out an Audio Source until complete Pause
     IEnumerator PauseFade(GameObject sourceObject, float fade_time, float volume_num)
     {
-        if (volume_num < 0)
-        {
-            volume_num = 0;
+        if (volume_num < 0) 
+        { 
+            volume_num = 0; 
         }
-        else if (volume_num > 1)
+        else if (volume_num > 1) 
         {
-            volume_num = 1;
+            volume_num = 1;      
         }
         float change_time = 0;
         float change_in_volume = (volume_num - sourceObject.GetComponent<AudioSource>().volume) / fade_time;

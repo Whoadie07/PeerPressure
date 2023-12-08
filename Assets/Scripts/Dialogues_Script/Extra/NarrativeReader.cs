@@ -6,19 +6,19 @@ using UnityEngine;
 using UnityEngine.UI;
 
 /*
- A Dialogue player the when a player interact with object with 
- Dialogue Node and Interactable script. A Dialogue Player will 
- take the Dialogue Node and player out the narrative dialogue 
+ A Narrative player the when a player interact with object with 
+ Narrative Node and Interactable script. A Narrative Player will 
+ take the narrative node and player out the narrative dialogue are 
  pre-written in dialogue line
  */
 public class NarrativeReader : MonoBehaviour
 {
     //Public Variables
 
-    //Dialogue Node Variables
-    public NarrativeNode rootNode = null;
-    public NarrativeNode currentNode = null;
-    public NarrativeNode tmpNode = null;
+    //Narrative Node Variables
+    public NarrativeNode rootNode = null; // Root node of the start narrative node.
+    public NarrativeNode currentNode = null; //Currentnode current narrative node playing. 
+    public NarrativeNode tmpNode = null; //tmpNode is using store a preious node for checking. 
 
 
     //UI
@@ -27,7 +27,7 @@ public class NarrativeReader : MonoBehaviour
     public GameObject[] ListofButton = new GameObject[4]; //The List of Button for answer
     public Text[] ListofAnswer = new Text[4]; //The list of answers text for the option button option
 
-    //Object Pass in the dialogue
+    //Object Pass with the narrative node.
     public GameObject NarrativeObject;
 
     /*Protected Variables*/
@@ -135,21 +135,12 @@ public class NarrativeReader : MonoBehaviour
                     ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
                 }
             }
-            /*else if (!currentNode.IsQuestion())
-            { 
-                DialogueDisplay.SetActive(false);
-                DialogueText.SetActive(false);
-                for (int i = 0; i < ListofAnswer.Length; i++)
-                {
-                    ListofButton[i].SetActive(false);
-                }
-                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
-            }*/
         }
         else
         {
             if (!currentNode.IsQuestion())
             {
+                Debug.Log("It is not null");
                 if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
                 DialogueDisplay.SetActive(false);
                 DialogueText.SetActive(false);
@@ -190,6 +181,8 @@ public class NarrativeReader : MonoBehaviour
                     if (i_loop != -1)
                     {
                         NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().playerPath[i_loop] = currentNode.PathObject;
+                        NarrativeObject.GetComponent<NPC_Movement>().CurrentPath = currentNode.PathObject;
+
                     }
                     
                 }

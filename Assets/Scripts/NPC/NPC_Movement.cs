@@ -1,3 +1,5 @@
+using Unity.PlasticSCM.Editor.WebApi;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -12,6 +14,7 @@ public class NPC_Movement : MonoBehaviour
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
+    public PathObject CurrentPath = null;
 
     //NPC Movement by move them with a path to follow
     public int NpcPath = 0;
@@ -64,6 +67,13 @@ public class NPC_Movement : MonoBehaviour
                 InteractTarget.GetComponent<Player_Movement>().NpcInteracting = false;
                 InteractTarget.GetComponent<Player_Movement>().interactable = null;
                 InteractTarget = null;
+            }
+        }
+        if(CurrentPath != null)
+        {
+            if(CurrentPath.pathComplete)
+            {
+                NPC_Dialogue = ((CollectPath)(CurrentPath)).dialogueEndPath;
             }
         }
     }
