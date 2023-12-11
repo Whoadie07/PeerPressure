@@ -140,7 +140,6 @@ public class NarrativeReader : MonoBehaviour
         {
             if (!currentNode.IsQuestion())
             {
-                Debug.Log("It is not null");
                 if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
                 DialogueDisplay.SetActive(false);
                 DialogueText.SetActive(false);
@@ -182,6 +181,7 @@ public class NarrativeReader : MonoBehaviour
                     {
                         NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().playerPath[i_loop] = currentNode.PathObject;
                         NarrativeObject.GetComponent<NPC_Movement>().CurrentPath = currentNode.PathObject;
+                        NarrativeObject.GetComponent<NPC_Movement>().CurrentPath.pathBegin = false;
 
                     }
                     

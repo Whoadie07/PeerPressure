@@ -10,7 +10,7 @@ public class CollectPath : PathObject
     public static int numItem = 1;
     public string[] itemlist= new string[numItem];
     public int[] itemlistNeed = new int[numItem];
-    private int[] itemlistCorrect = new int[numItem];
+    public int[] itemlistCorrect = new int[numItem];
 
     //NPC Dialogue
     public NarrativeNode dialogueEndPath;
@@ -88,5 +88,50 @@ public class CollectPath : PathObject
     public void end(Inventory pathInventory)
     {
         pathComplete = true;
+        //pathBegin = false;
+    }
+    public void takeItem(Inventory pathInventory)
+    {
+        if (pathInventory == null)
+        {
+            Debug.Log("there not inventory");
+            return;
+        }
+        for(int j = 0; j < numItem; j++)
+        {
+            for (int i = 0; i < pathInventory.m_Inventory.Length; i++)
+            {
+                if (pathInventory.m_Inventory[i] == null) { continue; }
+                
+                if (pathInventory.m_Inventory[i].GetComponent<Object_Data>() != null)
+                {
+                    Object_Data temp_object = pathInventory.m_Inventory[i].GetComponent<Object_Data>();
+                    if (temp_object.object_name.Equals(itemlist[j]))
+                    {
+                        itemlistCorrect[j] -= 1;
+                        pathInventory.m_Inventory_UI[i].GetComponent<RawImage>().texture = null;
+                        Destroy(pathInventory.m_Inventory[i]);
+                        pathInventory.m_Inventory[i] = null;
+                    }
+                }
+            }
+            
+            for (int i = 0; i < pathInventory.HotbarInventory.Length; i++)
+            {
+                if (pathInventory.HotbarInventory[i] == null) { continue; }
+                
+                if (pathInventory.HotbarInventory[i].GetComponent<Object_Data>() != null)
+                {
+                    Object_Data temp_object = pathInventory.HotbarInventory[i].GetComponent<Object_Data>();
+                    if (temp_object.object_name.Equals(itemlist[j]))
+                    {
+                        itemlistCorrect[j] -= 1;
+                        pathInventory.HotbarInventory_UI[i].GetComponent<RawImage>().texture = null;
+                        Destroy(pathInventory.HotbarInventory[i]);
+                        pathInventory.HotbarInventory[i] = null;
+                    }
+                }
+            }
+        }
     }
 }

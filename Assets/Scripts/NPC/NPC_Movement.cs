@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class NPC_Movement : MonoBehaviour
 {
+    //NPC Data
+    public string NPC_name = "";
 
     //Animtor
     public Animator npc_animator;

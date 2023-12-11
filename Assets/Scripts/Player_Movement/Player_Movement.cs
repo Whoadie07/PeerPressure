@@ -34,6 +34,7 @@ public class Player_Movement : MonoBehaviour
 
     //Player Path
     public PathObject[] playerPath = new PathObject[1];
+    public Text PathDescription = null;
 
     //Private variables.
     private float playerSpeed = 5.0f;
@@ -48,7 +49,7 @@ public class Player_Movement : MonoBehaviour
     protected Vector2 turn;
     protected int isZoom = -1;
 
-
+    
 
     // Start is called before the first frame update
     void Start()
@@ -82,6 +83,23 @@ public class Player_Movement : MonoBehaviour
                     tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
                     tempInteractable.GetComponent<NPC_Movement>().InteractTarget = this.gameObject;
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
+                    for (int i = 0; i < playerPath.Length; i++)
+                    {
+                        if (playerPath.ElementAt(i) == null) { continue; }
+                        if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
+                        {
+                            CollectPath a = (CollectPath)playerPath[i];
+                            if (playerPath.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
+                            {
+                                if (a.pathComplete)
+                                {
+                                    ((CollectPath)playerPath[i]).takeItem(PlayerHand.GetComponent<Inventory>());
+                                    playerPath[i] = null;
+                                    continue;
+                                }
+                            }
+                        }
+                    }
                     tempInteractable = null;
                 }
                 //Player can intereact with Object.
@@ -153,9 +171,11 @@ public class Player_Movement : MonoBehaviour
         {
             playerMenu.SetActive(!playerMenu.activeSelf);
         }
-        for(int i = 0; i < playerPath.Length; i++)
+        PathDescription.text = "";
+        for (int i = 0; i < playerPath.Length; i++)
         {
             if (playerPath.ElementAt(i) == null) { continue; }
+            string statue_path = "";
             if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
             {
                 CollectPath a = (CollectPath)playerPath[i];
@@ -165,14 +185,18 @@ public class Player_Movement : MonoBehaviour
                     a.begin(PlayerHand, PlayerHand.GetComponent<Inventory>());
                     a.checkPath(PlayerHand.GetComponent<Inventory>());
                     playerPath[i]= a;
-                    Debug.Log("Run 1");
                 }
                 else
                 {
                     a.checkPath(PlayerHand.GetComponent<Inventory>());
-                    Debug.Log("Run 2");
+                    if (a.pathComplete)
+                        statue_path = " (Complete)";
+                    else
+                        statue_path = " (In progress)";
                 }
             }
+            PathDescription.text += playerPath.ElementAt(i).path_name + ":" + statue_path + "\n";
+            PathDescription.text += playerPath.ElementAt(i).path_description + "\n";
         }
 
     }
