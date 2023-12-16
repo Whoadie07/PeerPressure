@@ -7,7 +7,6 @@ public class ButtonSelect : MonoBehaviour, IPointerEnterHandler, IPointerExitHan
 {
     //public varaibles
 
-
     //The Image will show when the mouse pointer hover over the button.
     public RawImage selectButton;
     //Bool to check if the mouse pointer is hover. 

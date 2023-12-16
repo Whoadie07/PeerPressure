@@ -334,7 +334,7 @@ public class SoundPlayer : MonoBehaviour
             volume_num = 1;
         }
     }
-    //A function fade-out an Audio Source until complete Pause
+    //A function fade-out the Audio Source until complete Pause
     IEnumerator PauseFade(GameObject sourceObject, float fade_time, float volume_num)
     {
         if (volume_num < 0) 

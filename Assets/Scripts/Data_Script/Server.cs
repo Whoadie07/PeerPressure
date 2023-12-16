@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /*
- * An program that store and connect Data, Gameobjects, and etc to other of it, type
+ * An program that store and connect Data, Gameobjects, and etc.
+ * 
  */
 public class Server : MonoBehaviour
 {
@@ -11,7 +12,7 @@ public class Server : MonoBehaviour
      The Server for quick and access to Gameobject, Camera, and etc;
      Type Objects:
      1) GameObject with Scripts that are important, but cannot fit anywhere else.
-     2) Camera: [0] is main camera [1] is and [2] is zoom function camera
+     2) Camera: [0] is main camera and [1] is zoom function camera
      3) Character
      4) Environment
      5) Sound Dictionary

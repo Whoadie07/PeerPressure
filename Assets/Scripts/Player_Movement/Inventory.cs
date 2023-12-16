@@ -101,12 +101,13 @@ public class Inventory : MonoBehaviour
         }
         return -1;
     }
+    //Return the item at a particular slot in hot bar. 
     public GameObject GetGameObject(int item_num)
     {
         if (item_num < 0 || item_num >= HotBarSize) { return null; }
         return HotbarInventory[item_num];
     }
-    //Set the o
+    //Update the data of the Object_Data script of the currently slot.
     public void setItemHold()
     {
         setSlot(NumberItemCurrentlyHolding);

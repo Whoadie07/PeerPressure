@@ -38,7 +38,6 @@ public class NarrativeNode : ScriptableObject
     public bool isTherePath = false;
     public PathObject PathObject = null;
    
-    // public 
 
     //Check if the Dialogue is with animation
     public bool IsPlay()

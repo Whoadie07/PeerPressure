@@ -34,7 +34,7 @@ public class Menu : ScriptableObject
         else
         {
             new WaitForSeconds(10);
-            SceneManager.LoadScene(SceneNames[currently_play]);
+            SceneManager.LoadScene(SceneNames[currently_play++]);
         }
        
     }

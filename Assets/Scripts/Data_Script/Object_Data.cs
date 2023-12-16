@@ -10,9 +10,9 @@ public class Object_Data : MonoBehaviour
 {
     //private Variables
     private Vector3 o_original_size = new Vector3();
-    public string object_name = "";
 
     //Public Variables
+    public string object_name = ""; // Object Name
     public Vector3 o_change_size = new Vector3(); //Set the size of the object with in the player hand.
     public bool isContain = false; //Boolean variable for item to check if the it is in the player inventory.
     public bool isHold = false; //Boolean variable to check if the item is currently being hold in player hand.

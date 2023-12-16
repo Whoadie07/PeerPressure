@@ -29,17 +29,19 @@ public class SettingScene : MonoBehaviour
         SetVolume();
     }
     
-
+    //Set the Volume
     public void SetVolume()
     {
         VolumeS = VolumeSlider.value * 100;
         m_Setting.Volume = VolumeS;
     }
+    //Set the Music
     public void SetMusic()
     {
         MusicS = MusicSlider.value * 100;
         m_Setting.Music = MusicS;
     }
+    //Set the Sound Effect
     public void SetSoundEffect()
     {
         SoundEffectS = SoundEffectSlider.value * 100;

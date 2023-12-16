@@ -11,12 +11,16 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     //Public Varaibles
 
-    //I
+    //Inventory Datas
     public Inventory s_inventory;
+
+    //Slot Information
     public GameObject ObjectInSlot;
     public RawImage selectIcon;
     public int SlotNumber;
 
+
+    //Protected Varaibles
     protected bool MoveOver;
     
 
@@ -93,6 +97,7 @@ public class Slot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
             selectIcon.enabled = false;
         }
     }
+    //Functions deal with mouse point is hover over slot
     public void OnPointerEnter(PointerEventData eventData)
     {
         MoveOver = true;

@@ -7,9 +7,9 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Setting", menuName = "Setting")]
 public class Setting : ScriptableObject
 {
-    //Public Variable
+    //Public Variables
 
-    //Sounds Data
+    //Sounds Datas
     public float Music = 100;
     public float Volume = 100;
     public float SoundEffect = 100;
