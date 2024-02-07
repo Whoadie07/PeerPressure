@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17276882, g: 0.21589209, b: 0.2978252, a: 1}
+  m_IndirectSpecularColor: {r: 0.17276913, g: 0.21589279, b: 0.29782602, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -10794,6 +10794,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 8b3d1f1dab9393f4abe736263af8ad93, type: 2}
+  NPC_Affinity: {fileID: 0}
   CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
@@ -11187,6 +11188,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 95e84df908fc062469c3d1c6c7c8044d, type: 2}
+  NPC_Affinity: {fileID: 11400000, guid: 1452dc35c677bcf4f9baac2281f18a51, type: 2}
   CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
@@ -13604,7 +13606,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508973255}
-  m_LocalRotation: {x: 0.23174818, y: 0.004376872, z: -0.0010427303, w: 0.97276545}
+  m_LocalRotation: {x: 0.23174818, y: 0.004376855, z: -0.0010427262, w: 0.97276545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14240,6 +14242,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: 315482873e410664d9efe7ecc04cd751, type: 2}
+  NPC_Affinity: {fileID: 11400000, guid: 28320fcb9e7bd3f45849689fdc778502, type: 2}
   CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0
@@ -21541,6 +21544,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 1102401237}
   NPC_Dialogue: {fileID: 11400000, guid: aa93832eea5bd974382ab1632e5a33f5, type: 2}
+  NPC_Affinity: {fileID: 11400000, guid: 60c5b53ff8328de44b9a21a2a7fb58b6, type: 2}
   CurrentPath: {fileID: 0}
   NpcPath: 0
   CurrentpPath: 0

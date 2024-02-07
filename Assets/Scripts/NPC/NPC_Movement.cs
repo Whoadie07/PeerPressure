@@ -16,6 +16,9 @@ public class NPC_Movement : MonoBehaviour
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
+
+    public FriendData NPC_Affinity = null;
+
     public PathObject CurrentPath = null;
 
     //NPC Movement by move them with a path to follow
@@ -87,5 +90,6 @@ public class NPC_Movement : MonoBehaviour
         npcreader.currentNode = NPC_Dialogue;
         npcreader.DialoguePlay();
         npcreader.NarrativeObject = this.gameObject;
+        npcreader.AffinityData = NPC_Affinity;
     }
 }

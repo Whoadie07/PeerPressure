@@ -30,6 +30,8 @@ public class NarrativeReader : MonoBehaviour
     //Object Pass with the narrative node.
     public GameObject NarrativeObject;
 
+    public FriendData AffinityData;
+
     /*Protected Variables*/
 
     //A variable to keep track of second translate of each dialogues.
@@ -163,6 +165,7 @@ public class NarrativeReader : MonoBehaviour
         }
         if (cur_select.IsCorrect())
         {
+            ChangeAffinity(AffinityData, 1);
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
             if (currentNode.isTherePath)
@@ -190,6 +193,7 @@ public class NarrativeReader : MonoBehaviour
         }
         else
         {
+            ChangeAffinity(AffinityData, 0);
             tmpNode = currentNode;
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
@@ -212,4 +216,27 @@ public class NarrativeReader : MonoBehaviour
         NextLine();
 
     }
+
+    public void ChangeAffinity(FriendData classmate, int type)
+    {
+        // It gets the current affinity
+        int relationship = classmate.Friend;
+        // Type 1 increases the affinity by 2
+        if (type == 1)
+        {
+            relationship += 2;
+        }
+        // Anything other than 1 decreases the affinity
+        else
+        {
+            // If cannot go lower than a 0
+            if (relationship <= 2) relationship = 0;
+            // Otherwise, it decreases by 2
+            else relationship -= 2;
+        }
+        // Then the new affinity is set
+        classmate.Friend = relationship;
+    }
 }
+
+
