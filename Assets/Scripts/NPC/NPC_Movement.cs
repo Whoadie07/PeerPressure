@@ -18,6 +18,7 @@ public class NPC_Movement : MonoBehaviour
     public NarrativeNode NPC_Dialogue = null;
 
     public FriendData NPC_Affinity = null;
+    public ThePressure Peer = null;
 
     public PathObject CurrentPath = null;
 
@@ -91,5 +92,6 @@ public class NPC_Movement : MonoBehaviour
         npcreader.DialoguePlay();
         npcreader.NarrativeObject = this.gameObject;
         npcreader.AffinityData = NPC_Affinity;
+        npcreader.Pressure = Peer;
     }
 }
