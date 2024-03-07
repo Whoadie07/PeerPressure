@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c418e0317f924fd4fbdae0058844ebc5, type: 3}
-  m_Name: Ava
+  m_Script: {fileID: 11500000, guid: 5a088f3c5d4a6074d88195de180d535d, type: 3}
+  m_Name: Pressure
   m_EditorClassIdentifier: 
-  _friend: 2
+  _pressure: 15

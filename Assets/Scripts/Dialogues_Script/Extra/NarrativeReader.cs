@@ -18,7 +18,7 @@ public class NarrativeReader : MonoBehaviour
     //Narrative Node Variables
     public NarrativeNode rootNode = null; // Root node of the start narrative node.
     public NarrativeNode currentNode = null; //Currentnode current narrative node playing. 
-    public NarrativeNode tmpNode = null; //tmpNode is using store a preious node for checking. 
+    public NarrativeNode tmpNode = null; //tmpNode is using store a precious node for checking. 
 
 
     //UI
@@ -31,6 +31,8 @@ public class NarrativeReader : MonoBehaviour
     public GameObject NarrativeObject;
 
     public FriendData AffinityData;
+
+    public ThePressure Pressure;
 
     /*Protected Variables*/
 
@@ -165,7 +167,7 @@ public class NarrativeReader : MonoBehaviour
         }
         if (cur_select.IsCorrect())
         {
-            ChangeAffinity(AffinityData, 1);
+            ChangeAffinity(1);
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
             if (currentNode.isTherePath)
@@ -193,7 +195,8 @@ public class NarrativeReader : MonoBehaviour
         }
         else
         {
-            ChangeAffinity(AffinityData, 0);
+            ChangeAffinity(0);
+            IncreasePressure();
             tmpNode = currentNode;
             currentNode = currentNode.GetAnswerLine(index);
             DialoguePlay();
@@ -217,25 +220,30 @@ public class NarrativeReader : MonoBehaviour
 
     }
 
-    public void ChangeAffinity(FriendData classmate, int type)
+    /* This function changes the affinity/friendship between the play and the NPC */
+    public void ChangeAffinity(int type)
     {
-        // It gets the current affinity
-        int relationship = classmate.Friend;
+        int friendship = AffinityData.Friend;
         // Type 1 increases the affinity by 2
         if (type == 1)
         {
-            relationship += 2;
+            friendship += 2;
         }
         // Anything other than 1 decreases the affinity
         else
         {
             // If cannot go lower than a 0
-            if (relationship <= 2) relationship = 0;
+            if (friendship <= 2) friendship = 0;
             // Otherwise, it decreases by 2
-            else relationship -= 2;
+            else friendship -= 2;
         }
-        // Then the new affinity is set
-        classmate.Friend = relationship;
+        AffinityData.Friend = friendship;
+    }
+
+    /* If the player does something that would make them feel pressure, then the peer pressure meter increases */
+    public void IncreasePressure()
+    {
+        Pressure.Pressure += 15;
     }
 }
 

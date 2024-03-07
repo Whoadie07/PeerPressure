@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ResetFriendship : MonoBehaviour
+public class ResetGameData : MonoBehaviour
 {
     [SerializeField]
     private FriendData Ava;
@@ -24,6 +24,8 @@ public class ResetFriendship : MonoBehaviour
     private FriendData Owen;
     [SerializeField]
     private FriendData Sophia;
+    [SerializeField]
+    private ThePressure Pressure;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,5 +39,6 @@ public class ResetFriendship : MonoBehaviour
         Olivia.Friend = 0;
         Owen.Friend = 0;
         Sophia.Friend = 0;
+        Pressure.Pressure = 0;
     }
 }
