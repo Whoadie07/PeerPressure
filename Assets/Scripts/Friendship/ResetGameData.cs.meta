@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 0bbca1b353c70e44ebc8aa6f7ac8147c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - Ava: {fileID: 11400000, guid: 28320fcb9e7bd3f45849689fdc778502, type: 2}
+  - Ethan: {fileID: 11400000, guid: 1452dc35c677bcf4f9baac2281f18a51, type: 2}
+  - Isabella: {fileID: 11400000, guid: 60c5b53ff8328de44b9a21a2a7fb58b6, type: 2}
+  - Liam: {fileID: 11400000, guid: 5f564dc957f4a194e84a95e2c303589f, type: 2}
+  - Mia: {fileID: 11400000, guid: 5cdbb361777dcc94db9b9c7451a09247, type: 2}
+  - Mason: {fileID: 11400000, guid: b676921ef245fcc498296a82e2f289ac, type: 2}
+  - Noah: {fileID: 11400000, guid: a0c120663ffc31d41997c335b71e9073, type: 2}
+  - Olivia: {fileID: 11400000, guid: 3e82aed9701092048a151afcf127f740, type: 2}
+  - Owen: {fileID: 11400000, guid: 266173db78cbe2046afe1d245ab52e65, type: 2}
+  - Sophia: {fileID: 11400000, guid: 6550957c92b49504fbb08939e7abc47b, type: 2}
+  - Pressure: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
