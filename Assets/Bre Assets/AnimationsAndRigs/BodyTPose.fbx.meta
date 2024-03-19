@@ -1,0 +1,139 @@
+fileFormatVersion: 2
+guid: 393a2a78c09b1ff42b1faa48f01eb380
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips:
+  - 0e2fcdd427723344ca620f4ea5329dcf
+  - dc7c445679da6244eb3137fe2fa2574d
+  - ecec43ea07fd4fb42a785501e184b55c
+  - 5faef8648c90c1145a83168529888212
+  - 20b1e24c1e752894f9938fa58490b164
+  - 4cc588cc3be185c45b1e8901f4cd6023
+  - 7f0a6fadad657f645a36601f7882014b
+  - b8eb84ca29762e64998ac174fd8ca374
+  - 6a87a78784181b9488f6b27498f573f2
+  - cbc368198caf7194590fd2f3225c7330
+  - 9619ea9fd6723cc48acf7774a07b0a21
+  - c020f254803a8cd40a3e39425038a38b
+  - 273449aba52cc93409e71a9e9d7da5ba
+  - 594060c5e635a454da80b0f1fd65471b
+  - 22244bbcb09f04248a4fdce149e58115
+  - 92f356b755be1684f9e60041004376f8
+  - 401d377669b7a2c40b7b590f1a1d5cd5
+  - 7d7541113fc6a3f45a1673441bc6d2aa
+  - 6720e6cba19cde34294b4cf1e2f999b2
+  - b3e812e339b46604082a89bedb147b42
+  - 73984889721fa444ab9f594d429c4f18
+  - 9853bbf3be7a4dd4bad78fad3c5049ad
+  - 7c4b0cf30d8b9164a90e69084cda3b9e
+  - 7058036cf776f734ea1514f834d3366e
+  - 16325fe906d1b1c4fa1f6fd4a6fa8666
+  - ad4625b783df8134db26547f5a9615ab
+  - 09c56728033130b4da782e870aa1fa85
+  - 4057314529c4cfc4995917c7bc95c7a6
+  - ca940700fc646c143839e7e03736e531
+  - b28766cffa221f5408ca52c99adc2065
+  - 6f3e81409a22e7140a209edf72221c9c
+  - fdc55f436216fc847a3d9da373cf3f73
+  - a25a7cf4927817c499f36e98b00edc6d
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
