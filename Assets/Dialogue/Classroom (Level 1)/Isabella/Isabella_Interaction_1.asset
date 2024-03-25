@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2cce6ad724639f94fb8f3e850c0cebce, type: 3}
+  m_Name: Isabella_Interaction_1
+  m_EditorClassIdentifier: 
+  NPC_Name: Isabella
+  pathComplete: 1
+  pathBegin: 1
+  path_name: Basketball Hangout
+  path_description: Talk to Mia and ask if she can join you and Isabella for a game
+    of basketball.
+  TargetName: Mia
+  FriendData: {fileID: 11400000, guid: 60c5b53ff8328de44b9a21a2a7fb58b6, type: 2}
+  QuestNames:
+  - Mia
+  FriendList:
+  - {fileID: 11400000, guid: 5cdbb361777dcc94db9b9c7451a09247, type: 2}
+  dialogueClimaxes:
+  - {fileID: 11400000, guid: bb97cf440facb704e9b9e977338014b9, type: 2}
+  newClimaxes:
+  - {fileID: 11400000, guid: e567ae3977a7c9e44a5d920b0eb7d624, type: 2}
+  dialogueWait: {fileID: 11400000, guid: ebc988cbeea7b3846a1c79a93b505110, type: 2}
+  dialogueEndPath: {fileID: 11400000, guid: 3055c71db1553764ca1027779bab66bd, type: 2}
+  replacementRoot: {fileID: 11400000, guid: 2913cfe8eea4b9a47ab1fa3b78f7cb00, type: 2}

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.NetworkInformation;
 using Unity.VisualScripting;
 using UnityEditor.XR;
 using UnityEngine;
@@ -7,6 +8,9 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Collect Path", menuName = "Collect Path")]
 public class CollectPath : PathObject
 {
+    [SerializeField]
+    private PathList list;
+
     public static int numItem = 1;
     public string[] itemlist= new string[numItem];
     public int[] itemlistNeed = new int[numItem];
@@ -28,6 +32,7 @@ public class CollectPath : PathObject
             itemlistCorrect[i] = 0;
         }
     }
+
     public void checkPath(Inventory pathInventory)
     {
         if (pathInventory == null)
@@ -88,7 +93,8 @@ public class CollectPath : PathObject
     public void end(Inventory pathInventory)
     {
         pathComplete = true;
-        //pathBegin = false;
+        pathBegin = false;
+        //list.DeletePath(ID);
     }
     public void takeItem(Inventory pathInventory)
     {

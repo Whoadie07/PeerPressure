@@ -17,9 +17,9 @@ public class NarrativeReader : MonoBehaviour
 
     //Narrative Node Variables
     public NarrativeNode rootNode = null; // Root node of the start narrative node.
+    /// </summary>
     public NarrativeNode currentNode = null; //Currentnode current narrative node playing. 
     public NarrativeNode tmpNode = null; //tmpNode is using store a precious node for checking. 
-
 
     //UI
     public GameObject DialogueDisplay; //Display the Border the text will display.
@@ -66,43 +66,43 @@ public class NarrativeReader : MonoBehaviour
     //The main function to play the dialogue for each interaction
     public void DialoguePlay()
     {
-        DialogueIndex = 0;
-        DisplaySecond = currentNode.beginFrame;
-        StartSecond = currentNode.beginFrame;
-        DialogueDisplay.SetActive(true);
-        DialogueText.SetActive(true);
-        DialogueText.GetComponent<Text>().text = string.Empty;
-        if (currentNode.IsPlay())
-        {
-            isRunning = true;
-            DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
-            DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
-            StartCoroutine(DialoguePlaying());
-        }
-        else
-        {
-            isRunning = false;
-            DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
-        }
-        if (currentNode.DialogueLineSize() < 1)
-        {
-            for (int i = 0; i < ListofButton.Length; i++)
+            DialogueIndex = 0;
+            DisplaySecond = currentNode.beginFrame;
+            StartSecond = currentNode.beginFrame;
+            DialogueDisplay.SetActive(true);
+            DialogueText.SetActive(true);
+            DialogueText.GetComponent<Text>().text = string.Empty;
+            if (currentNode.IsPlay())
             {
-                ListofButton[i].SetActive(false);
+                isRunning = true;
+                DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
+                DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
+                StartCoroutine(DialoguePlaying());
             }
-            DialogueDisplay.SetActive(false);
-            DialogueText.SetActive(false);
-            isRunning = false;
-        }
-        if (currentNode.DialogueLineSize()  <= 1 && currentNode.IsAQueation)
-        {
-            for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
+            else
             {
-                ListofAnswer[i].text = string.Empty;
-                ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
-                ListofButton[i].SetActive(true);
+                isRunning = false;
+                DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
             }
-        }
+            if (currentNode.DialogueLineSize() < 1)
+            {
+                for (int i = 0; i < ListofButton.Length; i++)
+                {
+                    ListofButton[i].SetActive(false);
+                }
+                DialogueDisplay.SetActive(false);
+                DialogueText.SetActive(false);
+                isRunning = false;
+            }
+            if (currentNode.DialogueLineSize() <= 1 && currentNode.IsAQueation)
+            {
+                for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
+                {
+                    ListofAnswer[i].text = string.Empty;
+                    ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
+                    ListofButton[i].SetActive(true);
+                }
+            }
     }
     //This function will play the dialogue along with animation
     IEnumerator DialoguePlaying()
@@ -124,36 +124,35 @@ public class NarrativeReader : MonoBehaviour
     //The function play the next line of dialogue in ListofDialogue
     public void NextLine()
     {
-        DialogueIndex++;
-        if (DialogueIndex < currentNode.DialogueLineSize())
-        {
-            DialogueText.GetComponent<Text>().text = string.Empty;
-            DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
-            DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
-            if (DialogueIndex == currentNode.DialogueLineSize() - 1 && currentNode.IsQuestion())
+            DialogueIndex++;
+            if (DialogueIndex < currentNode.DialogueLineSize())
             {
-                for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
+                DialogueText.GetComponent<Text>().text = string.Empty;
+                DialogueText.GetComponent<Text>().text = currentNode.GetDialogueLine(DialogueIndex);
+                DisplaySecond += currentNode.GetDialogueSecond(DialogueIndex);
+                if (DialogueIndex == currentNode.DialogueLineSize() - 1 && currentNode.IsQuestion())
                 {
-                    ListofButton[i].SetActive(true);
-                    ListofAnswer[i].text = string.Empty;
-                    ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
+                    for (int i = 0; i < currentNode.AnswerResponseSize(); i++)
+                    {
+                        ListofButton[i].SetActive(true);
+                        ListofAnswer[i].text = string.Empty;
+                        ListofAnswer[i].text = currentNode.GetAnswerLine(i).GetAnswer();
+                    }
                 }
             }
-        }
-        else
-        {
-            if (!currentNode.IsQuestion())
+            else
             {
-                if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
-                DialogueDisplay.SetActive(false);
-                DialogueText.SetActive(false);
-                for (int i = 0; i < ListofAnswer.Length; i++)
+                if (!currentNode.IsQuestion())
                 {
-                    ListofButton[i].SetActive(false);
+                    if (NarrativeObject != null) { NarrativeObject.GetComponent<NPC_Movement>().IsInteracting = false; NarrativeObject = null; }
+                    DialogueDisplay.SetActive(false);
+                    DialogueText.SetActive(false);
+                    for (int i = 0; i < ListofAnswer.Length; i++)
+                    {
+                        ListofButton[i].SetActive(false);
+                    }
                 }
             }
-        }
-       
     }
 
     //Player choices an answer

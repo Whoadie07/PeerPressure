@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// This is the Friend Data object, where it stores the affinity value betweenthe player and the NPC.
 [CreateAssetMenu]
 public class FriendData : ScriptableObject
 {
