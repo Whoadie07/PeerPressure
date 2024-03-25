@@ -16,14 +16,12 @@ public class NPC_Movement : MonoBehaviour
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
-
     public GameObject link = null;
 
     // This is where the affinity data of the NPC is stored.
     public FriendData NPC_Affinity = null;
     // All NPCs are connected to the pressure levels of the player.
     public ThePressure Peer = null;
-
     public PathObject CurrentPath = null;
 
     //NPC Movement by move them with a path to follow
@@ -95,7 +93,5 @@ public class NPC_Movement : MonoBehaviour
         npcreader.currentNode = NPC_Dialogue;
         npcreader.DialoguePlay();
         npcreader.NarrativeObject = this.gameObject;
-        npcreader.AffinityData = NPC_Affinity;
-        npcreader.Pressure = Peer;
     }
 }

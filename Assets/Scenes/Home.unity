@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2071,61 +2071,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &1725523305
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1725523307}
-  - component: {fileID: 1725523306}
-  m_Layer: 0
-  m_Name: FriendSystem
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1725523306
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725523305}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bbca1b353c70e44ebc8aa6f7ac8147c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ava: {fileID: 11400000, guid: 28320fcb9e7bd3f45849689fdc778502, type: 2}
-  Ethan: {fileID: 11400000, guid: 1452dc35c677bcf4f9baac2281f18a51, type: 2}
-  Isabella: {fileID: 11400000, guid: 60c5b53ff8328de44b9a21a2a7fb58b6, type: 2}
-  Liam: {fileID: 11400000, guid: 5f564dc957f4a194e84a95e2c303589f, type: 2}
-  Mia: {fileID: 11400000, guid: 5cdbb361777dcc94db9b9c7451a09247, type: 2}
-  Mason: {fileID: 11400000, guid: b676921ef245fcc498296a82e2f289ac, type: 2}
-  Noah: {fileID: 11400000, guid: a0c120663ffc31d41997c335b71e9073, type: 2}
-  Olivia: {fileID: 11400000, guid: 3e82aed9701092048a151afcf127f740, type: 2}
-  Owen: {fileID: 11400000, guid: 266173db78cbe2046afe1d245ab52e65, type: 2}
-  Sophia: {fileID: 11400000, guid: 6550957c92b49504fbb08939e7abc47b, type: 2}
-  Pressure: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
---- !u!4 &1725523307
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1725523305}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.1066939, y: 0.7960487, z: 0.25660238}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1890697574
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,7 +2102,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fdd98d91976674e8d1d15fc7d68bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_setting: {fileID: 0}
   m_audio_source: {fileID: 1890697574}
   sp_dict: {fileID: 0}
 --- !u!114 &1890697576
@@ -2173,7 +2117,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ad_track: {fileID: 0}
-  sound_tag: 
 --- !u!82 &1890697577
 AudioSource:
   m_ObjectHideFlags: 0
