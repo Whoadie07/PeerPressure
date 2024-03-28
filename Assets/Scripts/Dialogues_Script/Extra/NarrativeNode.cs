@@ -23,6 +23,8 @@ public class NarrativeNode : ScriptableObject
     public float[] LineDisplay = new float[LineSize]; //List of dialogues second translating.
     public bool IsAQueation = false;
 
+    public bool IsInteractionClimax = false;
+    public bool IsInteractionEnd = false;
 
     //Answers
     public static int ResponseSize = 4;

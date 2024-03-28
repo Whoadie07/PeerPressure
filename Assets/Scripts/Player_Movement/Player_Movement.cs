@@ -99,6 +99,18 @@ public class Player_Movement : MonoBehaviour
                                 }
                             }
                         }
+                        else if (playerPath.ElementAt(i).GetType() == typeof(InteractionPath))
+                        {
+                            InteractionPath a = (InteractionPath)playerPath[i];
+                            if (playerPath.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
+                            {
+                                if (a.pathComplete)
+                                {
+                                    playerPath[i] = null;
+                                    continue;
+                                }
+                            }
+                        }
                     }
                     tempInteractable = null;
                 }
@@ -189,6 +201,23 @@ public class Player_Movement : MonoBehaviour
                 else
                 {
                     a.checkPath(PlayerHand.GetComponent<Inventory>());
+                    if (a.pathComplete)
+                        statue_path = " (Complete)";
+                    else
+                        statue_path = " (In progress)";
+                }
+            }
+            else if (playerPath.ElementAt(i).GetType() == typeof(InteractionPath))
+            {
+                InteractionPath a = (InteractionPath)playerPath[i];
+                if (!playerPath.ElementAt(i).pathBegin)
+                {
+                    a.pathBegin = true;
+                    a.Begin();
+                    playerPath[i] = a;
+                }
+                else
+                {
                     if (a.pathComplete)
                         statue_path = " (Complete)";
                     else

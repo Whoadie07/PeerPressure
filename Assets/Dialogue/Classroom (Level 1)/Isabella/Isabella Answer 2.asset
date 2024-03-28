@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LineOfDialogue:
   - "You: Too\r strict for me."
+  - 'Isabella: I can understand that.'
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -27,3 +28,5 @@ MonoBehaviour:
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

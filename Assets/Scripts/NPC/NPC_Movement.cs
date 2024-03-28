@@ -16,6 +16,12 @@ public class NPC_Movement : MonoBehaviour
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
+    public GameObject link = null;
+
+    // This is where the affinity data of the NPC is stored.
+    public FriendData NPC_Affinity = null;
+    // All NPCs are connected to the pressure levels of the player.
+    public ThePressure Peer = null;
     public PathObject CurrentPath = null;
 
     //NPC Movement by move them with a path to follow
@@ -71,18 +77,18 @@ public class NPC_Movement : MonoBehaviour
                 InteractTarget = null;
             }
         }
-        if(CurrentPath != null)
+        // This is for when there's a Interaction Quest going on between the player and the NPC.
+        if ((CurrentPath != null)&&(IsInteracting))
         {
-            if(CurrentPath.pathComplete)
+            if (CurrentPath.GetType() == typeof(InteractionPath))
             {
-                NPC_Dialogue = ((CollectPath)(CurrentPath)).dialogueEndPath;
+                ((InteractionPath)CurrentPath).UpdateDialogue(this, link.GetComponent<Link>());
             }
         }
     }
     //NPC will update to communicate with the player. 
     public void UpdateNPC()
     {
-        
         npcreader.rootNode = NPC_Dialogue;
         npcreader.currentNode = NPC_Dialogue;
         npcreader.DialoguePlay();

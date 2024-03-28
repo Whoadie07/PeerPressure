@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// When there's a new game starting, all the NPC affinity is set to 0.
 public class ResetGameData : MonoBehaviour
 {
     [SerializeField]

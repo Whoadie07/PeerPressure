@@ -22,6 +22,8 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 0
+  IsInteractionClimax: 0
+  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -30,6 +32,6 @@ MonoBehaviour:
   answer: Yes
   IsItCorrect: 1
   beginFrame: 0
-  endFrame: 1
+  endFrame: 2
   isTherePath: 1
   PathObject: {fileID: 11400000, guid: 5d914bc61bc63854d87712340201d520, type: 2}

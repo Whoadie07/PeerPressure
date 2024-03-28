@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
+  m_Name: Isabella_Answer_3.3
+  m_EditorClassIdentifier: 
+  LineOfDialogue:
+  - 'You: No. I never played basketball before in my life.'
+  - 'Isabella: Wow... Okay. I guess Mia and I will show you how it''s done before
+    we actually play.'
+  - 'You: Thanks.'
+  - 'Isabella: But it''s gonna take some time off our recess time.'
+  - 'You: Yeah. I''m sorry.'
+  - 'Isabella: It''s okay. I don''t mind and I think Mia won''t mind either.'
+  - 'You: Alright.'
+  IsPlaying: 0
+  LineDisplay:
+  - 0
+  IsAQueation: 0
+  IsInteractionClimax: 0
+  IsInteractionEnd: 0
+  AnswerResponse:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  answer: 
+  IsItCorrect: 0
+  beginFrame: 0
+  endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
