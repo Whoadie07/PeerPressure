@@ -13600,7 +13600,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508973255}
-  m_LocalRotation: {x: 0.23174818, y: 0.004376855, z: -0.0010427262, w: 0.97276545}
+  m_LocalRotation: {x: 0.23174818, y: 0.004376872, z: -0.0010427303, w: 0.97276545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -14473,7 +14473,7 @@ MonoBehaviour:
   isContain: 0
   isHold: 0
   play_hand: {fileID: 1707729283}
-  Object: {fileID: 0}
+  Object: {fileID: 2015927648}
   ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
 --- !u!1 &658699781 stripped
 GameObject:
@@ -17231,12 +17231,12 @@ GameObject:
   - component: {fileID: 1043280943}
   - component: {fileID: 1043280946}
   m_Layer: 0
-  m_Name: 
+  m_Name: Main Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!81 &1043280943
 AudioListener:
   m_ObjectHideFlags: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 269993610}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2705,7 +2705,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 254930383}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2837,10 +2837,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1465762402}
   - {fileID: 254898645}
   m_Father: {fileID: 9171886278011681205}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5715,7 +5714,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 526333628}
-  m_LocalRotation: {x: 0.24935743, y: 0.0043571885, z: -0.0011219498, w: 0.9684011}
+  m_LocalRotation: {x: 0.24935743, y: 0.004357263, z: -0.001121969, w: 0.9684011}
   m_LocalPosition: {x: -0.044993106, y: 4.059, z: -4.9997973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -7611,6 +7610,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 0}
   NPC_Dialogue: {fileID: 11400000, guid: aa93832eea5bd974382ab1632e5a33f5, type: 2}
+  link: {fileID: 0}
   NPC_Affinity: {fileID: 11400000, guid: 60c5b53ff8328de44b9a21a2a7fb58b6, type: 2}
   Peer: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
   CurrentPath: {fileID: 0}
@@ -7825,6 +7825,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 0}
   NPC_Dialogue: {fileID: 11400000, guid: 315482873e410664d9efe7ecc04cd751, type: 2}
+  link: {fileID: 0}
   NPC_Affinity: {fileID: 11400000, guid: 28320fcb9e7bd3f45849689fdc778502, type: 2}
   Peer: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
   CurrentPath: {fileID: 0}
@@ -10132,6 +10133,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 0}
   NPC_Dialogue: {fileID: 11400000, guid: 95e84df908fc062469c3d1c6c7c8044d, type: 2}
+  link: {fileID: 0}
   NPC_Affinity: {fileID: 11400000, guid: 1452dc35c677bcf4f9baac2281f18a51, type: 2}
   Peer: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
   CurrentPath: {fileID: 0}
@@ -11979,6 +11981,7 @@ MonoBehaviour:
   InteractTarget: {fileID: 0}
   npcreader: {fileID: 0}
   NPC_Dialogue: {fileID: 11400000, guid: 8b3d1f1dab9393f4abe736263af8ad93, type: 2}
+  link: {fileID: 0}
   NPC_Affinity: {fileID: 0}
   Peer: {fileID: 0}
   CurrentPath: {fileID: 0}
@@ -14432,7 +14435,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413490954}
-  m_LocalRotation: {x: 0.24935742, y: 0.0043572066, z: -0.0011219543, w: 0.9684011}
+  m_LocalRotation: {x: 0.24935742, y: 0.004357244, z: -0.0011219641, w: 0.9684011}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -16912,6 +16915,60 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.27, y: 5.01, z: 3.76}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1653182061
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1653182063}
+  - component: {fileID: 1653182062}
+  m_Layer: 0
+  m_Name: NPCLink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1653182062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653182061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e08afa5f5a0c7649a9463673254c1d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ava: {fileID: 748466597}
+  Ethan: {fileID: 924969709}
+  Isabella: {fileID: 735134597}
+  Liam: {fileID: 0}
+  Mia: {fileID: 0}
+  Mason: {fileID: 0}
+  Noah: {fileID: 0}
+  Olivia: {fileID: 0}
+  Owen: {fileID: 0}
+  Sophia: {fileID: 0}
+--- !u!4 &1653182063
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653182061}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.201271, y: 3.0557106, z: -2.4817395}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1658245165
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23607,7 +23664,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
@@ -23650,6 +23707,7 @@ RectTransform:
   - {fileID: 9171886278978517936}
   - {fileID: 9171886279142604465}
   - {fileID: 9171886278369018986}
+  - {fileID: 254930383}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -27360,8 +27418,6 @@ MonoBehaviour:
   - {fileID: 9171886278564560588}
   - {fileID: 9171886278812598134}
   NarrativeObject: {fileID: 0}
-  AffinityData: {fileID: 0}
-  Pressure: {fileID: 11400000, guid: 00f54764878ba9f4793b595ab7e7b1ca, type: 2}
   DialogueIndex: 0
 --- !u!224 &9171886279142604465
 RectTransform:
