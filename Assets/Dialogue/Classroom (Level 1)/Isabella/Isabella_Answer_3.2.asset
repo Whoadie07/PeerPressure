@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
+  m_Name: Isabella_Answer_3.2
+  m_EditorClassIdentifier: 
+  LineOfDialogue:
+  - 'You: I kind of know how to play, but only the basics.'
+  - 'Isabella: That''s alright. Mia and I can help refresh your memory.'
+  - 'You: Thanks, Isabella.'
+  IsPlaying: 0
+  LineDisplay:
+  - 0
+  IsAQueation: 0
+  IsInteractionClimax: 0
+  IsInteractionEnd: 0
+  AnswerResponse:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  answer: Kind of
+  IsItCorrect: 1
+  beginFrame: 0
+  endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

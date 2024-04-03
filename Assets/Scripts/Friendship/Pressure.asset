@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a088f3c5d4a6074d88195de180d535d, type: 3}
   m_Name: Pressure
   m_EditorClassIdentifier: 
-  _pressure: 15
+  _pressure: 30

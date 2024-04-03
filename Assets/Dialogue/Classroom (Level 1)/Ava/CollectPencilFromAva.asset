@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: CollectPencilFromAva
   m_EditorClassIdentifier: 
   NPC_Name: Ava
-  pathComplete: 1
+  pathComplete: 0
   pathBegin: 1
   path_name: A Pencil
   path_description: Find a pencil for Ava
+  ID: 0
+  list: {fileID: 11400000, guid: 3c554ef74ed52bc42b68d2c91fec19ee, type: 2}
   itemlist:
   - Pencil
   itemlistNeed: 01000000
-  itemlistCorrect: 01000000
+  itemlistCorrect: 00000000
   dialogueEndPath: {fileID: 11400000, guid: 35f4fc7bbad7e1f49bf85f83477cfb1d, type: 2}

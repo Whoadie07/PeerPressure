@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LineOfDialogue:
   - 'You: Yes'
-  - "Ethan: Oh, really?! Can I see your\r\nanswers? Please help me!\r"
+  - 'Ethan: Oh, thank you! Thank you so much! You''re a life saver!'
+  - Copying...
+  - 'Ethan: Alright. I''m done. Thanks again, (Player name).'
   IsPlaying: 0
   LineDisplay:
   - 0
-  IsAQueation: 0
+  IsAQueation: 1
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -28,3 +30,5 @@ MonoBehaviour:
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

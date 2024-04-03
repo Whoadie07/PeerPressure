@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Isabella Answer 1
   m_EditorClassIdentifier: 
   LineOfDialogue:
-  - 'You: Yes'
+  - 'You: Yeah. She is.'
+  - 'Isabella: I can''t wait for recess. Do you wanna play with me during recess?'
   IsPlaying: 0
   LineDisplay:
   - 0
-  IsAQueation: 0
+  IsAQueation: 1
   AnswerResponse:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 90ef0deefaa6bba438d3c69ba2bb1830, type: 2}
+  - {fileID: 11400000, guid: 2cd230d94c63e8c46a50fec16a0528bb, type: 2}
   answer: Yes
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

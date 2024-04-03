@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+// This is the pressure level meter in the game.
 public class PressureLevel : MonoBehaviour
 {
     [SerializeField]
