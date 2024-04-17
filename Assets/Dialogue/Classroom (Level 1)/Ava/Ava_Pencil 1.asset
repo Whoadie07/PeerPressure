@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Ava_Pencil 1
   m_EditorClassIdentifier: 
   LineOfDialogue:
-  - "Ava: Thanks! I can do the\r practice now.\r\nBut I'm still having no\r ideas.
+  - "Ava: Thanks! I can do the\r practice now.\r But I'm still having no\r ideas.
     I\u2019ve searched for\r answers. I found them\r actually pretty simple. You\r
-    could do the same to save\r\ntime!"
+    could do the same to save\r time!"
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -27,3 +27,5 @@ MonoBehaviour:
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}

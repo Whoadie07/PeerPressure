@@ -1,8 +1,10 @@
 using Cinemachine;
+using System.Collections.Generic;
 using System.Linq;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using UnityEngine.XR;
 
@@ -33,8 +35,16 @@ public class Player_Movement : MonoBehaviour
     public GameObject playerMenu;
 
     //Player Path
-    public PathObject[] playerPath = new PathObject[1];
+    public PathList playerPath;
     public Text PathDescription = null;
+
+    public Link link;
+
+    [SerializeField]
+    private Button back;
+    [SerializeField]
+    private Button next;
+    public int index = 0;
 
     //Private variables.
     private float playerSpeed = 5.0f;
@@ -49,21 +59,24 @@ public class Player_Movement : MonoBehaviour
     protected Vector2 turn;
     protected int isZoom = -1;
 
-    
+
 
     // Start is called before the first frame update
     void Start()
     {
         //Set the Navigation Mesh Agent to Player Speed;
         agent.speed = playerSpeed;
+        index = 0;
+        back.onClick.AddListener(PressLeftButton);
+        next.onClick.AddListener(PressRightButton);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         //Player Interactable and Movement by left-click
-        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting)
+        if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting &&
+            (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false))
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -83,30 +96,30 @@ public class Player_Movement : MonoBehaviour
                     tempInteractable.GetComponent<NPC_Movement>().IsInteracting = true;
                     tempInteractable.GetComponent<NPC_Movement>().InteractTarget = this.gameObject;
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
-                    for (int i = 0; i < playerPath.Length; i++)
+                    for (int i = 0; i < playerPath.pathObjects.Length; i++)
                     {
-                        if (playerPath.ElementAt(i) == null) { continue; }
-                        if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
+                        if (playerPath.pathObjects.ElementAt(i) == null) { continue; }
+                        else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(CollectPath))
                         {
-                            CollectPath a = (CollectPath)playerPath[i];
-                            if (playerPath.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
+                            CollectPath a = (CollectPath)playerPath.pathObjects[i];
+                            if (playerPath.pathObjects.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
                             {
-                                if (a.pathComplete)
+                                if (a.obtainedAll)
                                 {
-                                    ((CollectPath)playerPath[i]).takeItem(PlayerHand.GetComponent<Inventory>());
-                                    playerPath[i] = null;
+                                    ((CollectPath)playerPath.pathObjects[i]).takeItem(PlayerHand.GetComponent<Inventory>(), link);
+                                    playerPath.pathObjects[i] = null;
                                     continue;
                                 }
                             }
                         }
-                        else if (playerPath.ElementAt(i).GetType() == typeof(InteractionPath))
+                        else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(InteractionPath))
                         {
-                            InteractionPath a = (InteractionPath)playerPath[i];
-                            if (playerPath.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
+                            InteractionPath a = (InteractionPath)playerPath.pathObjects[i];
+                            if (playerPath.pathObjects.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
                             {
                                 if (a.pathComplete)
                                 {
-                                    playerPath[i] = null;
+                                    playerPath.pathObjects[i] = null;
                                     continue;
                                 }
                             }
@@ -158,7 +171,7 @@ public class Player_Movement : MonoBehaviour
                     PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
                     PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
                 }
-                
+
                 PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
                 PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
                 PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
@@ -176,7 +189,7 @@ public class Player_Movement : MonoBehaviour
             {
                 PlayerHand.GetComponent<Inventory>().OpenMainInventory = false;
             }
-            
+
         }
         //Open Player UI
         if (Input.GetKeyDown("w"))
@@ -184,51 +197,64 @@ public class Player_Movement : MonoBehaviour
             playerMenu.SetActive(!playerMenu.activeSelf);
         }
         PathDescription.text = "";
-        for (int i = 0; i < playerPath.Length; i++)
+        for (int i = 0; i < playerPath.pathObjects.Length; i++)
         {
-            if (playerPath.ElementAt(i) == null) { continue; }
             string statue_path = "";
-            if (playerPath.ElementAt(i).GetType() == typeof(CollectPath))
+            if (playerPath.pathObjects.ElementAt(i) == null) { continue; }
+            else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(CollectPath))
             {
-                CollectPath a = (CollectPath)playerPath[i];
-                if (!playerPath.ElementAt(i).pathBegin)
+                CollectPath a = (CollectPath)playerPath.pathObjects[i];
+                if (!playerPath.pathObjects.ElementAt(i).pathBegin)
                 {
                     a.pathBegin = true;
                     a.begin(PlayerHand, PlayerHand.GetComponent<Inventory>());
-                    a.checkPath(PlayerHand.GetComponent<Inventory>());
-                    playerPath[i]= a;
+                    a.checkPath(PlayerHand.GetComponent<Inventory>(), link);
+                    playerPath.pathObjects[i] = a;
                 }
                 else
                 {
-                    a.checkPath(PlayerHand.GetComponent<Inventory>());
+                    a.checkPath(PlayerHand.GetComponent<Inventory>(), link);
                     if (a.pathComplete)
+                    {
                         statue_path = " (Complete)";
-                    else
-                        statue_path = " (In progress)";
+                        ResetIndex();
+                    }
+                    else statue_path = " (In progress)";
                 }
             }
-            else if (playerPath.ElementAt(i).GetType() == typeof(InteractionPath))
+            else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(InteractionPath))
             {
-                InteractionPath a = (InteractionPath)playerPath[i];
-                if (!playerPath.ElementAt(i).pathBegin)
+                InteractionPath a = (InteractionPath)playerPath.pathObjects[i];
+                if (!playerPath.pathObjects.ElementAt(i).pathBegin)
                 {
                     a.pathBegin = true;
                     a.Begin();
-                    playerPath[i] = a;
+                    playerPath.pathObjects[i] = a;
                 }
                 else
                 {
                     if (a.pathComplete)
+                    {
                         statue_path = " (Complete)";
-                    else
-                        statue_path = " (In progress)";
+                        ResetIndex();
+                    }
+                    else statue_path = " (In progress)";
                 }
             }
-            PathDescription.text += playerPath.ElementAt(i).path_name + ":" + statue_path + "\n";
-            PathDescription.text += playerPath.ElementAt(i).path_description + "\n";
+            if (i == index)
+            {
+                PathDescription.text += playerPath.pathObjects.ElementAt(i).path_name + ":" + statue_path + "\n";
+                PathDescription.text += playerPath.pathObjects.ElementAt(i).path_description + "\n";
+            }
+            else if (index == 0)
+            {
+                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_name + ":" + statue_path + "\n";
+                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_description + "\n";
+            }
         }
-
+        UpdateList();
     }
+
     void OnGUI()
     {
         //Rotation the Camera Function with change is speed
@@ -277,5 +303,50 @@ public class Player_Movement : MonoBehaviour
         numberSlot = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
         instance_Object.transform.position = PlayerHand.GetComponent<Transform>().position;
         instance_Object.transform.rotation = PlayerHand.GetComponent<Transform>().rotation;
+    }
+    private void PressRightButton()
+    {
+        if (playerPath.pathObjects[index + 1] != null) index++;
+    }
+    private void PressLeftButton()
+    {
+        if (index > 0) index--;
+    }
+
+    private void ResetIndex()
+    {
+        index = 0;
+    }
+
+    private void UpdateList()
+    {
+        for (int i = 0; i < playerPath.pathObjects.Length; i++)
+        {
+            if (playerPath.pathObjects[i] != null) 
+            {
+                if (playerPath.pathObjects[i].pathComplete == true)
+                {
+                    for (int j = i; j < playerPath.pathObjects.Length; j++)
+                    {
+                        if (playerPath.pathObjects[j] != null)
+                        {
+                            playerPath.pathObjects[j] = playerPath.pathObjects[j + 1];
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    private bool IsMouseOverButton()
+    {
+        EventSystem eventSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
+        if (eventSys.IsPointerOverGameObject())
+        {
+            if (EventSystem.current.currentSelectedGameObject.name == back.name) { return true; }
+            else if (EventSystem.current.currentSelectedGameObject.name == next.name) { return true; }
+            else return false;
+        }
+        else { return false; }
     }
 }

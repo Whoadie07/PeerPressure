@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 // When there's a new game starting, all the NPC affinity is set to 0.
@@ -27,6 +28,8 @@ public class ResetGameData : MonoBehaviour
     private FriendData Sophia;
     [SerializeField]
     private ThePressure Pressure;
+    [SerializeField]
+    private PathList List;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,5 +44,9 @@ public class ResetGameData : MonoBehaviour
         Owen.Friend = 0;
         Sophia.Friend = 0;
         Pressure.Pressure = 0;
+        for (int i = 0; i < List.pathObjects.Length; i++)
+        {
+            List.pathObjects[i] = null;
+        }
     }
 }

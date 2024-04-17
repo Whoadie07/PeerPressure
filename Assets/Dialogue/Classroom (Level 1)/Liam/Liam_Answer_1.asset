@@ -16,6 +16,7 @@ MonoBehaviour:
   - 'You: I like music more.'
   - 'Liam: Sweet. Some of us are going to have a musical hangout if you want to join
     us.'
+  - 'You: Okay. Sounds fun.'
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -25,7 +26,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  answer: 
+  answer: Music
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1

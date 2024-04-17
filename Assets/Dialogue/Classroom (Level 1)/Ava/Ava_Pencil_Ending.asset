@@ -10,22 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
-  m_Name: Isabella_Interaction_1_Climax
+  m_Name: Ava_Pencil_Ending
   m_EditorClassIdentifier: 
   LineOfDialogue:
-  - 'Mia: Hi, (name).'
-  - '(Name): Hey, Mia.'
-  - 'Mia: What''s up?'
-  - '(Name): Isabella and I were wondering if you wanna play basketball with us at
-    recess.'
-  - 'Liam: Sure. Sounds fun.'
-  - '(Name): Great. I''ll let Isabella know.'
+  - "Ava: Thanks! I can do the\r practice now.\r But I'm still having no\r ideas.
+    I\u2019ve searched for\r answers. I found them\r actually pretty simple. You\r
+    could do the same to save\r time!"
   IsPlaying: 0
   LineDisplay:
   - 0
   IsAQueation: 0
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}

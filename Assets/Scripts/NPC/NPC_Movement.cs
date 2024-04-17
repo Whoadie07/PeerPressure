@@ -5,13 +5,13 @@ using UnityEngine.AI;
 
 public class NPC_Movement : MonoBehaviour
 {
-    //NPC Data
+    // NPC Data
     public string NPC_name = "";
 
-    //Animtor
+    // Animator
     public Animator npc_animator;
 
-    //Variables for controll npc interact
+    // Variables for controll npc interact
     public bool IsInteracting = false;
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
@@ -24,7 +24,7 @@ public class NPC_Movement : MonoBehaviour
     public ThePressure Peer = null;
     public PathObject CurrentPath = null;
 
-    //NPC Movement by move them with a path to follow
+    // NPC Movement by move them with a path to follow
     public int NpcPath = 0;
     public int CurrentpPath = 0;
     public static int PathNumber = 2;
@@ -32,7 +32,7 @@ public class NPC_Movement : MonoBehaviour
     public bool KeepMovement = false;
     protected Vector3 cur_path;
 
-    //NPC Control
+    // NPC Control
     public GameObject game_npc_agent;
     public NavMeshAgent npc_agent;
 
@@ -86,7 +86,7 @@ public class NPC_Movement : MonoBehaviour
             }
         }
     }
-    //NPC will update to communicate with the player. 
+    // NPC will update to communicate with the player. 
     public void UpdateNPC()
     {
         npcreader.rootNode = NPC_Dialogue;
