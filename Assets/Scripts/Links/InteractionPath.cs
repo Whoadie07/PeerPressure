@@ -32,7 +32,7 @@ public class InteractionPath : PathObject
     // This is where the new root node of the quest giver is stored.
     public NarrativeNode replacementRoot;
     // This is where the root nodes of the NPCs are stored during the quest.
-    private NarrativeNode[] previousRoots;
+    private NarrativeNode[] previousRoots = new NarrativeNode[0];
     // This checks if the player has interacted with the NPC or not.
     private bool hasInteracted = false;
     // This is to check if the player has interacted with all of the NPCs in the list.
@@ -74,12 +74,15 @@ public class InteractionPath : PathObject
         checker = new bool[FriendList.Length];
         for (int i = 0; i < FriendList.Length; i++)
         {
-            // This uses the link to get the NPC_Movement components of the NPCs in the quest to change the dialogue and save their previous roots.
-            previousRoots[i] = link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().NPC_Dialogue;
-            link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().NPC_Dialogue = dialogueClimaxes[i];
-            // The NPCs are also on the same path as the player.
-            link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().CurrentPath = this;
-            checker[i] = false;
+            if (previousRoots[i] == null)
+            {
+                // This uses the link to get the NPC_Movement components of the NPCs in the quest to change the dialogue and save their previous roots.
+                previousRoots[i] = link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().NPC_Dialogue;
+                link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().NPC_Dialogue = dialogueClimaxes[i];
+                // The NPCs are also on the same path as the player.
+                link.GetObject(QuestNames[i]).GetComponent<NPC_Movement>().CurrentPath = this;
+                checker[i] = false;
+            }
         }
         // The target name variable is initialized to the first NPC name on the questnames list.
         TargetName = link.GetObject(QuestNames[0]).GetComponent<NPC_Movement>().NPC_name;

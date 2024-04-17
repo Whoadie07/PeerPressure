@@ -54,7 +54,7 @@ public class NarrativeReader : MonoBehaviour
     //(Fixed) Move to the next dialgoue nextline
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1) && currentNode != null)
         {
             NextLine();
         }
@@ -170,18 +170,21 @@ public class NarrativeReader : MonoBehaviour
                 if(s_object != null)
                 {
                     int i_loop = -1;
-                    for (int i = 0; i < s_object.GetComponent<Player_Movement>().playerPath.Length; i++)
+                    for (int i = 0; i < s_object.GetComponent<Player_Movement>().playerPath.pathObjects.Length; i++)
                     {
-                        if (s_object.GetComponent<Player_Movement>().playerPath.ElementAt<PathObject>(i) != null) { continue; }
                         i_loop = i;
-                        break;
+                        if (s_object.GetComponent<Player_Movement>().playerPath.pathObjects.ElementAt<PathObject>(i) == null) { break; }
+                        else if (s_object.GetComponent<Player_Movement>().playerPath.pathObjects.ElementAt<PathObject>(i).path_name == currentNode.PathObject.path_name) { 
+                            i_loop = -1;
+                            break;
+                        }
                     }
                     if (i_loop != -1)
                     {
-                        NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().playerPath[i_loop] = currentNode.PathObject;
+                        NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().playerPath.pathObjects[i_loop] = currentNode.PathObject;
+                        NarrativeObject.GetComponent<NPC_Movement>().InteractTarget.GetComponent<Player_Movement>().index = i_loop;
                         NarrativeObject.GetComponent<NPC_Movement>().CurrentPath = currentNode.PathObject;
                         NarrativeObject.GetComponent<NPC_Movement>().CurrentPath.pathBegin = false;
-
                     }
                     
                 }
