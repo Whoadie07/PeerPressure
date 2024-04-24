@@ -49,6 +49,12 @@ public class Menu : ScriptableObject
         new WaitForSeconds(10);
         SceneManager.LoadScene(SceneNames[1]);
     }
+    //Load the chapter select scene
+    public void ChapterSelect()
+    {
+        new WaitForSeconds(10);
+        SceneManager.LoadScene("ChapterSelect");
+    }
     //Load the control scene
     public void Setting()
     {
