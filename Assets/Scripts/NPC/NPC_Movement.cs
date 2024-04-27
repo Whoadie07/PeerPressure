@@ -18,6 +18,8 @@ public class NPC_Movement : MonoBehaviour
     public NarrativeNode NPC_Dialogue = null;
     public GameObject link = null;
 
+    public Condition condition;
+
     // This is where the affinity data of the NPC is stored.
     public FriendData NPC_Affinity = null;
     // All NPCs are connected to the pressure levels of the player.
@@ -41,6 +43,17 @@ public class NPC_Movement : MonoBehaviour
     {
         NpcPath = 0;
         cur_path = NpcTargetPath[NpcPath].GetComponent<Transform>().position;
+        if (condition != null)
+        {
+            if (condition.Changer == 1)
+            {
+                NPC_Dialogue = condition.root1;
+            }
+            else if (condition.Changer == 0)
+            {
+                NPC_Dialogue = condition.root2;
+            }
+        }
     }
 
     // Update is called once per frame

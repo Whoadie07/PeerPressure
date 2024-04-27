@@ -24,6 +24,8 @@ public class CollectPath : PathObject
 
     public NarrativeNode dialogueReplaceRoot;
 
+    public Condition condition;
+
     public bool obtainedAll = false;
     
     public void begin(GameObject obj, Inventory pathInventory)
@@ -42,6 +44,7 @@ public class CollectPath : PathObject
             itemlistCorrect[i] = null;
         }
         obtainedAll = false;
+        if (condition != null) condition.Changer = 0;
     }
     public void checkPath(Inventory pathInventory, Link link)
     {
@@ -104,6 +107,7 @@ public class CollectPath : PathObject
         pathComplete = true;
         pathBegin = false;
         UpdateDialogue(link.GetComponent<Link>().GetObject(NPC_Name).GetComponent<NPC_Movement>(), 1);
+        if (condition != null) condition.Changer = 1;
     }
     public void takeItem(Inventory pathInventory, Link link)
     {

@@ -33,6 +33,8 @@ public class InteractionPath : PathObject
     public NarrativeNode replacementRoot;
     // This is where the root nodes of the NPCs are stored during the quest.
     private NarrativeNode[] previousRoots = new NarrativeNode[0];
+    // If there is a condition that affects the nodes in other levels
+    public Condition condition;
     // This checks if the player has interacted with the NPC or not.
     private bool hasInteracted = false;
     // This is to check if the player has interacted with all of the NPCs in the list.
@@ -46,6 +48,7 @@ public class InteractionPath : PathObject
         hasInteracted = false;
         hasSetUp = false;
         pathComplete = false;
+        if (condition != null) condition.Changer = 0;
     }
 
     // This updates the dialogue by calling the three functions below depending on the conditions.
@@ -61,6 +64,7 @@ public class InteractionPath : PathObject
         }
         // If it's not set up, then SetLinksList gets called.
         else SetLinksList(npc, link);
+        if ((pathComplete == true)&&(condition != null)) condition.Changer = 1;
     }
 
     // This sets up the links for the quest.
