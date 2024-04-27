@@ -31,3 +31,4 @@ MonoBehaviour:
   dialogueWait: {fileID: 11400000, guid: ebc988cbeea7b3846a1c79a93b505110, type: 2}
   dialogueEndPath: {fileID: 11400000, guid: 3055c71db1553764ca1027779bab66bd, type: 2}
   replacementRoot: {fileID: 11400000, guid: 2913cfe8eea4b9a47ab1fa3b78f7cb00, type: 2}
+  condition: {fileID: 11400000, guid: c2d79af687139a347915c169621cf062, type: 2}
