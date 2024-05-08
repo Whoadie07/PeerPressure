@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Pencil 1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Ava
   LineOfDialogue:
   - "Ava: Thanks! I can do the\r practice now.\r But I'm still having no\r ideas.
     I\u2019ve searched for\r answers. I found them\r actually pretty simple. You\r
@@ -29,3 +31,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

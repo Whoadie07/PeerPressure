@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Answer_1.3
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Ava
   LineOfDialogue:
   - 'You: Awful'
   - 'Ava: What happens? Is it the
@@ -28,3 +31,6 @@ MonoBehaviour:
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
+  condition: {fileID: 0}

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella_Interaction_Climax
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Mia
+  - You
+  - Mia
+  - You
   LineOfDialogue:
   - 'Mia: Hey, (Name).'
   - 'You: Hi, Mia. Do you wanna go play basketball with me and Isabella?'
@@ -21,8 +26,6 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 0
-  IsInteractionClimax: 1
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -34,3 +37,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

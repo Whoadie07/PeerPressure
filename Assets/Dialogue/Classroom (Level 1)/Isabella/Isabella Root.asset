@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella Root
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Isabella
+  - Isabella
   LineOfDialogue:
   - "Isabella: I really like Ms. Smith.\r"
   - "Isabella:  She\u2019s cool, isn\u2019t?"
@@ -26,3 +29,6 @@ MonoBehaviour:
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
+  condition: {fileID: 0}

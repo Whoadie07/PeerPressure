@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Noah_Playground_Root
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Noah
   LineOfDialogue:
   - 'Noah: Hello'
   IsPlaying: 0

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Pencil_ReplacementRoot
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Ava
+  - You
+  - Ava
   LineOfDialogue:
   - 'Ava: Hey. Do you need any help with something?'
   - 'You: Nah. I''m good.'
@@ -31,3 +35,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

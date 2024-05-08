@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella_Playground_Root1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Isabella
+  - You
+  - Mia
+  - Isabella
   LineOfDialogue:
   - 'Isabella: Hey! Are you ready to play basketball?'
   - 'You: You bet I am!'

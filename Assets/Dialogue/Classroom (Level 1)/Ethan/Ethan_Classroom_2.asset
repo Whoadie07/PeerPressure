@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ethan_Classroom_2
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Ethan
+  - Ethan
+  - You
   LineOfDialogue:
   - "Ethan: Wow, you are an expert in\r history! "
   - "Ethan:  Can I copy your\r answers?"
@@ -27,3 +31,6 @@ MonoBehaviour:
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
+  condition: {fileID: 0}

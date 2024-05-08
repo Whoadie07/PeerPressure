@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Liam_Classroom_1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Liam
+  - You
+  - Liam
   LineOfDialogue:
   - 'Liam: Hey.'
   - 'You: Hi.'
@@ -31,3 +35,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

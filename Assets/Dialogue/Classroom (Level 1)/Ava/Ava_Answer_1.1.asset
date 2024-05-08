@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Answer_1.1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Ava
   LineOfDialogue:
   - 'You: Good'
   - "Ava: Me, too. Except the\r homework is hard.\r ...Oh, I cannot find my\r pencil.
@@ -31,3 +34,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 1
   PathObject: {fileID: 11400000, guid: 5d914bc61bc63854d87712340201d520, type: 2}
+  condition: {fileID: 0}
