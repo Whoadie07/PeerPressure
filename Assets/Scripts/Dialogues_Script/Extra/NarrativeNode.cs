@@ -18,6 +18,7 @@ public class NarrativeNode : ScriptableObject
     //Start variables
     //Dialogue and Question will be last index
     public static int LineSize = 1;
+    [TextArea(3, 10000)][SerializeField] public string[] DialogueNames = new string[LineSize]; // List of Names for Dialogue
     [TextArea(3, 10000)][SerializeField] public string[] LineOfDialogue = new string[LineSize]; //List of Dialogues Line for node
     public bool IsPlaying = false;
     public float[] LineDisplay = new float[LineSize]; //List of dialogues second translating.
@@ -58,6 +59,15 @@ public class NarrativeNode : ScriptableObject
             return "None Text Exist";
         }
         return LineOfDialogue[index];
+    }
+
+    public string GetDialogueName(int index)
+    {
+        if (index >= DialogueNames.Length)
+        {
+            return "None Text Exist";
+        }
+        return DialogueNames[index];
     }
     //Return time dialogue will translating to the next dialogue
     public float GetDialogueSecond(int index)
@@ -104,6 +114,11 @@ public class NarrativeNode : ScriptableObject
     public int DialogueLineSize()
     {
         return LineOfDialogue.Length;
+    }
+
+    public int DialogueNamesSize()
+    {
+        return DialogueNames.Length;
     }
     public int DialogueSecondSize()
     {

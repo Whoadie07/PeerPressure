@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella_Answer_3.3
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Isabella
+  - You
+  - Isabella
+  - You
+  - Isabella
+  - You
   LineOfDialogue:
   - 'You: No. I never played basketball before in my life.'
   - 'Isabella: Wow... Okay. I guess Mia and I will show you how it''s done before
@@ -25,8 +33,6 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 0
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -38,3 +44,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

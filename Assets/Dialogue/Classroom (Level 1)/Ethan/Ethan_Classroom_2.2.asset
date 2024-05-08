@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ethan_Classroom_2.2
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Ethan
+  - Ethan
   LineOfDialogue:
   - 'You: No'
   - "Ethan: Alright. I must go now.\r"
@@ -29,3 +33,6 @@ MonoBehaviour:
   IsItCorrect: 1
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
+  condition: {fileID: 0}

@@ -12,6 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Pencil_Answer 1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Ava
+  - You
+  - Ava
   LineOfDialogue:
   - "You: Yes,\r I\u2019ll try it"
   - 'Ava: You should try!!!
@@ -23,8 +28,6 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 0
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -36,3 +39,4 @@ MonoBehaviour:
   endFrame: 3
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ethan_Classroom_1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Ethan
+  - You
   LineOfDialogue:
   - "Ethan: Shhh... Listen. I copied Mia\u2019s\r answers. I think you also need
     it.\r I must go home soon. You'd\r better copy it right now if you\r want."
@@ -27,3 +30,6 @@ MonoBehaviour:
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1
+  isTherePath: 0
+  PathObject: {fileID: 0}
+  condition: {fileID: 0}

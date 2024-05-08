@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Mia_Root
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Mia
+  - You
+  - Mia
   LineOfDialogue:
   - 'Mia: Hey, (name)! What''s up?'
   - '(You): Nothing Much. What about you?'
@@ -21,8 +25,6 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 1
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 11400000, guid: f81a6fe0ac89c53419341ac7d560f2b4, type: 2}
   - {fileID: 11400000, guid: b07759495ad625b4e956dc6bcf6bfaec, type: 2}
@@ -32,3 +34,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}

@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella Answer 2.1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Isabella
+  - You
   LineOfDialogue:
   - 'You: Sure!'
   - 'Isabella: Cool. Mia and I love playing basketball. Mind asking her if she also
@@ -32,3 +36,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 1
   PathObject: {fileID: 11400000, guid: 151d4f123d25ab04b9ffff0450cfe5cb, type: 2}
+  condition: {fileID: 0}

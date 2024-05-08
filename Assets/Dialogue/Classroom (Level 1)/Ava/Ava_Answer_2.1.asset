@@ -12,6 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Ava_Answer_2.1
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - You
+  - Ava
+  - Ava
   LineOfDialogue:
   - 'You: Yes'
   - 'Ava: Me, too. The homework is so confusing.
@@ -22,8 +26,6 @@ MonoBehaviour:
   LineDisplay:
   - 0
   IsAQueation: 0
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 0}
   - {fileID: 0}
@@ -35,3 +37,4 @@ MonoBehaviour:
   endFrame: 2
   isTherePath: 1
   PathObject: {fileID: 11400000, guid: 5d914bc61bc63854d87712340201d520, type: 2}
+  condition: {fileID: 0}

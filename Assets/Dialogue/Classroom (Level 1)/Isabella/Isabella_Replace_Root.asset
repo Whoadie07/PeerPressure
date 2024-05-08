@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4560e5442a0052f468d7e1b3fe367b03, type: 3}
   m_Name: Isabella_Replace_Root
   m_EditorClassIdentifier: 
+  DialogueNames:
+  - Mia
   LineOfDialogue:
   - 'Mia: So, do you know how to play basketball?'
   IsPlaying: 0
   LineDisplay:
   - 0
   IsAQueation: 1
-  IsInteractionClimax: 0
-  IsInteractionEnd: 0
   AnswerResponse:
   - {fileID: 11400000, guid: fa58b75acd6cadb429b1b9d6ea39959b, type: 2}
   - {fileID: 11400000, guid: 49847b46dde9b2549b21c76ac093f76a, type: 2}
@@ -31,3 +31,4 @@ MonoBehaviour:
   endFrame: 1
   isTherePath: 0
   PathObject: {fileID: 0}
+  condition: {fileID: 0}
