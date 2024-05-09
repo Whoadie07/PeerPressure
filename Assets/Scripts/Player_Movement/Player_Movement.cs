@@ -36,6 +36,7 @@ public class Player_Movement : MonoBehaviour
 
     //Player Path
     public PathList playerPath;
+    public Text PathName = null;
     public Text PathDescription = null;
 
     public Link link;
@@ -196,10 +197,10 @@ public class Player_Movement : MonoBehaviour
         {
             playerMenu.SetActive(!playerMenu.activeSelf);
         }
+        PathName.text = "";
         PathDescription.text = "";
         for (int i = 0; i < playerPath.pathObjects.Length; i++)
         {
-            string statue_path = "";
             if (playerPath.pathObjects.ElementAt(i) == null) { continue; }
             else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(CollectPath))
             {
@@ -214,12 +215,7 @@ public class Player_Movement : MonoBehaviour
                 else
                 {
                     a.checkPath(PlayerHand.GetComponent<Inventory>(), link);
-                    if (a.pathComplete)
-                    {
-                        statue_path = " (Complete)";
-                        ResetIndex();
-                    }
-                    else statue_path = " (In progress)";
+                    if (a.pathComplete) ResetIndex();
                 }
             }
             else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(InteractionPath))
@@ -233,23 +229,18 @@ public class Player_Movement : MonoBehaviour
                 }
                 else
                 {
-                    if (a.pathComplete)
-                    {
-                        statue_path = " (Complete)";
-                        ResetIndex();
-                    }
-                    else statue_path = " (In progress)";
+                    if (a.pathComplete) ResetIndex();
                 }
             }
             if (i == index)
             {
-                PathDescription.text += playerPath.pathObjects.ElementAt(i).path_name + ":" + statue_path + "\n";
-                PathDescription.text += playerPath.pathObjects.ElementAt(i).path_description + "\n";
+                PathName.text += playerPath.pathObjects.ElementAt(i).path_name;
+                PathDescription.text += playerPath.pathObjects.ElementAt(i).path_description;
             }
             else if (index == 0)
             {
-                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_name + ":" + statue_path + "\n";
-                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_description + "\n";
+                PathName.text += playerPath.pathObjects.ElementAt(0).path_name;
+                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_description;
             }
         }
         UpdateList();
