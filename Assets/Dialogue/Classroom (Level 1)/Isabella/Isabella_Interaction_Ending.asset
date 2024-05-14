@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Isabella_Interaction_Ending
   m_EditorClassIdentifier: 
   DialogueNames:
-  - Mia
+  - Isabella
   - You
-  - Mia
+  - Isabella
   - You
   LineOfDialogue:
-  - 'Mia: So, what did she say?'
-  - 'You: She said yes.'
-  - 'Mia: Awesome! See you at the court.'
-  - 'You: Okay.'
+  - So, what did she say?
+  - She said yes.
+  - Awesome! See you at the court.
+  - Okay.
   IsPlaying: 0
   LineDisplay:
   - 0

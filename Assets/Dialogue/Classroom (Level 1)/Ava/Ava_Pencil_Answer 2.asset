@@ -16,9 +16,9 @@ MonoBehaviour:
   - You
   - Ava
   LineOfDialogue:
-  - "You: No, I\u2019ll try them\r, myself."
-  - "Ava: I still suggest some\r searching. It won\u2019t\r harm. Well, I\u2019m
-    done. See\r, you tomorrow!"
+  - "No, I\u2019ll try them\r, myself."
+  - "I still suggest some\r searching. It won\u2019t\r harm. Well, I\u2019m done.
+    See\r, you tomorrow!"
   IsPlaying: 0
   LineDisplay:
   - 0

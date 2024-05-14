@@ -17,10 +17,10 @@ MonoBehaviour:
   - Isabella
   - You
   LineOfDialogue:
-  - 'You: Sure!'
-  - 'Isabella: Cool. Mia and I love playing basketball. Mind asking her if she also
-    wants to play with us?'
-  - 'You: Okay.'
+  - Sure!
+  - Cool. Mia and I love playing basketball. Mind asking her if she also wants to
+    play with us?
+  - Okay.
   IsPlaying: 0
   LineDisplay:
   - 0

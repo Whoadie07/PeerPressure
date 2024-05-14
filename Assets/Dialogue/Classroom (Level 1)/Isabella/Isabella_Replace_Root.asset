@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Isabella_Replace_Root
   m_EditorClassIdentifier: 
   DialogueNames:
-  - Mia
+  - Isabella
   LineOfDialogue:
-  - 'Mia: So, do you know how to play basketball?'
+  - So, do you know how to play basketball?
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -24,7 +24,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fa58b75acd6cadb429b1b9d6ea39959b, type: 2}
   - {fileID: 11400000, guid: 49847b46dde9b2549b21c76ac093f76a, type: 2}
   - {fileID: 11400000, guid: 75fca2aafd0b0cf4c992c3485354798d, type: 2}
-  - {fileID: 0}
   answer: 
   IsItCorrect: 0
   beginFrame: 0

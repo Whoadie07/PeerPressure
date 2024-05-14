@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueNames:
   - You
-  - Mia
+  - Isabella
   LineOfDialogue:
-  - 'You: Yeah. I know how to play.'
-  - 'Mia: That''s good. Then I won''t have to give you a crash course before our
-    game.'
+  - Yeah. I know how to play.
+  - That's good. Then I won't have to give you a crash course before our game.
   IsPlaying: 0
   LineDisplay:
   - 0

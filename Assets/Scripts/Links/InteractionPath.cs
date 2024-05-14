@@ -58,20 +58,18 @@ public class InteractionPath : PathObject
         if (hasSetUp)
         {
             // This checks whether the player has interacted with all the NPCs in the list or not.
-            // It also checks if the npc the player is interacting is the giver or one of the NPCs on the list.
-            if ((!hasInteracted)&&(npc.NPC_name == TargetName)) UpdateClimaxList(npc, link.GetObject(NPC_Name).GetComponent<NPC_Movement>());
-            else if ((hasInteracted)&&(npc.NPC_name == NPC_Name)) CompletedList(npc, link);
+            if (npc.NPC_name == TargetName) UpdateClimaxList(link);
         }
         // If it's not set up, then SetLinksList gets called.
-        else SetLinksList(npc, link);
+        else SetLinksList(link);
         if ((pathComplete == true)&&(condition != null)) condition.Changer = 1;
     }
 
     // This sets up the links for the quest.
-    public void SetLinksList(NPC_Movement npc, Link link)
+    public void SetLinksList(Link link)
     {
         // The waiting dialogue gets set for the quest giver.
-        npc.NPC_Dialogue = dialogueWait;
+        link.GetObject(NPC_Name).GetComponent<NPC_Movement>().NPC_Dialogue = dialogueWait;
         // Then, the roots of the NPCs the player needs to interact during the quest are stored in the previousRoots array.
         previousRoots = new NarrativeNode[FriendList.Length];
         // The checker array is initialized to tell what NPCs the players has interacted.
@@ -95,15 +93,15 @@ public class InteractionPath : PathObject
     }
 
     // This updates the climaxes of the NPCs
-    public void UpdateClimaxList(NPC_Movement npc1, NPC_Movement npc2)
+    public void UpdateClimaxList(Link link)
     {
         // This loops through the questnames array to find out if the name the NPC is interacted with matches the target name.
         for (int i = 0; i < FriendList.Length; i++)
         {
             // If so, then the NPC's dialogue gets changed to a new climax dialogue.
-            if (npc1.NPC_name == QuestNames[i])
+            if (link.GetObject(TargetName).GetComponent<NPC_Movement>().NPC_name == QuestNames[i])
             {
-                npc1.NPC_Dialogue = newClimaxes[i];
+                link.GetObject(TargetName).GetComponent<NPC_Movement>().NPC_Dialogue = newClimaxes[i];
                 // The checker marks the NPC interaction true.
                 checker[i] = true;
                 // If there are still some NPCs that need to be interacted, then the target name is set to the next NPC in the list.
@@ -119,16 +117,16 @@ public class InteractionPath : PathObject
         // If the player has interacted with all the NPCs on the list, then the dialogue for the giver is changed to the ending dialogue.
         if (counter == FriendList.Length)
         {
-            npc2.NPC_Dialogue = dialogueEndPath;
+            link.GetObject(NPC_Name).GetComponent<NPC_Movement>().NPC_Dialogue = dialogueEndPath;
             hasInteracted = true;
         }
     }
 
     // This gets called when the player interacts with the quest giver to complete the quest.
-    public void CompletedList(NPC_Movement npc, Link link)
+    public void CompletedList(Link link)
     {
         // This changes the dialogue of the quest giver to the new root.
-        npc.NPC_Dialogue = replacementRoot;
+        link.GetObject(NPC_Name).GetComponent<NPC_Movement>().NPC_Dialogue = replacementRoot;
         // The affinity is increased by 4.
         FriendData.Friend += 4;
         // Then the NPC's Dialogue return to their original roots.
@@ -141,5 +139,10 @@ public class InteractionPath : PathObject
             FriendList[i].Friend += 2;
         }
         pathComplete = true;
+    }
+
+    public bool GetInteracted()
+    {
+        return hasInteracted;
     }
 }

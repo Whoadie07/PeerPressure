@@ -17,9 +17,9 @@ MonoBehaviour:
   - You
   - Liam
   LineOfDialogue:
-  - 'Liam: Hey.'
-  - 'You: Hi.'
-  - 'Liam: I have a question. Which do you prefer? Music or Sports?'
+  - Hey.
+  - Hi.
+  - I have a question. Which do you prefer? Music or Sports?
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -27,8 +27,6 @@ MonoBehaviour:
   AnswerResponse:
   - {fileID: 11400000, guid: 1bf67e785874fb84789217bb75419c2a, type: 2}
   - {fileID: 11400000, guid: b790a5e24431a7649a0785d317087a33, type: 2}
-  - {fileID: 0}
-  - {fileID: 0}
   answer: 
   IsItCorrect: 0
   beginFrame: 0

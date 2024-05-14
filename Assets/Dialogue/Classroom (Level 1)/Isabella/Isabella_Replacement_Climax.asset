@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Mia
   LineOfDialogue:
-  - 'Mia: I can''t wait to play Basketball with you, guys.'
+  - I can't wait to play Basketball with you, guys.
   IsPlaying: 0
   LineDisplay:
   - 0

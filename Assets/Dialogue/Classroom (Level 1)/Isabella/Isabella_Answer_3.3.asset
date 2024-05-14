@@ -21,14 +21,14 @@ MonoBehaviour:
   - Isabella
   - You
   LineOfDialogue:
-  - 'You: No. I never played basketball before in my life.'
-  - 'Isabella: Wow... Okay. I guess Mia and I will show you how it''s done before
-    we actually play.'
-  - 'You: Thanks.'
-  - 'Isabella: But it''s gonna take some time off our recess time.'
-  - 'You: Yeah. I''m sorry.'
-  - 'Isabella: It''s okay. I don''t mind and I think Mia won''t mind either.'
-  - 'You: Alright.'
+  - No. I never played basketball before in my life.
+  - Wow... Okay. I guess Mia and I will show you how it's done before we actually
+    play.
+  - Thanks.
+  - But it's gonna take some time off our recess time.
+  - Yeah. I'm sorry.
+  - It's okay. I don't mind and I think Mia won't mind either.
+  - Alright.
   IsPlaying: 0
   LineDisplay:
   - 0
@@ -38,7 +38,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  answer: 
+  answer: No
   IsItCorrect: 0
   beginFrame: 0
   endFrame: 1

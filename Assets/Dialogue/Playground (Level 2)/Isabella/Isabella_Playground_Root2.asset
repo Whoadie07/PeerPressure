@@ -16,8 +16,8 @@ MonoBehaviour:
   - Isabella
   - You
   LineOfDialogue:
-  - 'Isabella: Oh hey. Do you wanna play basketball with us?'
-  - 'You: Sure.'
+  - Oh hey. Do you wanna play basketball with us?
+  - Sure.
   IsPlaying: 0
   LineDisplay:
   - 0

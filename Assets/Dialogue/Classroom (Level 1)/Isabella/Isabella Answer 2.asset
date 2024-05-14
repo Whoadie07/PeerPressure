@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Isabella
   LineOfDialogue:
-  - "You: Too\r strict for me."
-  - 'Isabella: I can understand that.'
+  - "Too\r strict for me."
+  - I can understand that.
   IsPlaying: 0
   LineDisplay:
   - 0

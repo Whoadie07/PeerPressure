@@ -18,10 +18,10 @@ MonoBehaviour:
   - Mia
   - You
   LineOfDialogue:
-  - 'Mia: Hey, (Name).'
-  - 'You: Hi, Mia. Do you wanna go play basketball with me and Isabella?'
-  - 'Mia: Sure. I''ve played with her before and she''s really good.'
-  - 'You: Alright. Cool. I''ll let her know.'
+  - Hey, (Name).
+  - Hi, Mia. Do you wanna go play basketball with me and Isabella?
+  - Sure. I've played with her before and she's really good.
+  - Alright. Cool. I'll let her know.
   IsPlaying: 0
   LineDisplay:
   - 0

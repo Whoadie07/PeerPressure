@@ -17,9 +17,9 @@ MonoBehaviour:
   - You
   - Isabella
   LineOfDialogue:
-  - 'Isabella: DId you ask Mia yet?'
-  - 'You: Not yet.'
-  - 'Isabella: Oh okay. Just don''t forget, okay?'
+  - ' DId you ask Mia yet?'
+  - Not yet.
+  - Oh okay. Just don't forget, okay?
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Ethan
   LineOfDialogue:
-  - 'You: No'
-  - 'Ethan: Well, I''ll go to Mia. I think she will show me her answers.'
+  - No
+  - Well, I'll go to Mia. I think she will show me her answers.
   IsPlaying: 0
   LineDisplay:
   - 0

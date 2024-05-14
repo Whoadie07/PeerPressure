@@ -18,10 +18,10 @@ MonoBehaviour:
   - Mia
   - Isabella
   LineOfDialogue:
-  - 'Isabella: Hey! Are you ready to play basketball?'
-  - 'You: You bet I am!'
-  - 'Mia: Awesome! I already got us a ball.'
-  - 'Isabella: You wanna go first?'
+  - Hey! Are you ready to play basketball?
+  - You bet I am!
+  - Awesome! I already got us a ball.
+  - You wanna go first?
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Ethan
   LineOfDialogue:
-  - 'You: No'
-  - "Ethan: Alright. I must go now.\r See you tomorrow!"
+  - No
+  - "Alright. I must go now.\r See you tomorrow!"
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Noah
   LineOfDialogue:
-  - 'Noah: Hello'
+  - Hello
   IsPlaying: 0
   LineDisplay:
   - 0

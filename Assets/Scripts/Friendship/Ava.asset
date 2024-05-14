@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c418e0317f924fd4fbdae0058844ebc5, type: 3}
   m_Name: Ava
   m_EditorClassIdentifier: 
-  _friend: 2
+  _friend: 0
