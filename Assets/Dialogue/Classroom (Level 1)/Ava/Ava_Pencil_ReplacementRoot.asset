@@ -17,9 +17,9 @@ MonoBehaviour:
   - You
   - Ava
   LineOfDialogue:
-  - 'Ava: Hey. Do you need any help with something?'
-  - 'You: Nah. I''m good.'
-  - 'Ava: Okay. See yah.'
+  - Hey. Do you need any help with something?
+  - Nah. I'm good.
+  - Okay. See yah.
   IsPlaying: 0
   LineDisplay:
   - 0

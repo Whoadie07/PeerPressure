@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Liam
   LineOfDialogue:
-  - 'Liam: Hello'
+  - Hello
   IsPlaying: 0
   LineDisplay:
   - 0

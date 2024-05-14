@@ -14,12 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueNames:
   - Ethan
-  - Ethan
   - You
   LineOfDialogue:
-  - "Ethan: Wow, you are an expert in\r history! "
-  - "Ethan:  Can I copy your\r answers?"
-  - "(Monologue) : Let Ethan copy the\r answers?\r"
+  - "Wow, you are an expert in\r history! Can I copy your\r answers?"
+  - "(Monologue): Let Ethan copy the\r answers?\r"
   IsPlaying: 0
   LineDisplay:
   - 0

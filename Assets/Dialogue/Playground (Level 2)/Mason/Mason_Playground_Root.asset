@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Mason
   LineOfDialogue:
-  - 'Mason: Hello'
+  - Hello
   IsPlaying: 0
   LineDisplay:
   - 0

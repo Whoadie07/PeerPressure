@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Ava
   LineOfDialogue:
-  - 'Ava: Hello'
+  - Hello
   IsPlaying: 0
   LineDisplay:
   - 0

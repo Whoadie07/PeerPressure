@@ -17,9 +17,9 @@ MonoBehaviour:
   - You
   - Ava
   LineOfDialogue:
-  - 'Ava: Have you found a pencil yet?'
-  - 'You: Not yet.'
-  - 'Ava: It''s okay. You can take your time.'
+  - Have you found a pencil yet?
+  - Not yet.
+  - It's okay. You can take your time.
   IsPlaying: 0
   LineDisplay:
   - 0

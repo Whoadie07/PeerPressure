@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Isabella
   LineOfDialogue:
-  - 'You: No Thanks'
-  - 'Isabella: Oh, okay. Let me know if you change your mind.'
+  - No Thanks
+  - Oh, okay. Let me know if you change your mind.
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -17,6 +17,17 @@ public class Link : MonoBehaviour
     public GameObject Owen;
     public GameObject Sophia;
 
+    public FriendData AvaData;
+    public FriendData EthanData;
+    public FriendData IsabellaData;
+    public FriendData LiamData;
+    public FriendData MiaData;
+    public FriendData MasonData;
+    public FriendData NoahData;
+    public FriendData OliviaData;
+    public FriendData OwenData;
+    public FriendData SophiaData;
+
     // This gets the game object of the NPC
     public GameObject GetObject(string name)
     {
@@ -30,6 +41,22 @@ public class Link : MonoBehaviour
         else if (name == "Olivia") return Olivia;
         else if (name == "Owen") return Owen;
         else if (name == "Sophia") return Sophia;
+        else return null;
+    }
+    
+    // This gets the friend data of the NPC
+    public FriendData GetData(string name)
+    {
+        if (name == "Ava") return AvaData;
+        else if (name == "Ethan") return EthanData;
+        else if (name == "Isabella") return IsabellaData;
+        else if (name == "Liam") return LiamData;
+        else if (name == "Mia") return MiaData;
+        else if (name == "Mason") return MasonData;
+        else if (name == "Noah") return NoahData;
+        else if (name == "Olivia") return OliviaData;
+        else if (name == "Owen") return OwenData;
+        else if (name == "Sophia") return SophiaData;
         else return null;
     }
 }

@@ -14,10 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DialogueNames:
   - Isabella
-  - Isabella
   LineOfDialogue:
-  - "Isabella: I really like Ms. Smith.\r"
-  - "Isabella:  She\u2019s cool, isn\u2019t?"
+  - "Isabella: I really like Ms. Smith.\r She\u2019s cool, isn\u2019t?"
   IsPlaying: 0
   LineDisplay:
   - 0

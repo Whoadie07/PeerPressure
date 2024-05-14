@@ -17,10 +17,9 @@ MonoBehaviour:
   - Liam
   - You
   LineOfDialogue:
-  - 'You: I like music more.'
-  - 'Liam: Sweet. Some of us are going to have a musical hangout if you want to join
-    us.'
-  - 'You: Okay. Sounds fun.'
+  - I like music more.
+  - Sweet. Some of us are going to have a musical hangout if you want to join us.
+  - Okay. Sounds fun.
   IsPlaying: 0
   LineDisplay:
   - 0

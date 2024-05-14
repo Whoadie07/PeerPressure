@@ -15,9 +15,9 @@ MonoBehaviour:
   DialogueNames:
   - Ava
   LineOfDialogue:
-  - "Ava: Thanks! I can do the\r practice now.\r But I'm still having no\r ideas.
-    I\u2019ve searched for\r answers. I found them\r actually pretty simple. You\r
-    could do the same to save\r time!"
+  - "Thanks! I can do the\r practice now.\r But I'm still having no\r ideas. I\u2019ve
+    searched for\r answers. I found them\r actually pretty simple. You\r could do
+    the same to save\r time!"
   IsPlaying: 0
   LineDisplay:
   - 0

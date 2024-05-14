@@ -45,6 +45,10 @@ public class Player_Movement : MonoBehaviour
     private Button back;
     [SerializeField]
     private Button next;
+
+    [SerializeField]
+    private Button menu;
+
     public int index = 0;
 
     //Private variables.
@@ -77,7 +81,7 @@ public class Player_Movement : MonoBehaviour
     {
         //Player Interactable and Movement by left-click
         if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting &&
-            (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false))
+            (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false && menu.GetComponent<UIButtons>().IsMouseOverButton() == false))
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -118,6 +122,10 @@ public class Player_Movement : MonoBehaviour
                             InteractionPath a = (InteractionPath)playerPath.pathObjects[i];
                             if (playerPath.pathObjects.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
                             {
+                                if (a.GetInteracted())
+                                {
+                                    a.CompletedList(link);
+                                }
                                 if (a.pathComplete)
                                 {
                                     playerPath.pathObjects[i] = null;
@@ -237,11 +245,6 @@ public class Player_Movement : MonoBehaviour
                 PathName.text += playerPath.pathObjects.ElementAt(i).path_name;
                 PathDescription.text += playerPath.pathObjects.ElementAt(i).path_description;
             }
-            else if (index == 0)
-            {
-                PathName.text += playerPath.pathObjects.ElementAt(0).path_name;
-                PathDescription.text += playerPath.pathObjects.ElementAt(0).path_description;
-            }
         }
         UpdateList();
     }
@@ -327,17 +330,5 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
-    }
-    
-    private bool IsMouseOverButton()
-    {
-        EventSystem eventSys = GameObject.Find("EventSystem").GetComponent<EventSystem>();
-        if (eventSys.IsPointerOverGameObject())
-        {
-            if (EventSystem.current.currentSelectedGameObject.name == back.name) { return true; }
-            else if (EventSystem.current.currentSelectedGameObject.name == next.name) { return true; }
-            else return false;
-        }
-        else { return false; }
     }
 }

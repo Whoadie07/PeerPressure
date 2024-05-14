@@ -16,10 +16,8 @@ MonoBehaviour:
   - You
   - Ava
   LineOfDialogue:
-  - 'You: Awful'
-  - 'Ava: What happens? Is it the
-
-    homework bothering you?'
+  - Awful
+  - What happens? Is it the homework bothering you?
   IsPlaying: 0
   LineDisplay:
   - 0

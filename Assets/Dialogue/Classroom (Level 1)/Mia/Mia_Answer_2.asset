@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Mia
   LineOfDialogue:
-  - 'You: They''re not great.'
-  - 'Mia: Oh, okay. I guess they''re not for everyone...'
+  - They're not great.
+  - Oh, okay. I guess they're not for everyone...
   IsPlaying: 0
   LineDisplay:
   - 0

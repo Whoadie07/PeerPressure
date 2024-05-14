@@ -15,8 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Ethan
   LineOfDialogue:
-  - "Ethan: Hi (playerName), Do you\r know how to write the\r second question in
-    her\r practice?\r"
+  - "Hi (playerName), Do you\r know how to write the\r second question in her\r practice?\r"
   IsPlaying: 0
   LineDisplay:
   - 0

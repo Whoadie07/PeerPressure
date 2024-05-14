@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Mia
   LineOfDialogue:
-  - '(You): They look great.'
-  - 'Mia: Thank you. How nice of you to say that.'
+  - They look great.
+  - Thank you. How nice of you to say that.
   IsPlaying: 0
   LineDisplay:
   - 0

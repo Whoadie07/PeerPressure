@@ -17,10 +17,10 @@ MonoBehaviour:
   - You
   - Mia
   LineOfDialogue:
-  - 'Mia: Hey, (name)! What''s up?'
-  - '(You): Nothing Much. What about you?'
-  - 'Mia: I just went shopping last week. I bought these new basketball shoes. What
-    do you think?'
+  - Hey, (name)! What's up?
+  - Nothing Much. What about you?
+  - I just went shopping last week. I bought these new basketball shoes. What do
+    you think?
   IsPlaying: 0
   LineDisplay:
   - 0

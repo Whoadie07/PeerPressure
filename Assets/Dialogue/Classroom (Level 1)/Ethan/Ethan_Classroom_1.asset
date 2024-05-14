@@ -16,8 +16,8 @@ MonoBehaviour:
   - Ethan
   - You
   LineOfDialogue:
-  - "Ethan: Shhh... Listen. I copied Mia\u2019s\r answers. I think you also need
-    it.\r I must go home soon. You'd\r better copy it right now if you\r want."
+  - "Shhh... Listen. I copied Mia\u2019s\r answers. I think you also need it.\r I
+    must go home soon. You'd\r better copy it right now if you\r want."
   - '(Monologue) : Copy the answers?'
   IsPlaying: 0
   LineDisplay:

@@ -17,9 +17,9 @@ MonoBehaviour:
   - Isabella
   - You
   LineOfDialogue:
-  - 'You: I kind of know how to play, but only the basics.'
-  - 'Isabella: That''s alright. Mia and I can help refresh your memory.'
-  - 'You: Thanks, Isabella.'
+  - I kind of know how to play, but only the basics.
+  - That's alright. Mia and I can help refresh your memory.
+  - Thanks, Isabella.
   IsPlaying: 0
   LineDisplay:
   - 0

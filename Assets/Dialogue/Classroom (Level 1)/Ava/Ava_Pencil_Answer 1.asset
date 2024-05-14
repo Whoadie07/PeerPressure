@@ -18,12 +18,12 @@ MonoBehaviour:
   - You
   - Ava
   LineOfDialogue:
-  - "You: Yes,\r I\u2019ll try it"
-  - 'Ava: You should try!!!
+  - "Yes,\r I\u2019ll try it"
+  - 'You should try!!!
 
 '
-  - "Ava: Well, I\u2019m done. "
-  - "Ava: See you\r tomorrow!"
+  - "Well, I\u2019m done. "
+  - "See you\r tomorrow!"
   IsPlaying: 0
   LineDisplay:
   - 0

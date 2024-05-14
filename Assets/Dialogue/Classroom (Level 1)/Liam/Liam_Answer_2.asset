@@ -17,9 +17,9 @@ MonoBehaviour:
   - Liam
   - You
   LineOfDialogue:
-  - 'You: I like sports.'
-  - 'Liam: Oh, okay. I''m not much of a sports guy, to be honest.'
-  - 'You: Gotcha.'
+  - I like sports.
+  - Oh, okay. I'm not much of a sports guy, to be honest.
+  - Gotcha.
   IsPlaying: 0
   LineDisplay:
   - 0

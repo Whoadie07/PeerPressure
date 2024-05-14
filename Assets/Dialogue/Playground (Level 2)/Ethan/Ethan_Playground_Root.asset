@@ -15,7 +15,7 @@ MonoBehaviour:
   DialogueNames:
   - Ethan
   LineOfDialogue:
-  - 'Ethan: Hello'
+  - Hello
   IsPlaying: 0
   LineDisplay:
   - 0

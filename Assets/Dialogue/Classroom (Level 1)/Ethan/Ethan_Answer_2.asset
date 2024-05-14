@@ -16,10 +16,10 @@ MonoBehaviour:
   - You
   - Ethan
   LineOfDialogue:
-  - "You: Some\r of them."
-  - "Ethan: Same for me. The\r questions are confusing.\r It\u2019s unreasonable
-    to do it\r on the first day. You know,\r Mia is good at history. I\u2019ll\r
-    ask her to share the\r answers."
+  - "Some\r of them."
+  - "Same for me. The\r questions are confusing.\r It\u2019s unreasonable to do it\r
+    on the first day. You know,\r Mia is good at history. I\u2019ll\r ask her to
+    share the\r answers."
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Isabella
   LineOfDialogue:
-  - 'You: Yeah. She is.'
-  - 'Isabella: I can''t wait for recess. Do you wanna play with me during recess?'
+  - Yeah. She is.
+  - I can't wait for recess. Do you wanna play with me during recess?
   IsPlaying: 0
   LineDisplay:
   - 0

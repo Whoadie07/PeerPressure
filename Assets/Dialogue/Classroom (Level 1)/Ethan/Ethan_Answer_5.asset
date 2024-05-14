@@ -18,10 +18,10 @@ MonoBehaviour:
   - 
   - Ethan
   LineOfDialogue:
-  - 'You: Yes'
-  - 'Ethan: Oh, thank you! Thank you so much! You''re a life saver!'
+  - Yes
+  - Oh, thank you! Thank you so much! You're a life saver!
   - Copying...
-  - 'Ethan: Alright. I''m done. Thanks again, (Player name).'
+  - Alright. I'm done. Thanks again, (Player name).
   IsPlaying: 0
   LineDisplay:
   - 0

@@ -28,7 +28,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7d06e1789b0e9724582a98eb27f39f51, type: 2}
   - {fileID: 11400000, guid: 64f258eca740e42408596a561c64655b, type: 2}
   - {fileID: 11400000, guid: abff76d4d79760c41b7ab27ca38dc608, type: 2}
-  - {fileID: 0}
   answer: 
   IsItCorrect: 0
   beginFrame: 0

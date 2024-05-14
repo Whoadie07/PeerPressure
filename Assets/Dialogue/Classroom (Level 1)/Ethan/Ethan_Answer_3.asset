@@ -16,8 +16,8 @@ MonoBehaviour:
   - You
   - Ethan
   LineOfDialogue:
-  - 'You: Yes'
-  - "Ethan: Oh, really?! Can I see your\r\nanswers? Please help me!\r"
+  - Yes
+  - "Oh, really?! Can I see your\r answers? Please help me!\r"
   IsPlaying: 0
   LineDisplay:
   - 0
