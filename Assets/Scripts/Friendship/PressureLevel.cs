@@ -15,6 +15,15 @@ public class PressureLevel : MonoBehaviour
 
     private void Update()
     {
-        rt.sizeDelta = new Vector2(Peer.Pressure, rt.sizeDelta.y);
+        if (Peer.Pressure > 400)
+        {
+            rt.anchoredPosition = new Vector2(-200 + (400 / 2), 0);
+            rt.sizeDelta = new Vector2(400, rt.sizeDelta.y);
+        }
+        else
+        {
+            rt.anchoredPosition = new Vector2(-200 + (Peer.Pressure / 2), 0);
+            rt.sizeDelta = new Vector2(Peer.Pressure, rt.sizeDelta.y);
+        }
     }
 }
