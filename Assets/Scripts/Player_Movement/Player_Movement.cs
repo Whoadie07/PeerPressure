@@ -47,9 +47,25 @@ public class Player_Movement : MonoBehaviour
     private Button next;
 
     [SerializeField]
+    private Button left;
+    [SerializeField] 
+    private Button right; 
+
+    [SerializeField]
     private Button menu;
 
+    [SerializeField]
+    private Button backpack;
+
+    [SerializeField]
+    private Button drop;
+
     public int index = 0;
+
+    public int item = 0;
+
+    [SerializeField]
+    private RectTransform selection;
 
     //Private variables.
     private float playerSpeed = 5.0f;
@@ -74,6 +90,8 @@ public class Player_Movement : MonoBehaviour
         index = 0;
         back.onClick.AddListener(PressLeftButton);
         next.onClick.AddListener(PressRightButton);
+        left.onClick.AddListener(LeftObject);
+        right.onClick.AddListener(RightObject);
     }
 
     // Update is called once per frame
@@ -81,7 +99,10 @@ public class Player_Movement : MonoBehaviour
     {
         //Player Interactable and Movement by left-click
         if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting &&
-            (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false && menu.GetComponent<UIButtons>().IsMouseOverButton() == false))
+            (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false
+            && menu.GetComponent<UIButtons>().IsMouseOverButton() == false && backpack.GetComponent<UIButtons>().IsMouseOverButton() == false
+            && (drop.IsActive() == false || drop.GetComponent<UIButtons>().IsMouseOverButton() == false) && left.GetComponent<UIButtons>().IsMouseOverButton() == false
+            && right.GetComponent<UIButtons>().IsMouseOverButton() == false))
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(rayinfo, out hitinfo, interactRange))
@@ -152,41 +173,38 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
-        //Switch item in the player hot bar. 
         int inf = PlayerHand.GetComponent<Inventory>().HotbarInventory.Length;
         for (int i = 1; i <= inf; i++)
         {
             if ((Input.GetKeyDown(i.ToString())))
             {
-                Debug.Log("Press: " + i.ToString());
-                if (PlayerHand.GetComponent<Inventory>().HotbarInventory[i - 1] == null)
-                {
-                    Debug.Log("Not item found");
-                }
-                else
-                {
-                    PlayerHand.GetComponent<Inventory>().setSlot((i - 1));
-                }
+                item = i-1;
             }
         }
+        if (selection != null) selection.anchoredPosition = new Vector2(-150 + (100 * item), -400);
+        PlayerHand.GetComponent<Inventory>().setSlot((item));
         //Drop item.
         if (Input.GetKeyDown("q"))
         {
             int hand = PlayerHand.GetComponent<Inventory>().NumberItemCurrentlyHolding;
             if (PlayerHand.GetComponent<Inventory>() != null)
             {
-                if (PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>() != null)
+                if (PlayerHand.GetComponent<Inventory>().HotbarInventory != null)
                 {
-                    PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
-                    PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
+                    if (PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] != null)
+                    {
+                        PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isContain = false;
+                        PlayerHand.GetComponent<Inventory>().HotbarInventory[hand].GetComponent<Object_Data>().isHold = false;
+                        PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
+                        PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
+                        PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
+                    }
                 }
-
-                PlayerHand.GetComponent<Inventory>().HotbarInventory[hand] = null;
-                PlayerHand.GetComponent<Inventory>().HotbarInventory_UI[hand].GetComponent<RawImage>().texture = null;
-                PlayerHand.GetComponent<Inventory>().CurrentlyHolding = null;
             }
-
         }
+        // If the player is holding an object, then they have the option of dropping it using the drop button
+        if (PlayerHand.GetComponent<Inventory>().getCurHold() != null) drop.GameObject().SetActive(true);
+        else drop.GameObject().SetActive(false);
         //Open main inventory.
         if (Input.GetKeyDown("e"))
         {
@@ -330,5 +348,15 @@ public class Player_Movement : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void LeftObject()
+    {
+        if (item > 0) item--;
+    }
+
+    private void RightObject()
+    {
+        if (item < PlayerHand.GetComponent<Inventory>().HotbarInventory.Length - 1) item++;
     }
 }
