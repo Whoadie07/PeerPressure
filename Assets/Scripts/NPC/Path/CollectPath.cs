@@ -23,7 +23,8 @@ public class CollectPath : PathObject
     public NarrativeNode dialogueClimax;
 
     public NarrativeNode dialogueReplaceRoot;
-
+    
+    //Dialogue Condition
     public Condition condition;
 
     public bool obtainedAll = false;
@@ -104,10 +105,16 @@ public class CollectPath : PathObject
     public void end(Link link)
     {
         FriendData.Friend += 4;
-        pathComplete = true;
-        pathBegin = false;
-        UpdateDialogue(link.GetComponent<Link>().GetObject(NPC_Name).GetComponent<NPC_Movement>(), 1);
+        // This changes the condition once the path is complete
         if (condition != null) condition.Changer = 1;
+        UpdateDialogue(link.GetComponent<Link>().GetObject(NPC_Name).GetComponent<NPC_Movement>(), 1);
+        pathBegin = false;
+        // This updates the level completion based on what level the path is in
+        if (Level == "Tutorial") List.UpdateLevelCompletion(1);
+        else if (Level == "Classroom") List.UpdateLevelCompletion(2);
+        else if (Level == "Cafeteria") List.UpdateLevelCompletion(3);
+        else if (Level == "Playground") List.UpdateLevelCompletion(4);
+        pathComplete = true;
     }
     public void takeItem(Inventory pathInventory, Link link)
     {
@@ -153,16 +160,20 @@ public class CollectPath : PathObject
         end(link);
     }
 
+    // The dialogue changes during a certain part of the path
     public void UpdateDialogue(NPC_Movement npc, int type)
     {
+        // If the player has obtained all objects but hasn't given them to the NPC
         if ((obtainedAll == true)&&(type == 0))
         {
             npc.NPC_Dialogue = dialogueEndPath;
         }
+        // If the player begins the path
         else if ((obtainedAll == false)&&(type == 0))
         {
             npc.NPC_Dialogue = dialogueClimax;
         }
+        // If the player gives all objects to the NPC
         else if ((obtainedAll == true)&&(type == 1))
         {
             npc.NPC_Dialogue = dialogueReplaceRoot;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-// When there's a new game starting, all the NPC affinity is set to 0.
+// When there's a new game starting, all the NPC affinity is set to 0 and the path_object list is empty.
 public class ResetGameData : MonoBehaviour
 {
     [SerializeField]

@@ -62,7 +62,6 @@ public class InteractionPath : PathObject
         }
         // If it's not set up, then SetLinksList gets called.
         else SetLinksList(link);
-        if ((pathComplete == true)&&(condition != null)) condition.Changer = 1;
     }
 
     // This sets up the links for the quest.
@@ -138,6 +137,14 @@ public class InteractionPath : PathObject
             // The NPCs' friend data is increased by 2.
             FriendList[i].Friend += 2;
         }
+        // This changes the condition once the path is complete
+        if (condition != null) condition.Changer = 1;
+        pathBegin = false;
+        // This updates the level completion based on what level the path is in
+        if (Level == "Tutorial") List.UpdateLevelCompletion(1);
+        else if (Level == "Classroom") List.UpdateLevelCompletion(2);
+        else if (Level == "Cafeteria") List.UpdateLevelCompletion(3);
+        else if (Level == "Playground") List.UpdateLevelCompletion(4);
         pathComplete = true;
     }
 

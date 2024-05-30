@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
+// This script is to install a mouse over button reader.
 public class UIButtons : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     private bool isMouseOver = false;

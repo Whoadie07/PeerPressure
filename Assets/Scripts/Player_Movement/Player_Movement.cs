@@ -35,35 +35,45 @@ public class Player_Movement : MonoBehaviour
     public GameObject playerMenu;
 
     //Player Path
+
     public PathList playerPath;
     public Text PathName = null;
     public Text PathDescription = null;
 
+    // This is the link variable which allows the script to access data from other NPCs
     public Link link;
 
+    // These buttons are for traversing the path_objects list in the objective UI
     [SerializeField]
     private Button back;
     [SerializeField]
     private Button next;
 
+    // These buttons are for traversing through the hotbar inventory in the inventory UI
     [SerializeField]
     private Button left;
     [SerializeField] 
     private Button right; 
 
+    // This is the pause button to pause the game and display the pause menu
     [SerializeField]
     private Button menu;
 
+    // This button opened the inventory
     [SerializeField]
     private Button backpack;
 
+    // If a player is holding an object that's selected in the hotbar inventory, this button gives them the option of dropping it
     [SerializeField]
     private Button drop;
 
+    // This is the index of the objective path_objects array
     public int index = 0;
 
+    // This is the index of the hotbar inventory array
     public int item = 0;
 
+    // This image is to show what item in the hotbar is selected
     [SerializeField]
     private RectTransform selection;
 
@@ -98,10 +108,11 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         //Player Interactable and Movement by left-click
+        // The player can't move when the mouse is over a button
         if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting &&
             (back.GetComponent<UIButtons>().IsMouseOverButton() == false && next.GetComponent<UIButtons>().IsMouseOverButton() == false
             && menu.GetComponent<UIButtons>().IsMouseOverButton() == false && backpack.GetComponent<UIButtons>().IsMouseOverButton() == false
-            && (drop.IsActive() == false || drop.GetComponent<UIButtons>().IsMouseOverButton() == false) && left.GetComponent<UIButtons>().IsMouseOverButton() == false
+            && (drop.IsActive() == false || (drop.IsActive() == true && drop.GetComponent<UIButtons>().IsMouseOverButton() == false)) && left.GetComponent<UIButtons>().IsMouseOverButton() == false
             && right.GetComponent<UIButtons>().IsMouseOverButton() == false))
         {
             rayinfo = cam.ScreenPointToRay(Input.mousePosition);
@@ -124,15 +135,18 @@ public class Player_Movement : MonoBehaviour
                     tempInteractable.GetComponent<NPC_Movement>().UpdateNPC();
                     for (int i = 0; i < playerPath.pathObjects.Length; i++)
                     {
+                        // This determines if the path does not exist, is a collect path, or an interaction path
                         if (playerPath.pathObjects.ElementAt(i) == null) { continue; }
                         else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(CollectPath))
                         {
                             CollectPath a = (CollectPath)playerPath.pathObjects[i];
                             if (playerPath.pathObjects.ElementAt(i).NPC_Name.Equals(tempInteractable.GetComponent<NPC_Movement>().NPC_name))
                             {
+                                // In a collect path, the player constantly checks if the player has collected all items so that they can give the items to the NPC
                                 if (a.obtainedAll)
                                 {
-                                    ((CollectPath)playerPath.pathObjects[i]).takeItem(PlayerHand.GetComponent<Inventory>(), link);
+                                    a.takeItem(PlayerHand.GetComponent<Inventory>(), link);
+                                    // The path is removed.
                                     playerPath.pathObjects[i] = null;
                                     continue;
                                 }
@@ -146,9 +160,7 @@ public class Player_Movement : MonoBehaviour
                                 if (a.GetInteracted())
                                 {
                                     a.CompletedList(link);
-                                }
-                                if (a.pathComplete)
-                                {
+                                    // The path is removed.
                                     playerPath.pathObjects[i] = null;
                                     continue;
                                 }
@@ -225,8 +237,10 @@ public class Player_Movement : MonoBehaviour
         }
         PathName.text = "";
         PathDescription.text = "";
+        // The Objective UI is changed when a player gains a new path or completes a path
         for (int i = 0; i < playerPath.pathObjects.Length; i++)
         {
+            // This determines if the path does not exist, is a collect path, or an interaction path
             if (playerPath.pathObjects.ElementAt(i) == null) { continue; }
             else if (playerPath.pathObjects.ElementAt(i).GetType() == typeof(CollectPath))
             {
@@ -330,6 +344,7 @@ public class Player_Movement : MonoBehaviour
         index = 0;
     }
 
+    // The path_object list is changed so that there would be no empty spaces in between paths.
     private void UpdateList()
     {
         for (int i = 0; i < playerPath.pathObjects.Length; i++)

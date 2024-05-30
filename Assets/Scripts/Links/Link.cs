@@ -17,6 +17,7 @@ public class Link : MonoBehaviour
     public GameObject Owen;
     public GameObject Sophia;
 
+    // These stores the friend data of all the classmate NPCs in the game.
     public FriendData AvaData;
     public FriendData EthanData;
     public FriendData IsabellaData;
