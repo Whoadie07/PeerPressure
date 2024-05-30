@@ -16,14 +16,17 @@ public class NPC_Movement : MonoBehaviour
     public GameObject InteractTarget;
     public NarrativeReader npcreader;
     public NarrativeNode NPC_Dialogue = null;
+    // This variable is to store the in game link that will connect the NPC to other NPCs
     public GameObject link = null;
 
+    // When completing a path, if a path has a specific condition, this object allows the script to check it to see if there's a specific dialogue needed.
     public Condition condition;
 
     // This is where the affinity data of the NPC is stored.
     public FriendData NPC_Affinity = null;
     // All NPCs are connected to the pressure levels of the player.
     public ThePressure Peer = null;
+    // This is the current path of the NPC.
     public PathObject CurrentPath = null;
 
     // NPC Movement by move them with a path to follow
@@ -43,6 +46,7 @@ public class NPC_Movement : MonoBehaviour
     {
         NpcPath = 0;
         cur_path = NpcTargetPath[NpcPath].GetComponent<Transform>().position;
+        // This checks the condition and sets the root dialogue based on that condition.
         if (condition != null)
         {
             if (condition.Changer == 1)

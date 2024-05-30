@@ -6,6 +6,7 @@ using UnityEngine.UI;
 // This is the pressure level meter in the game.
 public class PressureLevel : MonoBehaviour
 {
+    // These variables access the components of the bar.
     [SerializeField]
     private ThePressure Peer;
     [SerializeField]
@@ -15,8 +16,10 @@ public class PressureLevel : MonoBehaviour
 
     private void Update()
     {
+        // The bar adjusts based on the amount of Peer Pressure the player has.
         if (Peer.Pressure > 400)
-        {
+        {   
+            // The bar cannot go over 400
             rt.anchoredPosition = new Vector2(-200 + (400 / 2), 0);
             rt.sizeDelta = new Vector2(400, rt.sizeDelta.y);
         }

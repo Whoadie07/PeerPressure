@@ -38,6 +38,7 @@ public class NarrativeNode : ScriptableObject
     public bool isTherePath = false;
     public PathObject PathObject = null;
 
+    //A condition that's used to change the root dialogue according to that condition.
     public Condition condition;
    
 

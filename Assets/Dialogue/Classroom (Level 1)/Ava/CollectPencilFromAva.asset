@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2409ce8b243a4f240a919afd66bdfb2f, type: 3}
   m_Name: CollectPencilFromAva
   m_EditorClassIdentifier: 
+  List: {fileID: 11400000, guid: b73b0ece5fd737e4e8851f255fbed77f, type: 2}
   NPC_Name: Ava
+  Level: Classroom
   pathComplete: 1
   pathBegin: 0
   path_name: A Pencil
@@ -27,4 +29,5 @@ MonoBehaviour:
   dialogueEndPath: {fileID: 11400000, guid: 8922a8d1e643008419bea5421917c885, type: 2}
   dialogueClimax: {fileID: 11400000, guid: 100a483ea876f96498860d4f6cb2983d, type: 2}
   dialogueReplaceRoot: {fileID: 11400000, guid: 4f398bbbfbeed6549a506211c60da725, type: 2}
+  condition: {fileID: 0}
   obtainedAll: 1

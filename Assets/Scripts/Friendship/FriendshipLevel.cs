@@ -7,6 +7,7 @@ using UnityEngine.UI;
 // This is the friendship level meter in the game.
 public class FriendshipLevel : MonoBehaviour
 {
+    // These variables access the components of the bar.
     [SerializeField]
     private FriendData friend;
     [SerializeField]
@@ -16,8 +17,10 @@ public class FriendshipLevel : MonoBehaviour
 
     private void Update()
     {
+        // The bar adjusts based on the amount of friendship the player has with the NPC
         if (friend.Friend > 300)
         {
+            // The bar cannot go over 300
             rt.anchoredPosition = new Vector2(-150 + (300 / 2), 0);
             rt.sizeDelta = new Vector2(300, rt.sizeDelta.y);
         }

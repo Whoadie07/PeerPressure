@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2cce6ad724639f94fb8f3e850c0cebce, type: 3}
   m_Name: Isabella_Interaction_1
   m_EditorClassIdentifier: 
+  List: {fileID: 11400000, guid: b73b0ece5fd737e4e8851f255fbed77f, type: 2}
   NPC_Name: Isabella
+  Level: Classroom
   pathComplete: 1
   pathBegin: 1
   path_name: Basketball Hangout
