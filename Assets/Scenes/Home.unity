@@ -2042,9 +2042,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58fdd98d91976674e8d1d15fc7d68bb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_setting: {fileID: 0}
+  m_setting: {fileID: 11400000, guid: 3dd7bcf72f25529478779348a0a86381, type: 2}
   m_audio_source: {fileID: 1890697574}
-  sp_dict: {fileID: 0}
+  sp_dict: {fileID: 11400000, guid: 589c8eb5f5acc4749b9e546ecd67c38a, type: 2}
 --- !u!114 &1890697576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2057,8 +2057,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31acf3497a6d89c45aaf5ad5f3300358, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ad_track: {fileID: 0}
-  sound_tag: 
+  ad_track: {fileID: 11400000, guid: 105dd921adbe0a642bef5c0453ea593e, type: 2}
+  sound_tag: Music
 --- !u!82 &1890697577
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2073,7 +2073,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
