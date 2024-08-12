@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bathroom Sounds
   m_EditorClassIdentifier: 
   track: {fileID: 8300000, guid: ca9e89830296e8d4ba78e28b69cfc1cc, type: 3}
-  volume: 0
+  volume: 1
   pitch: 0
   priority: 128
   Fade_In: 0

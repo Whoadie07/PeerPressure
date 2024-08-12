@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Net.NetworkInformation;
 using Unity.VisualScripting;
-using UnityEditor.XR;
+// using UnityEditor.XR;
 using UnityEngine;
 using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Collect Path", menuName = "Collect Path")]

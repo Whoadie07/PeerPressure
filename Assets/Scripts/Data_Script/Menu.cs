@@ -12,6 +12,7 @@ public class Menu : ScriptableObject
     public string[] SceneNames = new string[NumberScene]; //The list of Scene Names.
     public int currently_play = 3;
     public bool firstPlay = true;
+    public ChapterSelect Chapters;
 
     //When the game start up
     private void Awake()
@@ -28,7 +29,7 @@ public class Menu : ScriptableObject
         if (firstPlay)
         {
             firstPlay = false;
-            Tutorial();
+            FirstChapter();
             
         }
         else
@@ -44,10 +45,10 @@ public class Menu : ScriptableObject
         Application.Quit();
     }
     //Load the tutorial scene
-    public void Tutorial()
+    public void FirstChapter()
     {
         new WaitForSeconds(10);
-        SceneManager.LoadScene(SceneNames[1]);
+        SceneManager.LoadScene(SceneNames[3]);
     }
     //Load the chapter select scene
     public void ChapterSelect()
