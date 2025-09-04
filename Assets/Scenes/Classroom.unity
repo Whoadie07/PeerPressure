@@ -11257,6 +11257,7 @@ GameObject:
   - component: {fileID: 216166153}
   - component: {fileID: 216166154}
   - component: {fileID: 216166155}
+  - component: {fileID: 216166156}
   m_Layer: 7
   m_Name: Pencil (2)
   m_TagString: Untagged
@@ -11329,6 +11330,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &216166156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 216166151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d980b7d6e53004dbbea4ccc1ead763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!1 &217083392
 GameObject:
   m_ObjectHideFlags: 3
@@ -13398,6 +13412,7 @@ GameObject:
   - component: {fileID: 395948153}
   - component: {fileID: 395948154}
   - component: {fileID: 395948152}
+  - component: {fileID: 395948155}
   m_Layer: 7
   m_Name: Pencil (1)
   m_TagString: Untagged
@@ -13470,6 +13485,19 @@ MonoBehaviour:
   play_hand: {fileID: 1707729283}
   Object: {fileID: 919132149547310602}
   ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
+--- !u!114 &395948155
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395948150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d980b7d6e53004dbbea4ccc1ead763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!1 &397530280
 GameObject:
   m_ObjectHideFlags: 0
@@ -15043,7 +15071,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508973255}
-  m_LocalRotation: {x: 0.23174818, y: 0.004376872, z: -0.0010427303, w: 0.97276545}
+  m_LocalRotation: {x: 0.23174818, y: 0.004376855, z: -0.0010427262, w: 0.97276545}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -15568,6 +15596,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554401873}
   m_CullTransparentMesh: 1
+--- !u!1 &555655163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 555655165}
+  - component: {fileID: 555655164}
+  - component: {fileID: 555655166}
+  m_Layer: 0
+  m_Name: ItemManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &555655164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555655163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dc0dd1ca4ecf49418a04851e29c8b7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemNames:
+  - Pencil
+  - Notebook
+  - Book
+--- !u!4 &555655165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555655163}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555655166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 555655163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f63aecd7b9bc0c048ba080052221a452, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &558576610
 GameObject:
   m_ObjectHideFlags: 0
@@ -20438,6 +20527,7 @@ Transform:
   - {fileID: 73237902}
   - {fileID: 1439739021}
   - {fileID: 1048204101}
+  - {fileID: 1633330334}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24568,6 +24658,7 @@ GameObject:
   - component: {fileID: 1324283010}
   - component: {fileID: 1324283009}
   - component: {fileID: 1324283011}
+  - component: {fileID: 1324283012}
   m_Layer: 7
   m_Name: Pencil (5)
   m_TagString: Untagged
@@ -24640,6 +24731,19 @@ MonoBehaviour:
   play_hand: {fileID: 1707729283}
   Object: {fileID: 2015927648}
   ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
+--- !u!114 &1324283012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1324283007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d980b7d6e53004dbbea4ccc1ead763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!1001 &1343414574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27735,6 +27839,104 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9cc6ae3d2b7c877408dd2695ac74618f, type: 3}
   m_PrefabInstance: {fileID: 924091751}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1633330333
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1633330334}
+  - component: {fileID: 1633330338}
+  - component: {fileID: 1633330337}
+  - component: {fileID: 1633330336}
+  - component: {fileID: 1633330335}
+  m_Layer: 7
+  m_Name: Pencil (10)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1633330334
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633330333}
+  m_LocalRotation: {x: -0.026661199, y: 0.7126709, z: 0.700009, w: 0.037105378}
+  m_LocalPosition: {x: 0.36, y: -1.6320324, z: -10.505714}
+  m_LocalScale: {x: 0.10000001, y: 0.099999994, z: 0.10000001}
+  m_ConstrainProportionsScale: 1
+  m_Children:
+  - {fileID: 2088439906}
+  m_Father: {fileID: 987207859}
+  m_RootOrder: 37
+  m_LocalEulerAnglesHint: {x: -88.67, y: 137.898, z: 36.933}
+--- !u!114 &1633330335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633330333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d980b7d6e53004dbbea4ccc1ead763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
+--- !u!54 &1633330336
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633330333}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1633330337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633330333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24158bdd7ccadf44981edab085a70b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  object_name: Pencil
+  o_change_size: {x: 0, y: 0, z: 0}
+  isContain: 0
+  isHold: 0
+  play_hand: {fileID: 1707729283}
+  Object: {fileID: 2088439905}
+  ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
+--- !u!136 &1633330338
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633330333}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.1
+  m_Height: 3.27
+  m_Direction: 1
+  m_Center: {x: -0.01, y: 0.57, z: 0}
 --- !u!1001 &1634333772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32792,6 +32994,93 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9cc6ae3d2b7c877408dd2695ac74618f, type: 3}
   m_PrefabInstance: {fileID: 1389299523}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2088439905
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2088439906}
+  - component: {fileID: 2088439908}
+  - component: {fileID: 2088439907}
+  m_Layer: 7
+  m_Name: Pencil EXPORT
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2088439906
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088439905}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1633330334}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &2088439907
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088439905}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: b2c4a76030507e24fb7357059477dcf8, type: 2}
+  - {fileID: 2100000, guid: f50f5e1eba40ce24b982b5aac855d0b0, type: 2}
+  - {fileID: 2100000, guid: fd053a05d04a7b44ca5e65e160f32c2a, type: 2}
+  - {fileID: 2100000, guid: dea3abc60a767e7488495fe9850e67b7, type: 2}
+  - {fileID: 2100000, guid: 71e4455eb41790445bfed3a563e9c74c, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2088439908
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2088439905}
+  m_Mesh: {fileID: -7387706064836869012, guid: 1b1187f7ad9517041a435571c7ea9f0f, type: 3}
 --- !u!1001 &2089711568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -37485,6 +37774,7 @@ GameObject:
   - component: {fileID: 7777997875913172512}
   - component: {fileID: 7777997875913172511}
   - component: {fileID: 7777997875913172513}
+  - component: {fileID: 7777997875913172514}
   m_Layer: 7
   m_Name: Pencil
   m_TagString: Untagged
@@ -38912,6 +39202,19 @@ MonoBehaviour:
   play_hand: {fileID: 1707729283}
   Object: {fileID: 1622880783}
   ObjectImage: {fileID: 2800000, guid: 3801a3f7170ce974e9c7cf8991d51efe, type: 3}
+--- !u!114 &7777997875913172514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4643615756360101407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 74d980b7d6e53004dbbea4ccc1ead763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 0
 --- !u!4 &8149487651720298692
 Transform:
   m_ObjectHideFlags: 0
