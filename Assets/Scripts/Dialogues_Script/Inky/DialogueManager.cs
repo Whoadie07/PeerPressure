@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using UnityEngine.EventSystems;
-
 /*TODOS
     * Fix the issue where dialogue conjoins when skipped (Requires stopping/managing the playWord coroutine)
 */
@@ -25,6 +24,7 @@ public class DialogueManager : MonoBehaviour
     private static DialogueManager instance;
     private bool dialogueIsPlaying = false;
     private Coroutine playWordCoroutine; // Added reference to manage typing coroutine
+    ItemManager itemManager;
 
     // --- Public property to check state ---
     public bool IsDialoguePlaying
@@ -66,7 +66,7 @@ public class DialogueManager : MonoBehaviour
             choice.SetActive(false);
             index++;
         }
-        // Removed: EnterDialogueMode(); // Don't start dialogue automatically
+        itemManager = ItemManager.Instance;
     }
 
     private void Update()
@@ -102,6 +102,7 @@ public class DialogueManager : MonoBehaviour
                 ExitDialogueMode();
             }
         }
+
     }
 
     // --- MODIFIED: Now accepts the Ink file to load ---
@@ -122,7 +123,6 @@ public class DialogueManager : MonoBehaviour
         dialogueIsPlaying = true;
         dialoguePanel.SetActive(true); // Activate the dialogue UI panel
 
-        Debug.Log($"DialogueManager: Starting story from {inkJSON.name}");
         ContinueStory(); // Start the first line/sequence
     }
     // ---
@@ -136,12 +136,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         dialogueIsPlaying = false;
-        Debug.Log("Does this end, YES");
         dialoguePanel.SetActive(false);
         dialogueText.text = "";
         ClearChoices();
         currentStory = null; // Clear story reference
-        Debug.Log("DialogueManager: Exiting Dialogue Mode.");
     }
 
     private void ContinueStory()

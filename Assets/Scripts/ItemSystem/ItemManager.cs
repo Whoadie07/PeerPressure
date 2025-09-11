@@ -54,6 +54,12 @@ public class ItemManager : MonoBehaviour
         return null;
     }
 
+    public ItemState getItemState(int id)
+    {
+        Item item = GetItemById(id);
+        return item.itemState;
+    }
+
     // Changes item state
     public void ChangeItemState(int id, ItemState newState)
     {

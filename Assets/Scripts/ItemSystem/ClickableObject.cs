@@ -30,7 +30,6 @@ public class ClickableObject : MonoBehaviour
             // Change the state of the item in the central manager to "InInventory".
             ItemManager.Instance.ChangeItemState(itemId, ItemState.InInventory);
 
-            Debug.Log($"Picked up: {itemData.itemName}. Its state is now {itemData.itemState}.");
 
             // Deactivate the GameObject in the scene to represent it being picked up.
             // Using SetActive(false) is often better than Destroy() as it's less
