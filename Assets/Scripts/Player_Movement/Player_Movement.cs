@@ -104,9 +104,27 @@ public class Player_Movement : MonoBehaviour
         right.onClick.AddListener(RightObject);
     }
 
+    void stopPlayerMovement ()
+    {
+        agent.speed = 0.0f;
+    }
+
+    void continuePlayerMovement ()
+    {
+        agent.speed = playerSpeed;
+    }
     // Update is called once per frame
     void Update()
     {
+        if (DialogueManager.GetInstance().IsDialoguePlaying)
+        {
+            stopPlayerMovement();
+        }
+        else
+        {
+            continuePlayerMovement();
+        }
+        
         //Player Interactable and Movement by left-click
         // The player can't move when the mouse is over a button
         if (Input.GetMouseButtonDown(0) && !PlayerHand.GetComponent<Inventory>().OpenMainInventory && !playerMenu.activeSelf && !NpcInteracting &&
